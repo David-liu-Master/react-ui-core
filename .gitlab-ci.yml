@@ -11,8 +11,6 @@ test:
     - yarn install
     - yarn coverage
   coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
-  dependencies:
-    - build
   except:
     - master
 
@@ -24,6 +22,6 @@ pages:
     - mv demo/dist public
   artifacts:
     paths:
-    - public
+      - public
   only:
     - master
