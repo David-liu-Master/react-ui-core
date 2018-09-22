@@ -1,0 +1,9 @@
+src/locale/_build
+/coverage
+/demo/dist
+/es
+/lib
+/node_modules
+/umd
+npm-debug.log*
+yarn-error.log

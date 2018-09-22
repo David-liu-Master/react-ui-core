@@ -1,0 +1,94 @@
+{
+  "name": "@openpatch/ui-core",
+  "version": "1.0.0",
+  "description": "ui core for openpatch",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
+  "lingui": {
+    "sourceLocale": "en",
+    "localeDir": "<rootDir>/src/locale",
+    "format": "minimal",
+    "srcPathDirs": [
+      "<rootDir>/src"
+    ]
+  },
+  "scripts": {
+    "build": "lingui extract --clean && lingui compile --strict && cross-env NODE_ENV=production nwb build-react-component",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "prepublishOnly": "npm run build",
+    "start": "nwb serve-react-demo",
+    "test": "jest",
+    "test:coverage": "jest --coverage --collectCoverage",
+    "test:watch": "nwb test-react --server",
+    "prettier": "prettier --single-quote --write src/**/*.js",
+    "locale:extract": "lingui extract",
+    "locale:clean": "lingui extract --clean",
+    "locale:compile": "lingui compile --strict",
+    "locale:add": "lingui add-locale"
+  },
+  "dependencies": {
+    "@lingui/react": "^2.7.0"
+  },
+  "peerDependencies": {
+    "@lingui/macro": "2.x",
+    "@lingui/react": "2.x",
+    "@material-ui/core": "3.x",
+    "@material-ui/icons": "3.x",
+    "react": "16.x"
+  },
+  "devDependencies": {
+    "@lingui/cli": "^2.7.0",
+    "@lingui/loader": "^2.7.0",
+    "@lingui/macro": "^2.7.0",
+    "@material-ui/core": "^3.1.0",
+    "@material-ui/icons": "^3.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-macros": "^2.4.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-app": "^3.1.2",
+    "cross-env": "^5.2.0",
+    "eslint-config-prettier": "^3.0.1",
+    "husky": "^0.14.3",
+    "jest": "^23.6.0",
+    "nwb": "0.23.x",
+    "prettier": "^1.14.3",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-test-renderer": "^16.5.2"
+  },
+  "author": "",
+  "homepage": "",
+  "license": "MIT",
+  "repository": "",
+  "keywords": [
+    "react-component"
+  ],
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "npm run prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "coverageReporters": [
+      "html",
+      "text"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ],
+    "plugins": [
+      "macros"
+    ]
+  }
+}

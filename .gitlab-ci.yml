@@ -1,0 +1,49 @@
+# Official docker image.
+image: docker:latest
+
+services:
+  - docker:dind
+
+before_script:
+  - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+
+stages:
+  - build
+  - test
+  - deploy
+
+build-master:
+  stage: build
+  script:
+    - docker build --pull -t "$CI_REGISTRY_IMAGE"
+    - docker push "$CI_REGISTRY_IMAGE"
+  only:
+    - master
+
+build:
+  stage: build
+  script:
+    - docker build --pull -t "$CI_REGISTRY_IMAGE/frontend:$CI_COMMIT_REF_NAME"
+    - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
+  except:
+    - master
+
+test:
+  stage: test
+  script:
+    - docker run "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME" yarn test:coverage
+  coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
+  dependencies:
+    - build
+  except:
+    - master
+
+test-master:
+  stage: test
+  script:
+    - docker run "$CI_REGISTRY_IMAGE" yarn test:coverage
+  coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
+  dependencies:
+    - build-master
+  only:
+    - master
