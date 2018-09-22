@@ -1,6 +1,6 @@
 {
   "name": "@openpatch/ui-core",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "ui core for openpatch",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -63,10 +63,13 @@
     "react-dom": "^16.5.2",
     "react-test-renderer": "^16.5.2"
   },
-  "author": "",
-  "homepage": "",
+  "author": "Mike Barkmin",
+  "homepage": "https://openpatch.gitlab.io/ui-core",
   "license": "MIT",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git://gitlab.com/openpatch/ui-core.git"
+  },
   "keywords": [
     "react-component"
   ],
