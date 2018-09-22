@@ -17,7 +17,7 @@ pages:
   script:
     - yarn install
     - yarn build
-    - mv demo/dist public
+    - mv cosmos-export public
   artifacts:
     paths:
       - public

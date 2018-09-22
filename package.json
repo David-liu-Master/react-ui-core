@@ -27,6 +27,8 @@
     "test:coverage": "jest --coverage --collectCoverage",
     "test:watch": "nwb test-react --server",
     "prettier": "prettier --single-quote --write src/**/*.js",
+    "cosmos": "cosmos",
+    "cosmos:export": "cosmos-export",
     "locale:extract": "lingui extract",
     "locale:clean": "lingui extract --clean",
     "locale:compile": "lingui compile --strict",
@@ -60,6 +62,7 @@
     "nwb": "0.23.x",
     "prettier": "^1.14.3",
     "react": "^16.5.2",
+    "react-cosmos": "^4.6.4",
     "react-dom": "^16.5.2",
     "react-test-renderer": "^16.5.2"
   },
