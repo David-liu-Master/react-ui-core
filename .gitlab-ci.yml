@@ -11,8 +11,6 @@ test:
     - yarn install
     - yarn coverage
   coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
-  except:
-    - master
 
 pages:
   stage: deploy
