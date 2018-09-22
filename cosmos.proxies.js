@@ -1,8 +1,8 @@
 import React from 'react';
 import { I18nProvider } from '@lingui/react';
-import locale from './src/locale';
+import olocale from './src/locale';
 
-const createI18nProxy = () => {
+const createI18nProxy = ({ locale }) => {
   class I18nProxy extends React.Component {
     render() {
       const {
@@ -22,4 +22,4 @@ const createI18nProxy = () => {
   return I18nProxy;
 };
 
-export default [createI18nProxy()];
+export default [createI18nProxy({ locale: olocale })];

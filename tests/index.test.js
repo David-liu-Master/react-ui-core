@@ -1,5 +1,5 @@
 import React from 'react';
-import Index from './index';
+import Index from '../src/index';
 import createComponentWithI18n from '../utils/createComponentWithI18n';
 
 test('Index', () => {
