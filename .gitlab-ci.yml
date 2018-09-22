@@ -19,6 +19,8 @@ pages:
     - yarn build
     - yarn cosmos:export
     - mv cosmos-export public
+    - mv public/ui-core/* public/
+    - rm -rf public/ui-core
   artifacts:
     paths:
       - public
