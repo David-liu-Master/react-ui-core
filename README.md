@@ -1,16 +1,16 @@
 # frontend
 
-[![Travis][build-badge]][build]
+[![Pipeline][pipeline-badge]][pipeline]
 [![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+[![Coverage][coverage-badge]][coverage]
 
 Describe frontend here.
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+[pipeline-badge]: https://gitlab.com/openpatch/ui-core/badges/master/pipeline.svg
+[pipeline]: https://gitlab.com/openpatch/ui-core/commits/master
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+[npm-badge]: https://badge.fury.io/js/%40openpatch%2Fui-core.svg
+[npm]: https://www.npmjs.com/package/@openpatch/ui-core
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+[coveralls-badge]: https://gitlab.com/openpatch/ui-core/commits/master
+[coveralls]: https://gitlab.com/openpatch/ui-core/badges/master/coverage.svg
