@@ -56,11 +56,15 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-app": "^3.1.2",
     "cross-env": "^5.2.0",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
     "eslint-config-prettier": "^3.0.1",
     "husky": "^0.14.3",
     "jest": "^23.6.0",
+    "jest-enzyme": "^6.1.2",
     "nwb": "0.23.x",
     "prettier": "^1.14.3",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-cosmos": "^4.6.4",
     "react-cosmos-test": "^4.6.4",
@@ -84,6 +88,7 @@
     ]
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/enzyme.config.js",
     "coverageReporters": [
       "html",
       "text"
