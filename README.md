@@ -4,7 +4,19 @@
 [![npm package][npm-badge]][npm]
 [![Coverage][coverage-badge]][coverage]
 
-Describe frontend here.
+# Setup
+
+First we need to install all dependencies.
+```
+yarn install
+```
+
+Then we can start [react-cosmos](https://github.com/react-cosmos/react-cosmos).
+```
+yarn start
+```
+
+Afterwards we can start developing our components.
 
 [pipeline-badge]: https://gitlab.com/openpatch/ui-core/badges/master/pipeline.svg
 [pipeline]: https://gitlab.com/openpatch/ui-core/commits/master
