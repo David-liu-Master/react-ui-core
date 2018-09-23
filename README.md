@@ -12,5 +12,5 @@ Describe frontend here.
 [npm-badge]: https://badge.fury.io/js/%40openpatch%2Fui-core.svg
 [npm]: https://www.npmjs.com/package/@openpatch/ui-core
 
-[coverage-badge]: https://gitlab.com/openpatch/ui-core/commits/master
-[coverage]: https://gitlab.com/openpatch/ui-core/badges/master/coverage.svg
+[coverage-badge]: https://gitlab.com/openpatch/ui-core/badges/master/coverage.svg
+[coverage]: https://gitlab.com/openpatch/ui-core/commits/master
