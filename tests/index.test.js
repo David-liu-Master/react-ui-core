@@ -1,9 +1,12 @@
 import React from 'react';
-import Index from '../src/index';
-import createComponentWithI18n from '../utils/createComponentWithI18n';
+import { create as renderer } from 'react-test-renderer';
+import createTestContext from 'react-cosmos-test/generic';
+import fixture from '../fixtures/index.fixture';
 
-test('Index', () => {
-  const component = createComponentWithI18n(<Index />);
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+const { mount, getWrapper } = createTestContext({ renderer, fixture });
+
+beforeEach(mount);
+
+test('renders index', () => {
+  expect(getWrapper().toJSON()).toMatchSnapshot();
 });

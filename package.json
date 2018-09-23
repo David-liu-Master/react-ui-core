@@ -63,6 +63,7 @@
     "prettier": "^1.14.3",
     "react": "^16.5.2",
     "react-cosmos": "^4.6.4",
+    "react-cosmos-test": "^4.6.4",
     "react-dom": "^16.5.2",
     "react-test-renderer": "^16.5.2"
   },
