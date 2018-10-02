@@ -35,7 +35,10 @@
     "locale:add": "lingui add-locale"
   },
   "dependencies": {
-    "@lingui/react": "^2.7.0"
+    "@lingui/react": "^2.7.0",
+    "highlight.js": "^9.12.0",
+    "immer": "^1.7.2",
+    "react-markdown": "^3.6.0"
   },
   "peerDependencies": {
     "@lingui/macro": "2.x",
@@ -89,7 +92,9 @@
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/enzyme.config.js",
-    "coveragePathIgnorePatterns": ["<rootDir>/src/locale/"],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/locale/"
+    ],
     "coverageReporters": [
       "html",
       "text"
@@ -98,7 +103,8 @@
   "babel": {
     "presets": [
       "env",
-      "react"
+      "react",
+      "react-app"
     ],
     "plugins": [
       "macros"
