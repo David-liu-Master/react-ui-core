@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`I18n actions should create change language action 1`] = `
+Object {
+  "payload": Object {
+    "language": "en",
+  },
+  "type": "openpatch.ui-core.i18n.CHANGE_LANGUAGE",
+}
+`;

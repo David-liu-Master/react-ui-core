@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemRenderer actions should create changeNote action 1`] = `
+Object {
+  "payload": Object {
+    "note": "Hi this is a note",
+  },
+  "type": "openpatch.ui-core.CHANGE_NOTE",
+}
+`;
+
+exports[`ItemRenderer actions should create changeResponse action 1`] = `
+Object {
+  "payload": Object {
+    "id": 2,
+    "response": "This is a response",
+  },
+  "type": "openpatch.ui-core.CHANGE_NOTE",
+}
+`;
