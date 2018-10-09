@@ -1,7 +1,12 @@
 import React from 'react';
+import createReduxProxy from 'react-cosmos-redux-proxy';
 
 import { I18nProvider } from './src/I18n/I18nProvider';
 import olocale from './src/locale';
+
+const ReduxProxy = createReduxProxy({
+  createStore: state => configureStore(state)
+});
 
 const createI18nProxy = ({ locale }) => {
   class I18nProxy extends React.Component {
@@ -23,4 +28,4 @@ const createI18nProxy = ({ locale }) => {
   return I18nProxy;
 };
 
-export default [createI18nProxy({ locale: olocale })];
+export default [ReduxProxy, createI18nProxy({ locale: olocale })];

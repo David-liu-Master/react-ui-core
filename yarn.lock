@@ -8730,6 +8730,15 @@ react-cosmos-playground@^4.6.4:
   resolved "https://registry.yarnpkg.com/react-cosmos-playground/-/react-cosmos-playground-4.6.4.tgz#8298501995e7004e24af96960734b35c7a96c115"
   integrity sha1-gphQGZXnAE4kr5aWBzSzXHqWwRU=
 
+react-cosmos-redux-proxy@^4.6.1:
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/react-cosmos-redux-proxy/-/react-cosmos-redux-proxy-4.6.1.tgz#dd2b66a4084f24ee542b0bcdfad2e1bc5cd9774c"
+  integrity sha1-3StmpAhPJO5UKwvN+tLhvFzZd0w=
+  dependencies:
+    lodash.omit "^4.5.0"
+    react-cosmos-shared "^4.6.1"
+    redux "^4.0.0"
+
 react-cosmos-shared@^4.6.1:
   version "4.6.1"
   resolved "https://registry.yarnpkg.com/react-cosmos-shared/-/react-cosmos-shared-4.6.1.tgz#deacaaaa69b79b408a6c0931597badb17e36ec95"

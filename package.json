@@ -74,6 +74,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-cosmos": "^4.6.4",
+    "react-cosmos-redux-proxy": "^4.6.1",
     "react-cosmos-test": "^4.6.4",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
