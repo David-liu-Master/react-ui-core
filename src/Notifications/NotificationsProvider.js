@@ -18,7 +18,7 @@ export class NotificationsProvider extends React.Component {
   componentWillMount() {
     // clear notifications
     const { clearNotifications } = this.props;
-    this.clearNotifications();
+    clearNotifications();
   }
 
   componentWillUpdate = nextProps => {
@@ -38,7 +38,7 @@ export class NotificationsProvider extends React.Component {
 
   onExited = () => {
     const { removeNotification } = this.props;
-    this.removeNotification();
+    removeNotification();
   };
 
   render() {

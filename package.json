@@ -99,7 +99,8 @@
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/enzyme.config.js",
     "coveragePathIgnorePatterns": [
-      "<rootDir>/src/locale/"
+      "<rootDir>/src/locale/",
+      "<rootDir>/fixtures"
     ],
     "coverageReporters": [
       "html",

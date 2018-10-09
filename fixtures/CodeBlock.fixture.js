@@ -3,6 +3,7 @@ import CodeBlock from '../src/CodeBlock';
 export default [
   {
     component: CodeBlock,
+    name: 'Small Example',
     props: {
       language: 'java',
       value: 'public static void main(String[] args) {}'
@@ -10,6 +11,7 @@ export default [
   },
   {
     component: CodeBlock,
+    name: 'Large Example',
     props: {
       language: 'java',
       value: `

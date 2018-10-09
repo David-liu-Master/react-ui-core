@@ -3,6 +3,7 @@ import Notification from '../../src/Notifications/Notification';
 export default [
   {
     component: Notification,
+    name: 'Only Message',
     props: {
       message: 'Hi!',
       open: true
@@ -10,6 +11,7 @@ export default [
   },
   {
     component: Notification,
+    name: 'With Action',
     props: {
       message: 'Hi!',
       open: true,
