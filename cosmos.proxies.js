@@ -1,11 +1,14 @@
 import React from 'react';
+import { createStore, combineReducers } from 'redux';
 import createReduxProxy from 'react-cosmos-redux-proxy';
 
 import { I18nProvider } from './src/I18n/I18nProvider';
 import olocale from './src/locale';
 
+const rootReducer = combineReducers({});
+
 const ReduxProxy = createReduxProxy({
-  createStore: state => configureStore(state)
+  createStore: state => createStore(rootReducer)(state)
 });
 
 const createI18nProxy = ({ locale }) => {
