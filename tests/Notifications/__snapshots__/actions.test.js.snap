@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notifications actions should create add notification action 1`] = `
+Object {
+  "payload": Object {
+    "notification": Object {
+      "message": "Hi",
+    },
+  },
+  "type": "openpatch.ui-core.notifications.ADD_NOTIFICATION",
+}
+`;
+
+exports[`Notifications actions should create clear notifications action 1`] = `
+Object {
+  "type": "openpatch.ui-core.notifications.CLEAR_NOTIFICATIONS",
+}
+`;
+
+exports[`Notifications actions should create remove notification action 1`] = `
+Object {
+  "type": "openpatch.ui-core.notifications.REMOVE_NOTIFICATION",
+}
+`;
