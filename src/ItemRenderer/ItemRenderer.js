@@ -4,11 +4,15 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import { Trans } from '@lingui/macro';
+import _get from 'lodash/get';
+import _map from 'lodash/map';
 
 import MarkdownRenderer from '../MarkdownRenderer';
 import { changeNote, changeResponse } from './actions';
 
-class ItemRenderer extends React.Component {
+const styles = theme => ({});
+
+export class ItemRenderer extends React.Component {
   onNoteChange = e => {
     const { onNoteChange, dispatch } = this.props;
     const note = e.target.value;
@@ -23,12 +27,70 @@ class ItemRenderer extends React.Component {
   };
 
   render() {
-    return <div>ItemRenderer</div>;
+    const {
+      classes,
+      FormatRenderer,
+      item,
+      state,
+      hidden,
+      dispatch,
+      onResponseChange,
+      onNoteChange
+    } = this.props;
+
+    if (!FormatRenderer) {
+      return <Trans id="openpatch.ui-core.unsupported">Unsupported</Trans>;
+    }
+
+    const assignment = _get(item, ['assignment']);
+    const publicContent = _get(item, ['content', 'public']);
+    const responses = _get(item, ['responses']);
+    const allow_note = _get(item, ['allow_note']);
+
+    return (
+      <div style={{ display: !hidden ? 'block' : 'none' }}>
+        {assignment && (
+          <Paper>
+            <div>
+              <Typography>
+                <Trans id="openpatch.ui-core.assignment">Assignment</Trans>
+              </Typography>
+            </div>
+            <div>
+              <MarkdownRenderer source={assignment} />
+            </div>
+          </Paper>
+        )}
+        {publicContent && (
+          <Paper>
+            <FormatRenderer
+              dispatch={dispatch}
+              {...state}
+              content={publicContent}
+            />
+          </Paper>
+        )}
+        {responses &&
+          _map(responses, (value, key) => <Paper key={key}>{value}</Paper>)}
+      </div>
+    );
   }
 }
 
 ItemRenderer.propTypes = {
-  item: PropTypes.object,
+  classes: PropTypes.object.isRequired,
+  FormatRenderer: PropTypes.element,
+  item: PropTypes.shape({
+    format: PropTypes.shape({
+      type: PropTypes.string
+    }),
+    assignment: PropTypes.string,
+    content: PropTypes.shape({
+      public: PropTypes.object
+    }),
+    responses: PropTypes.objectOf(PropTypes.object),
+    allow_note: PropTypes.bool
+  }),
   state: PropTypes.object,
   hidden: PropTypes.bool,
   dispatch: PropTyes.func,
@@ -38,6 +100,7 @@ ItemRenderer.propTypes = {
 
 ItemRenderer.defaultProps = {
   item: {},
+  FormatRenderer: null,
   state: {},
   hidden: false,
   dispatch: () => {},
@@ -45,5 +108,4 @@ ItemRenderer.defaultProps = {
   onNoteChange: () => {}
 };
 
-export default ItemRenderer;
-
+export default withStyles(styles)(ItemRenderer);
