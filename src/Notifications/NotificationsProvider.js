@@ -32,7 +32,8 @@ export class NotificationsProvider extends React.Component {
 
   onClose = transition => {
     this.setState({
-      open: false
+      open: false,
+      transition
     });
   };
 
@@ -42,7 +43,7 @@ export class NotificationsProvider extends React.Component {
   };
 
   render() {
-    const { notifications } = this.props;
+    const { children, notifications } = this.props;
     let activeNotification = notifications[0];
     if (!activeNotification) {
       return null;
@@ -74,8 +75,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  removeNotification: () => removeNotification(),
-  clearNotifications: () => clearNotifications()
+  removeNotification: () => dispatch(removeNotification()),
+  clearNotifications: () => dispatch(clearNotifications())
 });
 
 export default connect(

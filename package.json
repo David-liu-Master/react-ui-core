@@ -101,7 +101,8 @@
     "setupTestFrameworkScriptFile": "<rootDir>/enzyme.config.js",
     "coveragePathIgnorePatterns": [
       "<rootDir>/src/locale/",
-      "<rootDir>/fixtures"
+      "<rootDir>/fixtures",
+      "<rootDir>/proxies"
     ],
     "coverageReporters": [
       "html",

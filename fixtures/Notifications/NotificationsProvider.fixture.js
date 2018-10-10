@@ -1,31 +1,23 @@
-import { NotificationsProvider } from '../../src/Notifications/NotificationsProvider';
+import React from 'react';
+
+import NotificationsProvider from '../../src/Notifications/NotificationsProvider';
+import DispatchNotificationButton from './DispatchNotificationButton';
 
 export default [
   {
-    component: NotificationsProvider,
-    name: 'One Message',
-    state: {
-      open: true
-    },
+    component: props => (
+      <div>
+        <DispatchNotificationButton notification={props.notification} />
+        <NotificationsProvider />
+      </div>
+    ),
     props: {
-      removeNotification: () => console.log('remove notification'),
-      clearNotifications: () => console.log('clear notifications'),
+      notification: {
+        message: 'alert!'
+      }
+    },
+    reduxState: {
       notifications: [{ message: 'First and only Message' }]
-    }
-  },
-  {
-    component: NotificationsProvider,
-    name: 'Two Messages',
-    state: {
-      open: true
-    },
-    props: {
-      removeNotification: () => console.log('remove notification'),
-      clearNotifications: () => console.log('clear notifications'),
-      notifications: [
-        { message: 'First Message' },
-        { message: 'Second Message' }
-      ]
     }
   }
 ];
