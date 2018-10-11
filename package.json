@@ -19,7 +19,7 @@
     ]
   },
   "scripts": {
-    "build": "lingui extract --clean && lingui compile --strict && cross-env NODE_ENV=production nwb build-react-component",
+    "build": "lingui extract --clean && lingui compile && cross-env NODE_ENV=production nwb build-react-component",
     "clean": "nwb clean-module && nwb clean-demo",
     "prepublishOnly": "npm run build",
     "start": "cosmos",
@@ -31,7 +31,7 @@
     "cosmos:export": "cosmos-export",
     "locale:extract": "lingui extract",
     "locale:clean": "lingui extract --clean",
-    "locale:compile": "lingui compile --strict",
+    "locale:compile": "lingui compile",
     "locale:add": "lingui add-locale"
   },
   "dependencies": {
