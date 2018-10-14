@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`layout actions should create toggleDrawer action 1`] = `
+Object {
+  "type": "openpatch.ui-core.layout.TOGGLE_DRAWER",
+}
+`;

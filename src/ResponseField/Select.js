@@ -31,7 +31,6 @@ Select.propTypes = {
 
 Select.defaultProps = {
   onChange: () => {},
-  edit: false,
   options: [],
   value: 0
 };

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme actions should create change theme action 1`] = `
+Object {
+  "payload": Object {
+    "primary": "#000",
+    "secondary": "#FFF",
+  },
+  "type": "openpatch.ui-core.theme.CHANGE_THEME",
+}
+`;
+
+exports[`theme actions should create reset theme action 1`] = `
+Object {
+  "type": "openpatch.ui-core.theme.RESET_THEME",
+}
+`;

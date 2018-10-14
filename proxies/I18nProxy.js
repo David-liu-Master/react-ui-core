@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { I18nProvider } from '../src/I18n/I18nProvider';
+import { I18nProvider } from '../src/I18nProvider';
 import olocale from '../src/locale';
 
 export const createI18nProxy = ({ locale }) => {

@@ -1,0 +1,68 @@
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+
+import theme from './style/theme';
+import { toggleDrawer } from './redux/layout/actions';
+
+const styles = theme => ({
+  logo: {
+    display: 'inline-flex',
+    marginLeft: theme.spacing.unit * 2
+  },
+  middle: {
+    flexGrow: 1,
+    padding: theme.spacing.unit,
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  appBar: {
+    maxHeight: 64,
+    zIndex: 1250
+  }
+});
+
+export class LogoAppBar extends React.Component {
+  render() {
+    const { classes, toggleDrawer, middle, logo } = this.props;
+    return (
+      <AppBar className={classes.appBar} position="absolute">
+        <Toolbar>
+          <IconButton onClick={toggleDrawer} color="inherit">
+            <MenuIcon />
+          </IconButton>
+          <div className={classes.logo}>{logo}</div>
+          <div className={classes.middle}>{middle}</div>
+          Menu
+        </Toolbar>
+      </AppBar>
+    );
+  }
+}
+
+LogoAppBar.propTypes = {
+  classes: PropTypes.object.isRequired,
+  children: PropTypes.node,
+  logo: PropTypes.node,
+  middle: PropTypes.node,
+  toggleDrawer: PropTypes.func
+};
+
+LogoAppBar.defaultProps = {
+  toggleDrawer: () => {},
+  logo: <theme.Logo />
+};
+
+const mapDispatchToProps = dispatch => ({
+  toggleDrawer: () => dispatch(toggleDrawer())
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(withStyles(styles)(LogoAppBar));

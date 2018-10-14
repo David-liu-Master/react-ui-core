@@ -203,7 +203,6 @@ Matrix.propTypes = {
 
 Matrix.defaultProps = {
   onChange: () => {},
-  edit: false,
   value: {
     values: {},
     additionalValues: {},

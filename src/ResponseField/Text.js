@@ -11,7 +11,13 @@ class Text extends React.Component {
   render() {
     const { input, value } = this.props;
     return (
-      <TextField {...input} fullWidth value={value} onChange={this.onChange} />
+      <TextField
+        {...input}
+        variant="outlined"
+        fullWidth
+        value={value}
+        onChange={this.onChange}
+      />
     );
   }
 }
@@ -20,7 +26,6 @@ Text.propTypes = {
   input: PropTypes.shape({
     multiline: PropTypes.bool,
     type: PropTypes.oneOf(['number', 'text', 'email', 'password']),
-    defaultValue: PropTypes.string,
     rows: PropTypes.number
   }),
   value: PropTypes.string
@@ -28,7 +33,6 @@ Text.propTypes = {
 
 Text.defaultProps = {
   onChange: () => {},
-  edit: false,
   input: {},
   content: {},
   value: ''
