@@ -71,6 +71,7 @@
     "husky": "^1.1.2",
     "jest": "^23.6.0",
     "jest-enzyme": "^7.0.0",
+    "lint-staged": "^7.3.0",
     "nwb": "0.23.x",
     "prettier": "^1.14.3",
     "prop-types": "^15.6.2",
@@ -93,6 +94,11 @@
   "keywords": [
     "react-component"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
       "npm run prettier --single-quote --write",
