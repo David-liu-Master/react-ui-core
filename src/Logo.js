@@ -14,8 +14,7 @@ const styles = theme => ({
   text: {
     marginLeft: theme.spacing.unit,
     fontWeight: 1000,
-    fontSize: 18,
-    fontStretch: 'condensed'
+    fontSize: 16,
   }
 });
 

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 import theme from './style/theme';
 import customTheme from './style/theme.custom';
@@ -11,9 +12,16 @@ export class ThemeProvider extends React.Component {
   render() {
     const { children, theme } = this.props;
     return (
-      <MuiThemeProvider theme={customTheme(theme.primary, theme.secondary)}>
-        {children}
-      </MuiThemeProvider>
+      <React.Fragment>
+        <CssBaseline />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+        />
+        <MuiThemeProvider theme={customTheme(theme.primary, theme.secondary)}>
+          {children}
+        </MuiThemeProvider>
+      </React.Fragment>
     );
   }
 }

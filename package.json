@@ -1,6 +1,6 @@
 {
   "name": "@openpatch/ui-core",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "ui core for openpatch",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -39,7 +39,7 @@
     "highlight.js": "^9.12.0",
     "immer": "^1.7.2",
     "lodash": "^4.17.11",
-    "react-markdown": "^3.6.0",
+    "react-markdown": "^4.0.3",
     "reselect": "^4.0.0"
   },
   "peerDependencies": {
@@ -67,9 +67,9 @@
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "eslint-config-prettier": "^3.0.1",
-    "husky": "^0.14.3",
+    "husky": "^1.1.2",
     "jest": "^23.6.0",
-    "jest-enzyme": "^6.1.2",
+    "jest-enzyme": "^7.0.0",
     "nwb": "0.23.x",
     "prettier": "^1.14.3",
     "prop-types": "^15.6.2",

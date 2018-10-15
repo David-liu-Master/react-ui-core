@@ -11,6 +11,9 @@ const theme = (primary, secondary) =>
         main: secondary
       }
     },
+    typography: {
+      useNextVariants: true
+    },
     Logo
   });
 
