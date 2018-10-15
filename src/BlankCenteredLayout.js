@@ -22,7 +22,7 @@ const styles = theme => ({
 
 class BlankCenteredLayout extends React.Component {
   render() {
-    const { children } = this.props;
+    const { classes, children } = this.props;
     return <div className={classes.container}>{children}</div>;
   }
 }
