@@ -21,6 +21,9 @@ const styles = theme => ({
     justifyContent: 'space-around',
     width: '100%',
     marginTop: theme.spacing.unit * 2
+  },
+  button: {
+    paddingLeft: theme.spacing.unit
   }
 });
 
@@ -174,6 +177,7 @@ class LoginForm extends React.Component {
             <Trans id="openpatch.ui-core.register">Register</Trans>
           </Button>
           <Button
+            className={classes.button}
             variant="raised"
             disabled={status === 'sending'}
             color={isRegistering ? 'primary' : 'secondary'}
