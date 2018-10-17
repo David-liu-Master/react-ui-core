@@ -31,11 +31,9 @@
     'openpatch.ui-core.password': 'Password',
     'openpatch.ui-core.register': 'Register',
     'openpatch.ui-core.repeatPassword': 'Repeat Password',
-    'openpatch.ui-core.sd': 'SD',
     'openpatch.ui-core.standardDeviation': 'SD',
     'openpatch.ui-core.unsupported': 'Unsupported',
     'openpatch.ui-core.username': 'Username',
-    'openpatch.ui-core.var': 'Var',
     'openpatch.ui-core.variance': 'Var'
   }
 };
