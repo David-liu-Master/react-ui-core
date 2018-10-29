@@ -9,7 +9,6 @@ test:
   stage: test
   script:
     - yarn install
-    - yarn test
     - yarn test:coverage
   coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
 
