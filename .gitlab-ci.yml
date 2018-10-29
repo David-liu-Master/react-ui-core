@@ -10,8 +10,8 @@ test:
   script:
     - yarn install
     - yarn test
-    # - yarn test:coverage
-    # coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
+    - yarn test:coverage
+  coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
 
 pages:
   stage: deploy
