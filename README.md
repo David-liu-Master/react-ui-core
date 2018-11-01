@@ -4,7 +4,7 @@
 [![npm package][npm-badge]][npm]
 [![Coverage][coverage-badge]][coverage]
 
-The core component library for OpenPatch. It contains all shared react components and redux logic. https://openpatch.gitlab.io/ui-core/
+The core component library for OpenPatch. It contains all shared react components and redux logic.
 
 # Setup
 
