@@ -81,7 +81,7 @@
     "react-cosmos-test": "4.6.4",
     "react-dom": "16.6.1",
     "react-test-renderer": "16.6.1",
-    "react-redux": "5.1.0",
+    "react-redux": "5.1.1",
     "redux": "4.0.1"
   },
   "author": "Mike Barkmin",
