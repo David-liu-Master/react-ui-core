@@ -53,7 +53,7 @@
     "redux": "^4.0.0"
   },
   "devDependencies": {
-    "@lingui/cli": "2.7.0",
+    "@lingui/cli": "2.7.1",
     "@lingui/loader": "2.7.0",
     "@lingui/macro": "2.7.0",
     "@lingui/react": "2.7.0",
