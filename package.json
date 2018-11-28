@@ -80,8 +80,8 @@
     "react-cosmos-redux-proxy": "4.6.1",
     "react-cosmos-test": "4.6.4",
     "react-dom": "16.6.3",
-    "react-test-renderer": "16.6.3",
     "react-redux": "5.1.1",
+    "react-test-renderer": "16.6.3",
     "redux": "4.0.1"
   },
   "author": "Mike Barkmin",
@@ -91,7 +91,7 @@
     "type": "git",
     "url": "git@gitlab.com:openpatch/ui-core.git"
   },
-  "postpublish" : "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
+  "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
   "keywords": [
     "react-component"
   ],
