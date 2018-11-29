@@ -1,9 +1,11 @@
 import { getLanguage } from '../../../src/redux/i18n/selectors';
 
 const mockState = {
-  i18n: {
-    language: 'de',
-    locales: []
+  core: {
+    i18n: {
+      language: 'de',
+      locales: []
+    }
   },
   otherThings: {}
 };

@@ -9,7 +9,9 @@ export default (state = initalState, action) =>
     switch (action.type) {
       case CHANGE_NOTE:
         draft.note = action.payload.note;
+        break;
       case CHANGE_RESPONSE:
         draft.responses[action.payload.id] = action.payload.response;
+        break;
     }
   });

@@ -17,7 +17,9 @@ export default [
       }
     },
     reduxState: {
-      notifications: [{ message: 'First and only Message' }]
+      core: {
+        notifications: [{ message: 'First and only Message' }]
+      }
     }
   }
 ];

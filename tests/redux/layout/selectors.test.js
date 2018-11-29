@@ -1,8 +1,10 @@
 import { getLayout, getDrawerOpen } from '../../../src/redux/layout/selectors';
 
 const mockState = {
-  layout: {
-    drawerOpen: false
+  core: {
+    layout: {
+      drawerOpen: false
+    }
   },
   otherThings: {}
 };

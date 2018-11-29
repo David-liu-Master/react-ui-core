@@ -11,7 +11,7 @@ class DispatchNotificationButton extends React.Component {
     return (
       <Button
         color="primary"
-        variant="raised"
+        variant="contained"
         onClick={() => addNotification(notification)}
       >
         Dispatch Notification
@@ -21,7 +21,8 @@ class DispatchNotificationButton extends React.Component {
 }
 
 DispatchNotificationButton.propTypes = {
-  notification: PropTypes.object
+  notification: PropTypes.object,
+  addNotification: PropTypes.func
 };
 
 DispatchNotificationButton.defaultProps = {

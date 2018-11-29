@@ -1,3 +1,1 @@
-import { createSelector } from 'reselect';
-
-export const getNotifications = state => state.notifications;
+export const getNotifications = state => state.core.notifications;

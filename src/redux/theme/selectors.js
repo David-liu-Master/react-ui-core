@@ -1,1 +1,1 @@
-export const getTheme = state => state.theme;
+export const getTheme = state => state.core.theme;

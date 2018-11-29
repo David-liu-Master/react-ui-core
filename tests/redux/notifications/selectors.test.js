@@ -1,7 +1,9 @@
 import { getNotifications } from '../../../src/redux/notifications/selectors';
 
 const mockState = {
-  notifications: [],
+  core: {
+    notifications: []
+  },
   otherThings: {
     stuff: 'Hi'
   }
@@ -9,6 +11,6 @@ const mockState = {
 
 describe('Notifications selectors', () => {
   it('should select notifications', () => {
-    expect(getNotifications(mockState)).toEqual(mockState.notifications);
+    expect(getNotifications(mockState)).toEqual(mockState.core.notifications);
   });
 });
