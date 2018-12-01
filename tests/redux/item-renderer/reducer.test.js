@@ -1,5 +1,8 @@
 import reducer from '../../../src/redux/item-renderer/reducer';
-import { changeResponse, changeNote } from '../../../src/redux/item-renderer/actions';
+import {
+  changeResponse,
+  changeNote
+} from '../../../src/redux/item-renderer/actions';
 
 const mockState = {
   note: '',

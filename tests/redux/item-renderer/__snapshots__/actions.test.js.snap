@@ -15,6 +15,6 @@ Object {
     "id": 2,
     "response": "This is a response",
   },
-  "type": "openpatch.ui-core.CHANGE_NOTE",
+  "type": "openpatch.ui-core.CHANGE_RESPONSE",
 }
 `;
