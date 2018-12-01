@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { setupI18n } from '@lingui/core';
 import { I18nProvider as I18P } from '@lingui/react';
 import _merge from 'lodash/merge';
 
@@ -14,14 +15,14 @@ export const mergeLocales = locales => {
   return locale;
 };
 
+export const i18n = setupI18n();
+
 export class I18nProvider extends React.Component {
   render() {
     const { children, language, locales } = this.props;
-    return (
-      <I18P language={language} catalogs={mergeLocales(locales)}>
-        {children}
-      </I18P>
-    );
+    i18n.load(mergeLocales(locales));
+    i18n.activate(language);
+    return <I18P i18n={i18n}>{children}</I18P>;
   }
 }
 
