@@ -5,17 +5,17 @@ import LogoAppBar from '../src/LogoAppBar';
 export default [
   {
     component: LogoAppBar,
-    reduxState: {}
+    reduxState: { core: {} }
   },
   {
     component: LogoAppBar,
-    reduxState: {}
+    reduxState: { core: {} }
   },
   {
     component: LogoAppBar,
     props: {
       middle: <div>Search</div>
     },
-    reduxState: {}
+    reduxState: { core: {} }
   }
 ];

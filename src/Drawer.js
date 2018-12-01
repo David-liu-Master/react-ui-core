@@ -91,8 +91,8 @@ export class Drawer extends React.Component {
         <Divider />
         <div className={classes.content}>
           <div className={classes.sections}>
-            {sections.map(section => (
-              <DrawerSection {...section} />
+            {sections.map((section, i) => (
+              <DrawerSection key={i} {...section} />
             ))}
           </div>
           <div className={classes.footer}>
@@ -145,7 +145,7 @@ Drawer.propTypes = {
       links: PropTypes.arrayOf(
         PropTypes.shape({
           label: PropTypes.string.isRequired,
-          icon: PropTypes.node.isRequired,
+          Icon: PropTypes.func.isRequired,
           href: PropTypes.string.isRequired
         })
       )

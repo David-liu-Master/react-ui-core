@@ -34,7 +34,7 @@ DrawerSection.propTypes = {
   links: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
-      Icon: PropTypes.node.isRequired,
+      Icon: PropTypes.func.isRequired,
       href: PropTypes.string.isRequired
     })
   )

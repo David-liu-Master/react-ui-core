@@ -28,8 +28,8 @@ class DrawerLayout extends React.Component {
 DrawerLayout.propTypes = {
   classes: PropTypes.object.isRequired,
   children: PropTypes.node,
-  drawer: Drawer.propTypes,
-  appBar: LogoAppBar.propTypes
+  drawer: PropTypes.shape(Drawer.propTypes),
+  appBar: PropTypes.shape(LogoAppBar.propTypes)
 };
 
 export default withStyles(styles)(DrawerLayout);

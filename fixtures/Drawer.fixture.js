@@ -101,8 +101,10 @@ export default [
       }
     },
     reduxState: {
-      layout: {
-        drawerOpen: true
+      core: {
+        layout: {
+          drawerOpen: true
+        }
       }
     }
   },
@@ -112,8 +114,10 @@ export default [
       variant: 'temporary'
     },
     reduxState: {
-      layout: {
-        drawerOpen: true
+      core: {
+        layout: {
+          drawerOpen: true
+        }
       }
     }
   }
