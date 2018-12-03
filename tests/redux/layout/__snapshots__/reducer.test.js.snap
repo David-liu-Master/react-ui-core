@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`layout reducer should reduce toggleDrawer 1`] = `
+Object {
+  "drawerOpen": true,
+  "isRequesting": false,
+  "remoteSections": Object {},
+  "requestingFailed": false,
+}
+`;
+
+exports[`layout reducer should return initialState 1`] = `
+Object {
+  "drawerOpen": false,
+  "isRequesting": false,
+  "remoteSections": Object {},
+  "requestingFailed": false,
+}
+`;

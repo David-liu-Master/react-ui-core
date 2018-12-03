@@ -7,15 +7,10 @@ const mockState = {
 
 describe('layout reducer', () => {
   it('should return initialState', () => {
-    expect(reducer(undefined, {})).toEqual({
-      drawerOpen: false
-    });
+    expect(reducer(undefined, {})).toMatchSnapshot();
   });
   it('should reduce toggleDrawer', () => {
-    expect(reducer(undefined, toggleDrawer())).toEqual({
-      drawerOpen: true
-    });
-
+    expect(reducer(undefined, toggleDrawer())).toMatchSnapshot();
     expect(reducer(mockState, toggleDrawer())).toEqual({
       drawerOpen: false
     });
