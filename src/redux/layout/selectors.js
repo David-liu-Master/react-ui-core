@@ -8,3 +8,8 @@ export const getDrawerOpen = createSelector(
     return layout.drawerOpen;
   }
 );
+
+export const getRemoteSections = createSelector(
+  [getLayout],
+  layout => layout.remoteSections
+);
