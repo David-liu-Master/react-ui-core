@@ -19,9 +19,15 @@ class RemoteDrawerLayout extends React.Component {
   render() {
     const { remoteSections, drawer, ...props } = this.props;
 
+    let combinedSections = [...Object.values(remoteSections)];
+
+    if (drawer.sections) {
+      combinedSections = [...drawer.sections, ...combinedSections];
+    }
+
     const remoteDrawer = {
       ...drawer,
-      sections: [...drawer.sections, ...Object.values(remoteSections)]
+      sections: combinedSections
     };
 
     return <DrawerLayout drawer={remoteDrawer} {...props} />;
@@ -38,7 +44,8 @@ RemoteDrawerLayout.propTypes = {
 
 RemoteDrawerLayout.defaultProps = {
   remoteSectionURLs: [],
-  remoteSections: {}
+  remoteSections: {},
+  drawer: {}
 };
 
 const mapStateToProps = state => ({
