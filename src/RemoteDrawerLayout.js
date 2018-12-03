@@ -23,8 +23,7 @@ class RemoteDrawerLayout extends React.Component {
     let combinedSections = [...Object.values(remoteSections)];
 
     combinedSections = _map(combinedSections, section => {
-      section.useRouter = useRouter;
-      return section;
+      return { ...section, useRouter };
     });
 
     if (drawer.sections) {
