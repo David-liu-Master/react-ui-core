@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import { ServerLocation } from '@reach/router';
+import { Router, ServerLocation } from '@reach/router';
 
 export const createReachRouterProxy = basepath => {
   function addBasepath(url) {
@@ -19,10 +19,10 @@ export const createReachRouterProxy = basepath => {
       fixture: { url = '/' }
     } = rest;
 
-    return React.createElement(
-      ServerLocation,
-      { url: addBasepath(url) },
-      React.createElement(NextProxy, { ...rest, nextProxy: next() })
+    return (
+      <ServerLocation url={addBasepath(url)}>
+        <NextProxy {...rest} nextProxy={next()} />
+      </ServerLocation>
     );
   };
 };

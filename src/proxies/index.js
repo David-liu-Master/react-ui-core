@@ -8,6 +8,6 @@ export default {
   ReduxProxy,
   I18nProxy,
   NotificationsProxy,
-  ReachRouterProxy,
-  ThemeProxy
+  ThemeProxy,
+  ReachRouterProxy
 };
