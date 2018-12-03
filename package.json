@@ -1,6 +1,6 @@
 {
   "name": "@openpatch/ui-core",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "ui core for openpatch",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -59,6 +59,7 @@
     "@lingui/macro": "2.7.2",
     "@lingui/react": "2.7.2",
     "@material-ui/core": "3.6.1",
+    "@reach/router": "^1.2.1",
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
     "babel-plugin-macros": "2.4.2",
