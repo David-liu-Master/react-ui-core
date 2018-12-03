@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ThemeProvider } from '../src/ThemeProvider';
+import { ThemeProvider } from '../ThemeProvider';
 
 export const createThemeProxy = () => {
   class ThemeProxy extends React.Component {
