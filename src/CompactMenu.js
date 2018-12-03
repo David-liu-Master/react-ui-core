@@ -44,13 +44,26 @@ class CompactMenu extends React.Component {
           buttonRef={node => {
             this.anchorEl = node;
           }}
+          color="inherit"
           aria-owns={open ? 'menu-list' : null}
           aria-haspopup="true"
           onClick={this.handleToggle}
         >
           <Icon>more_vert</Icon>
         </IconButton>
-        <Popper open={open} anchorEl={this.anchorEl} transition disablePortal>
+        <Popper
+          open={open}
+          anchorEl={this.anchorEl}
+          transition
+          modifiers={{
+            flip: {
+              enabled: true
+            },
+            preventOverflow: {
+              enabled: true
+            }
+          }}
+        >
           {({ TransitionProps, placement }) => (
             <Grow
               {...TransitionProps}

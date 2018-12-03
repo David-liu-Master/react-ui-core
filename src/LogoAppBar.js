@@ -29,7 +29,7 @@ const styles = theme => ({
 
 export class LogoAppBar extends React.Component {
   render() {
-    const { classes, toggleDrawer, middle, logo } = this.props;
+    const { classes, toggleDrawer, middle, logo, right } = this.props;
     return (
       <AppBar className={classes.appBar} position="absolute">
         <Toolbar>
@@ -38,7 +38,7 @@ export class LogoAppBar extends React.Component {
           </IconButton>
           <div className={classes.logo}>{logo}</div>
           <div className={classes.middle}>{middle}</div>
-          Menu
+          {right}
         </Toolbar>
       </AppBar>
     );
@@ -50,7 +50,8 @@ LogoAppBar.propTypes = {
   children: PropTypes.node,
   logo: PropTypes.node,
   middle: PropTypes.node,
-  toggleDrawer: PropTypes.func
+  toggleDrawer: PropTypes.func,
+  right: PropTypes.node
 };
 
 LogoAppBar.defaultProps = {
