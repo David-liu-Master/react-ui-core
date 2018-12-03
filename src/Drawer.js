@@ -144,15 +144,13 @@ Drawer.propTypes = {
     primaryLinks: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string.isRequired,
-        href: PropTypes.string.isRequired,
-        component: PropTypes.func
+        href: PropTypes.string.isRequired
       })
     ),
     secondaryLinks: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string.isRequired,
-        href: PropTypes.string.isRequired,
-        component: PropTypes.func
+        href: PropTypes.string.isRequired
       })
     ),
     copyright: PropTypes.string

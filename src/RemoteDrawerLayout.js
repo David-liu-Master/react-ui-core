@@ -18,20 +18,12 @@ class RemoteDrawerLayout extends React.Component {
   }
 
   render() {
-    const {
-      remoteSections,
-      drawer,
-      remoteSectionLinkComponent,
-      ...props
-    } = this.props;
+    const { remoteSections, drawer, useRouter, ...props } = this.props;
 
     let combinedSections = [...Object.values(remoteSections)];
 
     combinedSections = _map(combinedSections, section => {
-      section.links = _map(section.links, link => {
-        link.component = remoteSectionLinkComponent;
-        return link;
-      });
+      section.useRouter = useRouter;
       return section;
     });
 
@@ -51,10 +43,7 @@ class RemoteDrawerLayout extends React.Component {
 RemoteDrawerLayout.propTypes = {
   remoteSectionURLs: PropTypes.arrayOf(PropTypes.string),
   remoteSections: PropTypes.object,
-  remoteSectionLinkComponent: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.string
-  ]),
+  useRouter: PropTypes.boolean,
   fetchRemoteSection: PropTypes.func.isRequired,
   appBar: PropTypes.shape(DrawerLayout.propTypes.appBar),
   drawer: PropTypes.shape(DrawerLayout.propTypes.drawer)
@@ -63,7 +52,7 @@ RemoteDrawerLayout.propTypes = {
 RemoteDrawerLayout.defaultProps = {
   remoteSectionURLs: [],
   remoteSections: {},
-  remoteSectionLinkComponent: 'a',
+  useRouter: false,
   drawer: {}
 };
 

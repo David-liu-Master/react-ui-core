@@ -7,27 +7,40 @@ import Icon from '@material-ui/core/Icon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import Divider from '@material-ui/core/Divider';
+import { Link } from '@reach/router';
 
 class DrawerSection extends React.Component {
   render() {
-    const { label, links } = this.props;
+    const { useRouter, label, links } = this.props;
     return (
       <div>
         <List component="nav">
           {label && <ListSubheader>{label}</ListSubheader>}
-          {links.map(link => (
-            <ListItem
-              component={link.component ? link.component : 'a'}
-              href={link.href}
-              key={link.label}
-              button
-            >
-              <ListItemIcon>
-                <Icon>{link.icon}</Icon>
-              </ListItemIcon>
-              <ListItemText inset primary={link.label} />
-            </ListItem>
-          ))}
+          {links.map(link => {
+            if (useRouter) {
+              return (
+                <ListItem
+                  component={Link}
+                  to={link.href}
+                  key={link.label}
+                  button
+                >
+                  <ListItemIcon>
+                    <Icon>{link.icon}</Icon>
+                  </ListItemIcon>
+                  <ListItemText inset primary={link.label} />
+                </ListItem>
+              );
+            }
+            return (
+              <ListItem component="a" href={link.href} key={link.label} button>
+                <ListItemIcon>
+                  <Icon>{link.icon}</Icon>
+                </ListItemIcon>
+                <ListItemText inset primary={link.label} />
+              </ListItem>
+            );
+          })}
         </List>
         <Divider />
       </div>
@@ -37,12 +50,12 @@ class DrawerSection extends React.Component {
 
 DrawerSection.propTypes = {
   label: PropTypes.string,
+  useRouter: PropTypes.boolean,
   links: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
       icon: PropTypes.string.isRequired,
-      href: PropTypes.string.isRequired,
-      component: PropTypes.func
+      href: PropTypes.string.isRequired
     })
   )
 };
