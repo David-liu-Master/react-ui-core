@@ -87,7 +87,7 @@
     "react-redux": "5.1.1",
     "react-test-renderer": "16.6.3",
     "redux": "4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "2.3.0"
   },
   "author": "Mike Barkmin",
   "homepage": "https://openpatch.gitlab.io/ui-core",
