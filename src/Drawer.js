@@ -139,29 +139,20 @@ export class Drawer extends React.Component {
 Drawer.propTypes = {
   classes: PropTypes.object.isRequired,
   logo: PropTypes.node,
-  sections: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string,
-      links: PropTypes.arrayOf(
-        PropTypes.shape({
-          label: PropTypes.string.isRequired,
-          icon: PropTypes.string.isRequired,
-          href: PropTypes.string.isRequired
-        })
-      )
-    })
-  ),
+  sections: PropTypes.arrayOf(PropTypes.shape(DrawerSection.propTypes)),
   footer: PropTypes.shape({
     primaryLinks: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string.isRequired,
-        href: PropTypes.string.isRequired
+        href: PropTypes.string.isRequired,
+        component: PropTypes.func
       })
     ),
     secondaryLinks: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string.isRequired,
-        href: PropTypes.string.isRequired
+        href: PropTypes.string.isRequired,
+        component: PropTypes.func
       })
     ),
     copyright: PropTypes.string

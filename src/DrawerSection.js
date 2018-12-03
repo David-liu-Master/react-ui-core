@@ -16,7 +16,12 @@ class DrawerSection extends React.Component {
         <List component="nav">
           {label && <ListSubheader>{label}</ListSubheader>}
           {links.map(link => (
-            <ListItem component="a" href={link.href} key={link.label} button>
+            <ListItem
+              component={link.component ? link.component : 'a'}
+              href={link.href}
+              key={link.label}
+              button
+            >
               <ListItemIcon>
                 <Icon>{link.icon}</Icon>
               </ListItemIcon>
@@ -36,7 +41,8 @@ DrawerSection.propTypes = {
     PropTypes.shape({
       label: PropTypes.string.isRequired,
       icon: PropTypes.string.isRequired,
-      href: PropTypes.string.isRequired
+      href: PropTypes.string.isRequired,
+      component: PropTypes.func
     })
   )
 };
