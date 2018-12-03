@@ -27,6 +27,10 @@ export class I18nProvider extends React.Component {
 }
 
 I18nProvider.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
   language: PropTypes.string,
   locales: PropTypes.arrayOf(
     PropTypes.objectOf(

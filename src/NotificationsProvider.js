@@ -3,27 +3,28 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import Notification from './Notification';
-import { removeNotification, clearNotifications } from './redux/notifications/actions';
+import {
+  removeNotification,
+  clearNotifications
+} from './redux/notifications/actions';
 import { getNotifications } from './redux/notifications/selectors';
 
 export class NotificationsProvider extends React.Component {
   constructor(props) {
     super(props);
 
+    const { clearNotifications } = props;
+    clearNotifications();
+
     this.state = {
       transition: undefined,
       open: false
     };
   }
-  componentWillMount() {
-    // clear notifications
-    const { clearNotifications } = this.props;
-    clearNotifications();
-  }
 
-  componentWillUpdate = nextProps => {
+  componentDidUpdate = (prevProps, prevState) => {
     const { notifications } = this.props;
-    if (notifications.length > 0 && !this.state.open) {
+    if (notifications.length > 0 && !prevState.open) {
       this.setState({
         open: true
       });
@@ -43,7 +44,7 @@ export class NotificationsProvider extends React.Component {
   };
 
   render() {
-    const { children, notifications } = this.props;
+    const { notifications } = this.props;
     let activeNotification = notifications[0];
     if (!activeNotification) {
       return null;

@@ -3,7 +3,6 @@ import produce from 'immer';
 import { CHANGE_THEME, RESET_THEME } from './constants';
 
 import theme from '../../style/theme';
-import customTheme from '../../style/theme.custom';
 
 const initialState = {
   primary: theme.palette.primary.main,

@@ -51,7 +51,8 @@
     "@material-ui/icons": "3.x",
     "react": "16.x",
     "react-redux": "^5.0.7",
-    "redux": "^4.0.0"
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@lingui/cli": "2.7.2",
@@ -87,7 +88,8 @@
     "react-dom": "16.6.3",
     "react-redux": "5.1.1",
     "react-test-renderer": "16.6.3",
-    "redux": "4.0.1"
+    "redux": "4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "author": "Mike Barkmin",
   "homepage": "https://openpatch.gitlab.io/ui-core",

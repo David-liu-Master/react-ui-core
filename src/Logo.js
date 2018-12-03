@@ -14,7 +14,7 @@ const styles = theme => ({
   text: {
     marginLeft: theme.spacing.unit,
     fontWeight: 1000,
-    fontSize: 16,
+    fontSize: 16
   }
 });
 
@@ -84,6 +84,7 @@ class Logo extends React.Component {
 }
 
 Logo.propTypes = {
+  classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired,
   hideText: PropTypes.bool,
   inverted: PropTypes.bool,

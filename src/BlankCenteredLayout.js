@@ -28,6 +28,7 @@ class BlankCenteredLayout extends React.Component {
 }
 
 BlankCenteredLayout.propTypes = {
+  classes: PropTypes.object.isRequired,
   children: PropTypes.node
 };
 

@@ -17,9 +17,7 @@ class FormatProvider extends React.Component {
 
   dispatch = action => {
     const { reducer } = this.props;
-    const prevState = this.state;
     const nextState = reducer(this.state, action);
-    console.log(prevState, action, nextState);
     this.setState(nextState);
   };
 

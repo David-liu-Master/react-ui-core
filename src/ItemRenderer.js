@@ -10,7 +10,7 @@ import _map from 'lodash/map';
 import MarkdownRenderer from './MarkdownRenderer';
 import { changeNote, changeResponse } from './redux/item-renderer/actions';
 
-const styles = theme => ({});
+const styles = () => ({});
 
 export class ItemRenderer extends React.Component {
   onNoteChange = e => {
@@ -27,16 +27,7 @@ export class ItemRenderer extends React.Component {
   };
 
   render() {
-    const {
-      classes,
-      FormatRenderer,
-      item,
-      state,
-      hidden,
-      dispatch,
-      onResponseChange,
-      onNoteChange
-    } = this.props;
+    const { FormatRenderer, item, state, hidden, dispatch } = this.props;
 
     if (!FormatRenderer) {
       return <Trans id="openpatch.ui-core.unsupported">Unsupported</Trans>;
@@ -45,7 +36,6 @@ export class ItemRenderer extends React.Component {
     const assignment = _get(item, ['assignment']);
     const publicContent = _get(item, ['content', 'public']);
     const responses = _get(item, ['responses']);
-    const allow_note = _get(item, ['allow_note']);
 
     return (
       <div style={{ display: !hidden ? 'block' : 'none' }}>
@@ -93,7 +83,7 @@ ItemRenderer.propTypes = {
   }),
   state: PropTypes.object,
   hidden: PropTypes.bool,
-  dispatch: PropTyes.func,
+  dispatch: PropTypes.func,
   onResponseChange: PropTypes.func,
   onNoteChange: PropTypes.func
 };
