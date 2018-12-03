@@ -1,5 +1,3 @@
-import StarIcon from '@material-ui/icons/Star';
-
 import DrawerSection from '../src/DrawerSection';
 
 export default [
@@ -10,7 +8,7 @@ export default [
       links: [
         {
           label: 'Test',
-          Icon: StarIcon,
+          icon: 'star',
           href: '/star'
         }
       ]
@@ -22,7 +20,7 @@ export default [
       links: [
         {
           label: 'Test',
-          Icon: StarIcon,
+          icon: 'star',
           href: '/star'
         }
       ]

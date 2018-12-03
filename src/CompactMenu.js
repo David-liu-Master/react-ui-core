@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
+import Icon from '@material-ui/core/Icon';
 import Paper from '@material-ui/core/Paper';
 import MenuList from '@material-ui/core/MenuList';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -9,7 +10,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Grow from '@material-ui/core/Grow';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Popper from '@material-ui/core/Popper';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 class CompactMenu extends React.Component {
   constructor(props) {
@@ -48,7 +48,7 @@ class CompactMenu extends React.Component {
           aria-haspopup="true"
           onClick={this.handleToggle}
         >
-          <MoreVertIcon />
+          <Icon>more_vert</Icon>
         </IconButton>
         <Popper open={open} anchorEl={this.anchorEl} transition disablePortal>
           {({ TransitionProps, placement }) => (
@@ -66,7 +66,7 @@ class CompactMenu extends React.Component {
                     {items.map(item => (
                       <MenuItem key={item.label} onClick={item.onClick}>
                         <ListItemIcon>
-                          <item.Icon />
+                          <Icon>{item.icon}</Icon>
                         </ListItemIcon>
                         <ListItemText inset primary={item.label} />
                       </MenuItem>
@@ -86,7 +86,7 @@ CompactMenu.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
-      Icon: PropTypes.func.isRequired,
+      icon: PropTypes.string.isRequired,
       onClick: PropTypes.func.isRequired
     })
   )

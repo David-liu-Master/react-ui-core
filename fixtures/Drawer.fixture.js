@@ -1,7 +1,3 @@
-import StarIcon from '@material-ui/icons/Star';
-import DeleteIcon from '@material-ui/icons/Delete';
-import HomeIcon from '@material-ui/icons/Home';
-
 import Drawer from '../src/Drawer';
 
 export default [
@@ -13,17 +9,17 @@ export default [
           links: [
             {
               label: 'Link 1',
-              Icon: StarIcon,
+              icon: 'star',
               href: 'http://google.de'
             },
             {
               label: 'Link 2',
-              Icon: DeleteIcon,
+              icon: 'delete',
               href: 'http://google.de'
             },
             {
               label: 'Link 3',
-              Icon: HomeIcon,
+              icon: 'home',
               href: 'http://google.de'
             }
           ]
@@ -33,17 +29,17 @@ export default [
           links: [
             {
               label: 'Link 1',
-              Icon: StarIcon,
+              icon: 'star',
               href: 'http://google.de'
             },
             {
               label: 'Link 2',
-              Icon: DeleteIcon,
+              icon: 'delete',
               href: 'http://google.de'
             },
             {
               label: 'Link 3',
-              Icon: HomeIcon,
+              icon: 'home',
               href: 'http://google.de'
             }
           ]
@@ -52,17 +48,17 @@ export default [
           links: [
             {
               label: 'Link 1',
-              Icon: StarIcon,
+              icon: 'star',
               href: 'http://google.de'
             },
             {
               label: 'Link 2',
-              Icon: DeleteIcon,
+              icon: 'delete',
               href: 'http://google.de'
             },
             {
               label: 'Link 3',
-              Icon: HomeIcon,
+              icon: 'home',
               href: 'http://google.de'
             }
           ]

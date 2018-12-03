@@ -1,7 +1,3 @@
-import StarIcon from '@material-ui/icons/Star';
-import DeleteIcon from '@material-ui/icons/Delete';
-import HomeIcon from '@material-ui/icons/Home';
-
 import CompactMenu from '../src/CompactMenu';
 
 export default [
@@ -11,17 +7,17 @@ export default [
       items: [
         {
           label: 'star',
-          Icon: StarIcon,
+          icon: 'star',
           onClick: () => console.log('star')
         },
         {
           label: 'delete',
-          Icon: DeleteIcon,
+          icon: 'delete',
           onClick: () => console.log('delete')
         },
         {
           label: 'home',
-          Icon: HomeIcon,
+          icon: 'home',
           onClick: () => console.log('home')
         }
       ]

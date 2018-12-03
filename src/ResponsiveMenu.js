@@ -18,7 +18,7 @@ ResponsiveMenu.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
-      Icon: PropTypes.func.isRequired,
+      icon: PropTypes.string.isRequired,
       onClick: PropTypes.func.isRequired
     })
   ),

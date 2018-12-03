@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import Icon from '@material-ui/core/Icon';
 
 import theme from './style/theme';
 import { toggleDrawer } from './redux/layout/actions';
@@ -34,7 +34,7 @@ export class LogoAppBar extends React.Component {
       <AppBar className={classes.appBar} position="absolute">
         <Toolbar>
           <IconButton onClick={toggleDrawer} color="inherit">
-            <MenuIcon />
+            <Icon>menu</Icon>
           </IconButton>
           <div className={classes.logo}>{logo}</div>
           <div className={classes.middle}>{middle}</div>

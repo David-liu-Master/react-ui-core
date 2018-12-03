@@ -18,6 +18,10 @@ export class ThemeProvider extends React.Component {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
         />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
         <MuiThemeProvider theme={customTheme(theme.primary, theme.secondary)}>
           {children}
         </MuiThemeProvider>

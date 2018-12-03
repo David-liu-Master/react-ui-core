@@ -8,9 +8,8 @@ import TableRow from '@material-ui/core/TableRow';
 import Radio from '@material-ui/core/Radio/Radio';
 import Checkbox from '@material-ui/core/Checkbox/Checkbox';
 import IconButton from '@material-ui/core/IconButton/IconButton';
+import Icon from '@material-ui/core/Icon';
 import TextField from '@material-ui/core/TextField';
-import AddIcon from '@material-ui/icons/Add';
-import DeleteIcon from '@material-ui/icons/Delete';
 
 class Matrix extends React.Component {
   onChange = (e, rowId, columnId, additional = false) => {
@@ -159,7 +158,7 @@ class Matrix extends React.Component {
                     key={i + '.head'}
                   >
                     <IconButton onClick={() => this.onRowDelete(i)}>
-                      <DeleteIcon />
+                      <Icon>delete</Icon>
                     </IconButton>
                     <TextField
                       onChange={e => this.onRowChange(e, i)}
@@ -176,7 +175,7 @@ class Matrix extends React.Component {
               <TableRow>
                 <TableCell>
                   <IconButton onClick={this.onRowAdd}>
-                    <AddIcon />
+                    <Icon>add</Icon>
                   </IconButton>
                 </TableCell>
                 {columns.map((columns, k) => (

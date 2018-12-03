@@ -5,8 +5,8 @@ import { withStyles } from '@material-ui/core/styles';
 import MuiDrawer from '@material-ui/core/Drawer';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
+import Icon from '@material-ui/core/Icon';
 import Divider from '@material-ui/core/Divider';
-import MenuIcon from '@material-ui/icons/Menu';
 
 import theme from './style/theme';
 import DrawerSection from './DrawerSection';
@@ -82,7 +82,7 @@ export class Drawer extends React.Component {
           {variant === 'temporary' && (
             <React.Fragment>
               <IconButton onClick={toggleDrawer}>
-                <MenuIcon />
+                <Icon>menu</Icon>
               </IconButton>
               <div className={classes.logo}>{logo}</div>
             </React.Fragment>
@@ -145,7 +145,7 @@ Drawer.propTypes = {
       links: PropTypes.arrayOf(
         PropTypes.shape({
           label: PropTypes.string.isRequired,
-          Icon: PropTypes.func.isRequired,
+          icon: PropTypes.string.isRequired,
           href: PropTypes.string.isRequired
         })
       )

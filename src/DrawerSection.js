@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
+import Icon from '@material-ui/core/Icon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import Divider from '@material-ui/core/Divider';
@@ -17,7 +18,7 @@ class DrawerSection extends React.Component {
           {links.map(link => (
             <ListItem component="a" href={link.href} key={link.label} button>
               <ListItemIcon>
-                <link.Icon />
+                <Icon>{link.icon}</Icon>
               </ListItemIcon>
               <ListItemText inset primary={link.label} />
             </ListItem>
@@ -34,7 +35,7 @@ DrawerSection.propTypes = {
   links: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
-      Icon: PropTypes.func.isRequired,
+      icon: PropTypes.string.isRequired,
       href: PropTypes.string.isRequired
     })
   )
