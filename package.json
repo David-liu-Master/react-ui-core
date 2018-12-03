@@ -1,6 +1,6 @@
 {
   "name": "@openpatch/ui-core",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "ui core for openpatch",
   "main": "lib/index.js",
   "module": "es/index.js",
