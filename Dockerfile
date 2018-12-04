@@ -1,4 +1,4 @@
-FROM node:10-alpine@sha256:b3e157beaf4f780f6e6ed058a438989afb0e5174b812c089e731b9f75b4db416
+FROM node:10-alpine@sha256:35fcf0a48f57bef4bafa0f844f62edb659d036364a1d086995efe5b43ca0c4af
 
 ADD package.json /package.json
 
