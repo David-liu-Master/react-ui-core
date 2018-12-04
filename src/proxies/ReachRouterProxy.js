@@ -1,31 +1,28 @@
-/* eslint-disable */
 import React from 'react';
-import { Router, ServerLocation } from '@reach/router';
+import {
+  createMemorySource,
+  createHistory,
+  LocationProvider,
+  Location,
+  Router
+} from '@reach/router';
 
-export const createReachRouterProxy = basepath => {
-  function addBasepath(url) {
-    if (!basepath) {
-      return url;
-    }
-    if (!basepath.endsWith('/')) {
-      basepath = `${basepath}/`;
-    }
-    return `${basepath}${url}`;
-  }
-  return props => {
-    const { nextProxy, ...rest } = props;
-    const { value: NextProxy, next } = nextProxy;
-    const {
-      fixture: { url = '/' }
-    } = rest;
+export const withReachRouter = (WrappedComponent, path = '/*') => ({
+  url,
+  ...props
+}) => {
+  const source = createMemorySource(url);
+  const history = createHistory(source);
 
-    return (
-      <ServerLocation url={addBasepath(url)}>
-        <NextProxy {...rest} nextProxy={next()} />
-      </ServerLocation>
-    );
-  };
+  return (
+    <LocationProvider history={history}>
+      <Location>
+        {({ location }) => (
+          <Router location={location}>
+            <WrappedComponent {...props} path={path} />
+          </Router>
+        )}
+      </Location>
+    </LocationProvider>
+  );
 };
-
-export default createReachRouterProxy();
-/* eslint-enable */
