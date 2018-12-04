@@ -13,3 +13,8 @@ export const getRemoteSections = createSelector(
   [getLayout],
   layout => layout.remoteSections
 );
+
+export const getAppBarTitle = createSelector(
+  [getLayout],
+  layout => layout.appBarTitle
+);

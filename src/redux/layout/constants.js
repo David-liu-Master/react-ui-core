@@ -5,3 +5,5 @@ export const REMOTE_SECTION_COMMIT =
   'openpatch.ui-core.layout.REMOTE_SECTION_COMMIT';
 export const REMOTE_SECTION_ROLLBACK =
   'openpatch.ui-core.layout.REMOTE_SECTION_ROLLBACK';
+export const CHANGE_APP_BAR_TITLE =
+  'openpatch.ui-core.layout.CHANGE_APP_BAR_TITLE';

@@ -1,5 +1,6 @@
 import {
   TOGGLE_DRAWER,
+  CHANGE_APP_BAR_TITLE,
   REMOTE_SECTION_REQUEST,
   REMOTE_SECTION_ROLLBACK,
   REMOTE_SECTION_COMMIT
@@ -8,6 +9,15 @@ import {
 export function toggleDrawer() {
   return {
     type: TOGGLE_DRAWER
+  };
+}
+
+export function changeAppBarTitle(title) {
+  return {
+    type: CHANGE_APP_BAR_TITLE,
+    payload: {
+      title
+    }
   };
 }
 
@@ -24,7 +34,7 @@ export function fetchRemoteSection(url) {
       .then(function(json) {
         return dispatch(fetchRemoteSectionCommit(url, json));
       })
-      .catch(function(err) {
+      .catch(function() {
         return dispatch(fetchRemoteSectionRollback());
       });
   };

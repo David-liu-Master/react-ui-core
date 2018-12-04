@@ -1,3 +1,4 @@
 module.exports = {
-  publicUrl: '/ui-core/'
+  publicUrl: '/ui-core/',
+  port: 8990
 };
