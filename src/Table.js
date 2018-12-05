@@ -29,6 +29,8 @@ const cellTypes = {
 class Table extends React.Component {
   static propTypes = {
     additionalCellTypes: PropTypes.objectOf(PropTypes.func),
+    columns: PropTypes.arrayOf(PropTypes.object),
+    toolbar: PropTypes.shape(TableToolbar.propTypes),
     order: PropTypes.oneOf(['asc', 'desc']),
     orderBy: PropTypes.string,
     page: PropTypes.number,
@@ -40,14 +42,12 @@ class Table extends React.Component {
         id: PropTypes.number.isRequired
       })
     ),
-    columns: PropTypes.arrayOf(PropTypes.object),
     selected: PropTypes.arrayOf(PropTypes.number),
     onSelectRows: PropTypes.func,
     onDeselectRows: PropTypes.func,
     onSort: PropTypes.func,
     onPageChange: PropTypes.func,
-    onPageSizeChange: PropTypes.func,
-    toolbar: PropTypes.shape(TableToolbar.propTypes)
+    onPageSizeChange: PropTypes.func
   };
 
   static defaultProps = {

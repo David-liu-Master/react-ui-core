@@ -42,6 +42,7 @@
     "lodash": "^4.17.11",
     "react-ace": "^6.2.0",
     "react-markdown": "^4.0.3",
+    "redux-form": "^7.4.2",
     "reselect": "^4.0.0"
   },
   "peerDependencies": {
