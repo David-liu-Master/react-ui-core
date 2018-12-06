@@ -1,0 +1,10 @@
+export const INIT = 'openpatch.ui-core.table.INIT';
+export const SELECT_ROWS = 'openpatch.ui-core.table.SELECT_ROWS';
+export const DESELECT_ROWS = 'openpatch.ui-core.table.DESELECT_ROWS';
+export const SET_PAGE = 'openpatch.ui-core.table.SET_PAGE';
+export const SET_PAGE_SIZE = 'openpatch.ui-core.table.SET_PAGE_SIZE';
+export const SET_ROWS_COUNT = 'openpatch.ui-core.table.SET_ROWS_COUNT';
+export const SORT = 'openpatch.ui-core.table.SORT';
+export const ROWS_REQUEST = 'openpatch.ui-core.table.ROWS_REQUEST';
+export const ROWS_COMMIT = 'openpatch.ui-core.table.ROWS_COMMIT';
+export const ROWS_ROLLBACK = 'openpatch.ui-core.table.ROWS_ROLLBACK';

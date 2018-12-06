@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import _difference from 'lodash/difference';
 import MuiTable from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -83,11 +84,11 @@ class Table extends React.Component {
   };
 
   handleRequestSort = (event, property) => {
-    const newOrderBy = property;
-    let newOrder = 'desc';
     const { orderBy, order, onSort } = this.props;
 
-    if (orderBy === newOrder && order === newOrder) {
+    const newOrderBy = property;
+    let newOrder = 'desc';
+    if (orderBy === newOrderBy && order === newOrder) {
       newOrder = 'asc';
     }
 
@@ -137,7 +138,9 @@ class Table extends React.Component {
               orderBy={orderBy}
               onSelectAllClick={onSelectRows ? this.handleSelectAllClick : null}
               onRequestSort={onSort ? this.handleRequestSort : null}
-              rowCount={pageSize}
+              selectedAllOfPage={
+                _difference(selected, rows.map(row => row.id)).length === 0
+              }
               numSelected={selected.length}
               columns={columns}
             />

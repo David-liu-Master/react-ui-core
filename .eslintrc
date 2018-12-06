@@ -14,9 +14,4 @@
     "plugin:react/recommended",
     "plugin:jest/recommended"
   ],
-  "overrides": [
-    {
-      "excludeFiles": '*.fixture.js'
-    }
-  ]
 }

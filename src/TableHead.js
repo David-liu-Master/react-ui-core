@@ -14,7 +14,7 @@ class TableHead extends React.Component {
     order: PropTypes.oneOf(['asc', 'desc']),
     orderBy: PropTypes.string,
     numSelected: PropTypes.number,
-    rowCount: PropTypes.number,
+    selectedAllOfPage: PropTypes.bool,
     columns: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
@@ -40,7 +40,7 @@ class TableHead extends React.Component {
       order,
       orderBy,
       numSelected,
-      rowCount,
+      selectedAllOfPage,
       columns,
       onRequestSort
     } = this.props;
@@ -50,8 +50,8 @@ class TableHead extends React.Component {
           {onSelectAllClick && (
             <TableCell padding="checkbox">
               <Checkbox
-                indeterminate={numSelected > 0 && numSelected < rowCount}
-                checked={numSelected == rowCount}
+                indeterminate={numSelected > 0 && !selectedAllOfPage}
+                checked={selectedAllOfPage}
                 onChange={onSelectAllClick}
               />
             </TableCell>
