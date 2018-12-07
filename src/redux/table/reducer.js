@@ -11,7 +11,8 @@ import {
   SORT,
   ROWS_REQUEST,
   ROWS_COMMIT,
-  ROWS_ROLLBACK
+  ROWS_ROLLBACK,
+  REFRESH
 } from './constants';
 
 const initialState = {};
@@ -25,7 +26,8 @@ const initialTableState = {
   page: 0,
   pageSize: 5,
   order: 'asc',
-  orderBy: null
+  orderBy: null,
+  needsRefresh: false
 };
 
 export default (state = initialState, action) =>
@@ -36,6 +38,10 @@ export default (state = initialState, action) =>
         if (!(action.payload.tableId in draft)) {
           draft[action.payload.tableId] = initialTableState;
         }
+        break;
+      case REFRESH:
+        table = draft[action.payload.tableId];
+        table.needsRefresh = true;
         break;
       case SET_ROWS_COUNT:
         table = draft[action.payload.tableId];
@@ -71,6 +77,7 @@ export default (state = initialState, action) =>
         table = draft[action.payload.tableId];
         table.isFetching = true;
         table.hasFailed = false;
+        table.needsRefresh = false;
         break;
       case ROWS_COMMIT:
         table = draft[action.payload.tableId];

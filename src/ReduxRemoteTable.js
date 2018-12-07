@@ -38,7 +38,8 @@ class ReduxRemoteTable extends React.Component {
     handlePageChange: PropTypes.func.isRequired,
     handlePageSizeChange: PropTypes.func.isRequired,
     handleSort: PropTypes.func.isRequired,
-    fetchRows: PropTypes.func.isRequired
+    fetchRows: PropTypes.func.isRequired,
+    needsRefresh: PropTypes.bool
   };
 
   static defaultProps = {
@@ -58,13 +59,15 @@ class ReduxRemoteTable extends React.Component {
       page,
       pageSize,
       order,
-      orderBy
+      orderBy,
+      needsRefresh
     } = this.props;
     if (
       page != prevProps.page ||
       pageSize != prevProps.pageSize ||
       order != prevProps.order ||
-      orderBy != prevProps.orderBy
+      orderBy != prevProps.orderBy ||
+      needsRefresh
     ) {
       fetchRows(constructPagingURL(page, pageSize, order, orderBy));
     }
@@ -77,6 +80,7 @@ class ReduxRemoteTable extends React.Component {
       pageSize != nextProps.pageSize ||
       order != nextProps.order ||
       orderBy != nextProps.orderBy ||
+      nextProps.needsRefresh ||
       !_isEqual(rows, nextProps.rows) ||
       !_isEqual(selected, nextProps.selected);
     return update;

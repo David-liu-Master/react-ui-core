@@ -8,7 +8,8 @@ import {
   SORT,
   ROWS_REQUEST,
   ROWS_COMMIT,
-  ROWS_ROLLBACK
+  ROWS_ROLLBACK,
+  REFRESH
 } from './constants';
 
 export function init(tableId) {
@@ -116,6 +117,15 @@ function getRowsCommit(tableId, rows) {
 function getRowsRollback(tableId) {
   return {
     type: ROWS_ROLLBACK,
+    payload: {
+      tableId
+    }
+  };
+}
+
+export function refresh(tableId) {
+  return {
+    type: REFRESH,
     payload: {
       tableId
     }
