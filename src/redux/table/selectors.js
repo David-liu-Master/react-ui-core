@@ -8,8 +8,8 @@ export const getTableById = id =>
     table => table[id]
   );
 
-export const getSelectionForTableId = id =>
+export const getSelectedForTableId = id =>
   createSelector(
     [getTableById(id)],
-    table => table.selection
+    table => (table ? table.selected : [])
   );
