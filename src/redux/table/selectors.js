@@ -7,3 +7,9 @@ export const getTableById = id =>
     [getTable],
     table => table[id]
   );
+
+export const getSelectionForTableId = id =>
+  createSelector(
+    [getTableById(id)],
+    table => table.selection
+  );
