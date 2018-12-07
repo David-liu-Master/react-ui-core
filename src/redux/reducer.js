@@ -5,6 +5,7 @@ import notifications from './notifications/reducer';
 import theme from './theme/reducer';
 import { reducer as form } from '../form';
 import table from './table/reducer';
+import dialog from './dialog/reducer';
 
 export default combineReducers({
   i18n,
@@ -12,5 +13,6 @@ export default combineReducers({
   notifications,
   theme,
   form,
-  table
+  table,
+  dialog
 });

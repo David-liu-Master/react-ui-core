@@ -16,15 +16,16 @@ class ConfirmDialog extends React.Component {
       onConfirm,
       onCancel,
       content,
-      title
+      title,
+      disableBackdropClick
     } = this.props;
     return (
       <Dialog
-        disableBackdropClick
-        disableEscapeKeyDown
+        disableBackdropClick={disableBackdropClick}
         aria-labelledby="confirmation-dialog-title"
         fullScreen={fullScreen}
         open={open}
+        onClose={onCancel}
       >
         <DialogTitle id="confirmation-dialog-title">{title}</DialogTitle>
         <DialogContent>{content}</DialogContent>
@@ -47,12 +48,14 @@ ConfirmDialog.propTypes = {
   onCancel: PropTypes.func.isRequired,
   title: PropTypes.node,
   fullScreen: PropTypes.bool,
-  content: PropTypes.node
+  content: PropTypes.node,
+  disableBackdropClick: PropTypes.bool
 };
 
 ConfirmDialog.defaultProps = {
   open: false,
-  fullScreen: false
+  fullScreen: false,
+  disableBackdropClick: true
 };
 
 export default withMobileDialog()(ConfirmDialog);

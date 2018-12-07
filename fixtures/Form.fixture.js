@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field, withForm } from '../src/form';
+import { Field, withReduxForm } from '../src/form';
 
 let ContactForm = props => {
   const { handleSubmit } = props;
@@ -22,7 +22,7 @@ let ContactForm = props => {
   );
 };
 
-ContactForm = withForm({
+ContactForm = withReduxForm({
   // a unique name for the form
   form: 'contact'
 })(ContactForm);
