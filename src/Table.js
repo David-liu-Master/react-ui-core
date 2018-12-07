@@ -128,6 +128,11 @@ class Table extends React.Component {
       ...additionalCellTypes
     };
 
+    const maxRowsOnPage = rowsCount < pageSize ? rowsCount : pageSize;
+
+    const numNotSelectedOnPage = _difference(rows.map(row => row.id), selected)
+      .length;
+
     return (
       <Paper>
         {toolbar && <TableToolbar numSelected={selected.length} {...toolbar} />}
@@ -138,10 +143,8 @@ class Table extends React.Component {
               orderBy={orderBy}
               onSelectAllClick={onSelectRows ? this.handleSelectAllClick : null}
               onRequestSort={onSort ? this.handleRequestSort : null}
-              selectedAllOfPage={
-                _difference(selected, rows.map(row => row.id)).length === 0
-              }
-              numSelected={selected.length}
+              selectedAllOnPage={numNotSelectedOnPage === 0}
+              numSelectedOnPage={maxRowsOnPage - numNotSelectedOnPage}
               columns={columns}
             />
             <TableBody>
@@ -175,23 +178,21 @@ class Table extends React.Component {
               ))}
             </TableBody>
           </MuiTable>
-          {rowsCount > pageSize && (
-            <TablePagination
-              rowsPerPageOptions={pageSizeOptions}
-              component="div"
-              count={rowsCount}
-              rowsPerPage={pageSize}
-              page={page}
-              backIconButtonProps={{
-                'aria-label': 'Previous Page'
-              }}
-              nextIconButtonProps={{
-                'aria-label': 'Next Page'
-              }}
-              onChangePage={this.handlePageChange}
-              onChangeRowsPerPage={this.handlePageSizeChange}
-            />
-          )}
+          <TablePagination
+            rowsPerPageOptions={pageSizeOptions}
+            component="div"
+            count={rowsCount}
+            rowsPerPage={pageSize}
+            page={page}
+            backIconButtonProps={{
+              'aria-label': 'Previous Page'
+            }}
+            nextIconButtonProps={{
+              'aria-label': 'Next Page'
+            }}
+            onChangePage={this.handlePageChange}
+            onChangeRowsPerPage={this.handlePageSizeChange}
+          />
         </div>
       </Paper>
     );

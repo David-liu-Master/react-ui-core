@@ -56,6 +56,7 @@ export default (state = initialState, action) =>
       case SET_PAGE_SIZE:
         table = draft[action.payload.tableId];
         table.pageSize = action.payload.pageSize;
+        table.page = 0;
         break;
       case SORT:
         table = draft[action.payload.tableId];
