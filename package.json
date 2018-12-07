@@ -1,6 +1,6 @@
 {
   "name": "@openpatch/ui-core",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "ui core for openpatch",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -33,7 +33,8 @@
     "locale:extract": "lingui extract",
     "locale:clean": "lingui extract --clean",
     "locale:compile": "lingui compile",
-    "locale:add": "lingui add-locale"
+    "locale:add": "lingui add-locale",
+    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -99,7 +100,6 @@
     "type": "git",
     "url": "git@gitlab.com:openpatch/ui-core.git"
   },
-  "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
   "keywords": [
     "react-component"
   ],
