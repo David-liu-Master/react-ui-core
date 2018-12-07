@@ -18,6 +18,9 @@
     }
   },
   messages: {
+    'Next Page': 'Next Page',
+    'Previous Page': 'Previous Page',
+    'Rows per page:': 'Rows per page:',
     'openpatch.ui-core.assignment': 'Assignment',
     'openpatch.ui-core.cancel': 'Cancel',
     'openpatch.ui-core.confirm': 'Confirm',
@@ -28,6 +31,9 @@
     'openpatch.ui-core.n': 'N',
     'openpatch.ui-core.standardDeviation': 'SD',
     'openpatch.ui-core.unsupported': 'Unsupported',
-    'openpatch.ui-core.variance': 'Var'
+    'openpatch.ui-core.variance': 'Var',
+    '{from}-{to} of {count}': function(a) {
+      return [a('from'), '-', a('to'), ' of ', a('count')];
+    }
   }
 };

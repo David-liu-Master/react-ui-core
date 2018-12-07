@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { t } from '@lingui/macro';
 import _difference from 'lodash/difference';
 import MuiTable from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -9,6 +10,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Checkbox from '@material-ui/core/Checkbox';
 import Paper from '@material-ui/core/Paper';
 
+import { i18n } from './I18nProvider';
 import TableHead from './TableHead';
 import TableToolbar from './TableToolbar';
 
@@ -184,11 +186,15 @@ class Table extends React.Component {
             count={rowsCount}
             rowsPerPage={pageSize}
             page={page}
+            labelDisplayedRows={({ from, to, count }) =>
+              i18n._(t`${from}-${to} of ${count}`)
+            }
+            labelRowsPerPage={i18n._(t`Rows per page:`)}
             backIconButtonProps={{
-              'aria-label': 'Previous Page'
+              'aria-label': i18n._(t`Previous Page`)
             }}
             nextIconButtonProps={{
-              'aria-label': 'Next Page'
+              'aria-label': i18n._(t`Next Page`)
             }}
             onChangePage={this.handlePageChange}
             onChangeRowsPerPage={this.handlePageSizeChange}
