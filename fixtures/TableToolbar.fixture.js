@@ -11,14 +11,14 @@ export default [
     component: TableToolbar,
     props: {
       title: 'Toolbar',
-      numSelected: 2
+      selected: [2, 3]
     }
   },
   {
     component: TableToolbar,
     props: {
       title: 'Toolbar',
-      numSelected: 2,
+      selected: [2],
       actions: [
         {
           label: 'Delete',
@@ -32,17 +32,17 @@ export default [
     component: TableToolbar,
     props: {
       title: 'Toolbar',
-      numSelected: 2,
+      selected: [2, 3],
       actions: [
         {
           label: 'Delete',
           icon: 'delete',
-          onClick: () => console.log('delete')
+          onClick: selected => console.log(selected)
         },
         {
           label: 'Star',
           icon: 'star',
-          onClick: () => console.log('star')
+          onClick: selected => console.log(selected)
         }
       ]
     }

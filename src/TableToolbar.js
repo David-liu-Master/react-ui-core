@@ -40,7 +40,7 @@ class TableToolbar extends React.Component {
   static propTypes = {
     classes: PropTypes.object.isRequired,
     title: PropTypes.string,
-    numSelected: PropTypes.number,
+    selected: PropTypes.arrayOf(PropTypes.number),
     actions: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string,
@@ -51,11 +51,13 @@ class TableToolbar extends React.Component {
   };
 
   static defaultProps = {
-    actions: []
+    actions: [],
+    selected: []
   };
 
   render() {
-    const { classes, title, actions, numSelected } = this.props;
+    const { classes, title, actions, selected } = this.props;
+    const numSelected = selected.length;
     return (
       <Toolbar
         className={classNames(classes.root, {
@@ -81,7 +83,7 @@ class TableToolbar extends React.Component {
                 <Tooltip key={i} title={action.label}>
                   <IconButton
                     aria-label={action.label}
-                    onClick={action.onClick}
+                    onClick={() => action.onClick(selected)}
                   >
                     <Icon>{action.icon}</Icon>
                   </IconButton>

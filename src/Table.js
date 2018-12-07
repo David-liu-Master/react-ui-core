@@ -137,7 +137,7 @@ class Table extends React.Component {
 
     return (
       <Paper>
-        {toolbar && <TableToolbar numSelected={selected.length} {...toolbar} />}
+        {toolbar && <TableToolbar selected={selected} {...toolbar} />}
         <div>
           <MuiTable>
             <TableHead
