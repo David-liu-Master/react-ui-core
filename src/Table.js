@@ -170,6 +170,7 @@ class Table extends React.Component {
                       >
                         <CellType
                           id={row.id}
+                          row={row}
                           value={row[column.id]}
                           {...column.cellProps}
                         />
