@@ -20,11 +20,11 @@ const styles = theme => ({
   },
   logo: {
     display: 'inline-flex',
-    marginLeft: theme.spacing.unit * 2
+    marginLeft: theme.spacing.units[2]
   },
   toolbar: {
     ...theme.mixins.toolbar,
-    paddingLeft: theme.spacing.unit * 2,
+    paddingLeft: theme.spacing.units[2],
     display: 'flex',
     alignItems: 'center',
     maxHeight: 64
@@ -34,20 +34,20 @@ const styles = theme => ({
     overflowX: 'scroll'
   },
   copyright: {
-    paddingLeft: theme.spacing.unit * 3,
-    paddingRight: theme.spacing.unit * 3,
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2
+    paddingLeft: theme.spacing.units[3],
+    paddingRight: theme.spacing.units[3],
+    paddingTop: theme.spacing.units[2],
+    paddingBottom: theme.spacing.units[2]
   },
   primaryLinks: {
-    paddingLeft: theme.spacing.unit * 3,
-    paddingRight: theme.spacing.unit * 3,
-    paddingTop: theme.spacing.unit * 2
+    paddingLeft: theme.spacing.units[3],
+    paddingRight: theme.spacing.units[3],
+    paddingTop: theme.spacing.units[2]
   },
   secondaryLinks: {
-    paddingLeft: theme.spacing.unit * 3,
-    paddingRight: theme.spacing.unit * 3,
-    paddingTop: theme.spacing.unit * 2
+    paddingLeft: theme.spacing.units[3],
+    paddingRight: theme.spacing.units[3],
+    paddingTop: theme.spacing.units[2]
   },
   link: {
     marginRight: theme.spacing.unit,

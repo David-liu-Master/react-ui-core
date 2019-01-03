@@ -13,7 +13,7 @@ import { getAppBarTitle } from './redux/layout/selectors';
 const styles = theme => ({
   title: {
     display: 'inline-flex',
-    marginLeft: theme.spacing.unit * 2,
+    marginLeft: theme.spacing.units[2],
     fontFamily: theme.typography.fontFamily,
     fontWeight: 'bold'
   },

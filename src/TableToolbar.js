@@ -66,13 +66,9 @@ class TableToolbar extends React.Component {
       >
         <div className={classes.title}>
           {numSelected > 0 ? (
-            <Typography color="inherit" variant="subtitle1">
-              {numSelected} selected
-            </Typography>
+            <Typography color="inherit">{numSelected} selected</Typography>
           ) : (
-            <Typography variant="h6" id="tableTitle">
-              {title}
-            </Typography>
+            <Typography id="tableTitle">{title}</Typography>
           )}
         </div>
         <div className={classes.spacer} />

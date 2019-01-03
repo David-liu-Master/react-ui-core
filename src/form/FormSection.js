@@ -6,7 +6,7 @@ const styles = theme => ({
   container: {
     display: 'flex',
     borderBottom: `1px solid ${theme.palette.grey[300]}`,
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing.units[2],
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column'
     }

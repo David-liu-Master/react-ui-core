@@ -9,11 +9,11 @@ import Select from './Select';
 
 const styles = theme => ({
   header: {
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing.units[2],
     backgroundColor: theme.palette.primary[100]
   },
   body: {
-    padding: theme.spacing.unit * 2
+    padding: theme.spacing.units[2]
   }
 });
 

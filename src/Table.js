@@ -32,6 +32,7 @@ const cellTypes = {
 class Table extends React.Component {
   static propTypes = {
     additionalCellTypes: PropTypes.objectOf(PropTypes.func),
+    label: PropTypes.string.isRequired,
     columns: PropTypes.arrayOf(PropTypes.object),
     toolbar: PropTypes.shape(TableToolbar.propTypes),
     order: PropTypes.oneOf(['asc', 'desc']),
@@ -95,7 +96,6 @@ class Table extends React.Component {
     }
 
     onSort(newOrder, newOrderBy);
-    // dispatch
   };
 
   handlePageChange = (event, page) => {
@@ -122,6 +122,7 @@ class Table extends React.Component {
       selected,
       onSelectRows,
       onSort,
+      label,
       toolbar
     } = this.props;
 
@@ -139,7 +140,7 @@ class Table extends React.Component {
       <Paper>
         {toolbar && <TableToolbar selected={selected} {...toolbar} />}
         <div>
-          <MuiTable>
+          <MuiTable aria-label={label}>
             <TableHead
               order={order}
               orderBy={orderBy}

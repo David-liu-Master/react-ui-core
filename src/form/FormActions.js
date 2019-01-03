@@ -6,9 +6,9 @@ const styles = theme => ({
   container: {
     display: 'flex',
     justifyContent: 'flex-end',
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing.units[2],
     '& > *': {
-      marginLeft: theme.spacing.unit * 2
+      marginLeft: theme.spacing.units[2]
     }
   }
 });

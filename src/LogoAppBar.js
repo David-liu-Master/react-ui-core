@@ -13,7 +13,7 @@ import { toggleDrawer } from './redux/layout/actions';
 const styles = theme => ({
   logo: {
     display: 'inline-flex',
-    marginLeft: theme.spacing.unit * 2
+    marginLeft: theme.spacing.units[2]
   },
   middle: {
     flexGrow: 1,

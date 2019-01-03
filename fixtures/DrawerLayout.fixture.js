@@ -4,6 +4,7 @@ export default [
   {
     component: DrawerLayout,
     props: {
+      children: 'test',
       appBar: {},
       drawer: {
         sections: [
