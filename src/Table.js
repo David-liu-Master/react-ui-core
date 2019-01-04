@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { t } from '@lingui/macro';
 import _difference from 'lodash/difference';
+import { withStyles } from '@material-ui/core/styles';
 import MuiTable from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -28,6 +29,12 @@ const cellTypes = {
   plain: PlainCell,
   bold: BoldCell
 };
+
+const styles = () => ({
+  container: {
+    overflowX: 'auto'
+  }
+});
 
 class Table extends React.Component {
   static propTypes = {
@@ -110,6 +117,7 @@ class Table extends React.Component {
 
   render() {
     const {
+      classes,
       additionalCellTypes,
       order,
       orderBy,
@@ -137,74 +145,72 @@ class Table extends React.Component {
       .length;
 
     return (
-      <Paper>
+      <Paper className={classes.container}>
         {toolbar && <TableToolbar selected={selected} {...toolbar} />}
-        <div>
-          <MuiTable aria-label={label}>
-            <TableHead
-              order={order}
-              orderBy={orderBy}
-              onSelectAllClick={onSelectRows ? this.handleSelectAllClick : null}
-              onRequestSort={onSort ? this.handleRequestSort : null}
-              selectedAllOnPage={numNotSelectedOnPage === 0}
-              numSelectedOnPage={maxRowsOnPage - numNotSelectedOnPage}
-              columns={columns}
-            />
-            <TableBody>
-              {rows.map(row => (
-                <TableRow hover key={row.id}>
-                  {onSelectRows && (
-                    <TableCell padding="checkbox">
-                      <Checkbox
-                        checked={this.isSelected(row.id)}
-                        onClick={event => this.handleSelectClick(event, row.id)}
+        <MuiTable aria-label={label}>
+          <TableHead
+            order={order}
+            orderBy={orderBy}
+            onSelectAllClick={onSelectRows ? this.handleSelectAllClick : null}
+            onRequestSort={onSort ? this.handleRequestSort : null}
+            selectedAllOnPage={numNotSelectedOnPage === 0}
+            numSelectedOnPage={maxRowsOnPage - numNotSelectedOnPage}
+            columns={columns}
+          />
+          <TableBody>
+            {rows.map(row => (
+              <TableRow hover key={row.id}>
+                {onSelectRows && (
+                  <TableCell padding="checkbox">
+                    <Checkbox
+                      checked={this.isSelected(row.id)}
+                      onClick={event => this.handleSelectClick(event, row.id)}
+                    />
+                  </TableCell>
+                )}
+                {columns.map(column => {
+                  const CellType = combinedCellTypes[column.type || 'plain'];
+                  return (
+                    <TableCell
+                      key={column.id}
+                      padding={column.disablePadding ? 'none' : 'default'}
+                      numeric={column.numeric}
+                    >
+                      <CellType
+                        id={row.id}
+                        row={row}
+                        value={row[column.id]}
+                        {...column.cellProps}
                       />
                     </TableCell>
-                  )}
-                  {columns.map(column => {
-                    const CellType = combinedCellTypes[column.type || 'plain'];
-                    return (
-                      <TableCell
-                        key={column.id}
-                        padding={column.disablePadding ? 'none' : 'default'}
-                        numeric={column.numeric}
-                      >
-                        <CellType
-                          id={row.id}
-                          row={row}
-                          value={row[column.id]}
-                          {...column.cellProps}
-                        />
-                      </TableCell>
-                    );
-                  })}
-                </TableRow>
-              ))}
-            </TableBody>
-          </MuiTable>
-          <TablePagination
-            rowsPerPageOptions={pageSizeOptions}
-            component="div"
-            count={rowsCount}
-            rowsPerPage={pageSize}
-            page={page}
-            labelDisplayedRows={({ from, to, count }) =>
-              i18n._(t`${from}-${to} of ${count}`)
-            }
-            labelRowsPerPage={i18n._(t`Rows per page:`)}
-            backIconButtonProps={{
-              'aria-label': i18n._(t`Previous Page`)
-            }}
-            nextIconButtonProps={{
-              'aria-label': i18n._(t`Next Page`)
-            }}
-            onChangePage={this.handlePageChange}
-            onChangeRowsPerPage={this.handlePageSizeChange}
-          />
-        </div>
+                  );
+                })}
+              </TableRow>
+            ))}
+          </TableBody>
+        </MuiTable>
+        <TablePagination
+          rowsPerPageOptions={pageSizeOptions}
+          component="div"
+          count={rowsCount}
+          rowsPerPage={pageSize}
+          page={page}
+          labelDisplayedRows={({ from, to, count }) =>
+            i18n._(t`${from}-${to} of ${count}`)
+          }
+          labelRowsPerPage={i18n._(t`Rows per page:`)}
+          backIconButtonProps={{
+            'aria-label': i18n._(t`Previous Page`)
+          }}
+          nextIconButtonProps={{
+            'aria-label': i18n._(t`Next Page`)
+          }}
+          onChangePage={this.handlePageChange}
+          onChangeRowsPerPage={this.handlePageSizeChange}
+        />
       </Paper>
     );
   }
 }
 
-export default Table;
+export default withStyles(styles)(Table);
