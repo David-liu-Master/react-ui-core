@@ -10,6 +10,8 @@
   "openpatch.ui-core.median": "Median",
   "openpatch.ui-core.min": "Min",
   "openpatch.ui-core.n": "N",
+  "openpatch.ui-core.not-found": "The page you are looking for was not found!",
+  "openpatch.ui-core.return-to-last-page": "Return to last viewed page",
   "openpatch.ui-core.standardDeviation": "SD",
   "openpatch.ui-core.unsupported": "Unsupported",
   "openpatch.ui-core.variance": "Var",
