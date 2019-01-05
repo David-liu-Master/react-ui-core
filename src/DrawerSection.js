@@ -7,33 +7,22 @@ import Icon from '@material-ui/core/Icon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import Divider from '@material-ui/core/Divider';
-import { Link } from '@reach/router';
 
 class DrawerSection extends React.Component {
   render() {
-    const { useRouter, label, links } = this.props;
+    const { component, label, links } = this.props;
     return (
       <div>
         <List component="nav">
           {label && <ListSubheader>{label}</ListSubheader>}
           {links.map(link => {
-            if (useRouter) {
-              return (
-                <ListItem
-                  component={Link}
-                  to={link.href}
-                  key={link.label}
-                  button
-                >
-                  <ListItemIcon>
-                    <Icon>{link.icon}</Icon>
-                  </ListItemIcon>
-                  <ListItemText inset primary={link.label} />
-                </ListItem>
-              );
-            }
             return (
-              <ListItem component="a" href={link.href} key={link.label} button>
+              <ListItem
+                component={component}
+                href={link.href}
+                key={link.label}
+                button
+              >
                 <ListItemIcon>
                   <Icon>{link.icon}</Icon>
                 </ListItemIcon>
@@ -50,7 +39,7 @@ class DrawerSection extends React.Component {
 
 DrawerSection.propTypes = {
   label: PropTypes.string,
-  useRouter: PropTypes.boolean,
+  component: PropTypes.func,
   links: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
@@ -58,6 +47,10 @@ DrawerSection.propTypes = {
       href: PropTypes.string.isRequired
     })
   )
+};
+
+DrawerSection.defaultProps = {
+  component: 'a'
 };
 
 export default DrawerSection;

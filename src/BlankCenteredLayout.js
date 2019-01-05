@@ -16,6 +16,7 @@ const styles = theme => ({
     height: '100vh',
     width: '100vw',
     overflowX: 'scroll',
+    zIndex: 1260,
     backgroundColor: theme.palette.primary.main
   }
 });
