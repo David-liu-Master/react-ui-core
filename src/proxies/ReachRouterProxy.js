@@ -5,7 +5,7 @@ import {
   LocationProvider,
   Location,
   Router
-} from '@reach/router';
+} from '../router';
 
 export const withReachRouter = (WrappedComponent, path = '/*') => ({
   url,
