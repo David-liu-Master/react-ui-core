@@ -2,6 +2,16 @@
   "name": "@openpatch/ui-core",
   "version": "0.15.0",
   "description": "ui core for openpatch",
+  "author": "Mike Barkmin",
+  "homepage": "https://openpatch.gitlab.io/ui-core",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:openpatch/ui-core.git"
+  },
+  "keywords": [
+    "react-component"
+  ],
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -94,16 +104,6 @@
     "redux": "4.0.1",
     "redux-thunk": "2.3.0"
   },
-  "author": "Mike Barkmin",
-  "homepage": "https://openpatch.gitlab.io/ui-core",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.com:openpatch/ui-core.git"
-  },
-  "keywords": [
-    "react-component"
-  ],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
