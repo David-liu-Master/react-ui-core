@@ -896,7 +896,7 @@ async-limiter@~1.0.0:
   resolved "https://registry.yarnpkg.com/async-limiter/-/async-limiter-1.0.0.tgz#78faed8c3d074ab81f22b4e985d79e8738f720f8"
   integrity sha512-jp/uFnooOiO+L211eZOoSyzpOITMXx1rBITauYykG3BRYPu8h0UcxsPNB04RR5vo4Tyz3+ay17tR6JVf9qzYWg==
 
-async-until@^1.1.1, async-until@^1.2.2:
+async-until@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/async-until/-/async-until-1.2.2.tgz#d18b4a3009385b5d0012fe22bf1b1ed213e42326"
   integrity sha512-faMIVxrbLZztvPDZ9QGnjbK1PTKK5toy8KFDd8OvNyUU8WnDpEKL/TVC8MMvW/g2mjcE9DB1+6GK0A63hw4fHw==
@@ -9410,14 +9410,6 @@ react-ace@^6.2.0:
     lodash.isequal "^4.5.0"
     prop-types "^15.6.2"
 
-react-cosmos-config@^4.6.1:
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/react-cosmos-config/-/react-cosmos-config-4.6.1.tgz#1fc4dbb69fa8243e4a6d58d3deefdf2573dee426"
-  integrity sha1-H8Tbtp+oJD5KbVjT3u/fJXPe5CY=
-  dependencies:
-    react-cosmos-shared "^4.6.1"
-    yargs "^12.0.1"
-
 react-cosmos-config@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/react-cosmos-config/-/react-cosmos-config-4.7.0.tgz#75c51954a03ce8fbdcab4e59510437ef732db258"
@@ -9438,23 +9430,6 @@ react-cosmos-fixture@^4.7.0:
     react-cosmos-shared2 "^4.7.0"
     react-is "^16.7.0"
     socket.io-client "^2.2.0"
-
-react-cosmos-loader@^4.6.4:
-  version "4.6.4"
-  resolved "https://registry.yarnpkg.com/react-cosmos-loader/-/react-cosmos-loader-4.6.4.tgz#50eb6ecc2d5494ba4719bd3515f8f6f5369e1ca0"
-  integrity sha1-UOtuzC1UlLpHGb01Ffj29TaeHKA=
-  dependencies:
-    "@skidding/linked-list" "^1.0.2"
-    async-until "^1.1.1"
-    deep-equal "^1.0.1"
-    lodash.merge "^4.6.1"
-    prop-types "^15.6.2"
-    react-cosmos-shared "^4.6.1"
-    react-cosmos-state-proxy "^4.6.1"
-    react-cosmos-voyager2 "^4.6.4"
-    react-is "^16.4.1"
-    socket.io-client "^2.1.1"
-    url-parse "^1.4.1"
 
 react-cosmos-loader@^4.7.0:
   version "4.7.0"
@@ -9524,16 +9499,6 @@ react-cosmos-shared@^4.7.0-24:
     resolve-from "^4.0.0"
     slash "^2.0.0"
 
-react-cosmos-state-proxy@^4.6.1:
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/react-cosmos-state-proxy/-/react-cosmos-state-proxy-4.6.1.tgz#822185542bcb9a56bfa79a3d15d2b1d8a5fad5b6"
-  integrity sha1-giGFVCvLmla/p5o9FdKx2KX61bY=
-  dependencies:
-    lodash.isempty "^4.4.0"
-    lodash.isequal "^4.4.0"
-    lodash.omit "^4.5.0"
-    react-cosmos-shared "^4.6.1"
-
 react-cosmos-state-proxy@^4.7.0-24:
   version "4.7.0-24"
   resolved "https://registry.yarnpkg.com/react-cosmos-state-proxy/-/react-cosmos-state-proxy-4.7.0-24.tgz#e27dec804e722d419bf0403b19644893c41f9cb6"
@@ -9545,28 +9510,16 @@ react-cosmos-state-proxy@^4.7.0-24:
     lodash.omit "^4.5.0"
     react-cosmos-shared "^4.7.0-24"
 
-react-cosmos-test@4.6.4:
-  version "4.6.4"
-  resolved "https://registry.yarnpkg.com/react-cosmos-test/-/react-cosmos-test-4.6.4.tgz#cdaff3fb94506de91fb856380821a9cd46a3fcac"
-  integrity sha1-za/z+5RQbekfuFY4CCGpzUaj/Kw=
+react-cosmos-test@4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/react-cosmos-test/-/react-cosmos-test-4.7.0.tgz#2e6983d609a3ff358981930cdf566b00301645f4"
+  integrity sha512-lBc0xSiTyMWtSppPWrku+b+Ozlt1b3R3fnB2XnfExa+7bJVihlPmKmvHBi9AsBy0RCrPrDfwqaB/EFaAk0UuDQ==
   dependencies:
-    react-cosmos-config "^4.6.1"
-    react-cosmos-loader "^4.6.4"
-    react-cosmos-shared "^4.6.1"
+    "@babel/runtime-corejs2" "^7.2.0"
+    react-cosmos-config "^4.7.0"
+    react-cosmos-loader "^4.7.0"
+    react-cosmos-shared "^4.7.0-24"
     traverse "^0.6.6"
-
-react-cosmos-voyager2@^4.6.4:
-  version "4.6.4"
-  resolved "https://registry.yarnpkg.com/react-cosmos-voyager2/-/react-cosmos-voyager2-4.6.4.tgz#c0bcbd665ed5ba7390d9edae366c6c04790ffa6f"
-  integrity sha1-wLy9Zl7VunOQ2e2uNmxsBHkP+m8=
-  dependencies:
-    babel-types "^6.26.0"
-    babylon "^6.18.0"
-    glob "^7.1.2"
-    lodash.sortby "^4.7.0"
-    micromatch "^3.1.10"
-    react-cosmos-shared "^4.6.1"
-    util.promisify "^1.0.0"
 
 react-cosmos-voyager2@^4.7.0-24:
   version "4.7.0-24"
@@ -9690,7 +9643,7 @@ react-event-listener@^0.6.2:
     prop-types "^15.6.0"
     warning "^4.0.1"
 
-react-is@^16.3.2, react-is@^16.4.1, react-is@^16.6.0, react-is@^16.6.1, react-is@^16.6.3:
+react-is@^16.3.2, react-is@^16.6.0, react-is@^16.6.1, react-is@^16.6.3:
   version "16.6.3"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.6.3.tgz#d2d7462fcfcbe6ec0da56ad69047e47e56e7eac0"
   integrity sha512-u7FDWtthB4rWibG/+mFbVd5FvdI20yde86qKGx4lVUTWmPlSWQ4QxbBIrrs+HnXGbxOUlUzTAP/VDmvCwaP2yA==
@@ -10691,7 +10644,7 @@ socket.io-client@2.0.4:
     socket.io-parser "~3.1.1"
     to-array "0.1.4"
 
-socket.io-client@2.2.0, socket.io-client@^2.1.1, socket.io-client@^2.2.0:
+socket.io-client@2.2.0, socket.io-client@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/socket.io-client/-/socket.io-client-2.2.0.tgz#84e73ee3c43d5020ccc1a258faeeb9aec2723af7"
   integrity sha512-56ZrkTDbdTLmBIyfFYesgOxsjcLnwAKoN4CiPyTVkMQj3zTUh0QAx3GbvIvLpFEOvQWu92yyWICxB0u7wkVbYA==
@@ -11683,7 +11636,7 @@ url-loader@1.0.1:
     mime "^2.0.3"
     schema-utils "^0.4.3"
 
-url-parse@^1.1.8, url-parse@^1.4.1, url-parse@^1.4.3, url-parse@^1.4.4, url-parse@~1.4.3:
+url-parse@^1.1.8, url-parse@^1.4.3, url-parse@^1.4.4, url-parse@~1.4.3:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.4.tgz#cac1556e95faa0303691fec5cf9d5a1bc34648f8"
   integrity sha512-/92DTTorg4JjktLNLe6GPS2/RvAd/RGr6LuktmWSMLEOa6rjnlrFXNgSbSmkNvCoL2T028A0a1JaJLzRMlFoHg==
@@ -12283,7 +12236,7 @@ yargs@^11.0.0:
     y18n "^3.2.1"
     yargs-parser "^9.0.2"
 
-yargs@^12.0.1, yargs@^12.0.5:
+yargs@^12.0.5:
   version "12.0.5"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-12.0.5.tgz#05f5997b609647b64f66b81e3b4b10a368e7ad13"
   integrity sha512-Lhz8TLaYnxq/2ObqHDql8dX8CJi97oHxrjUcYtzKbbykPtVW9WB+poxI+NM2UIzsMgNCZTIf0AQwsjK5yMAqZw==
