@@ -265,10 +265,10 @@
     jest-validate "^23.5.0"
     pkg-conf "^2.1.0"
 
-"@lingui/core@2.7.2":
-  version "2.7.2"
-  resolved "https://registry.yarnpkg.com/@lingui/core/-/core-2.7.2.tgz#bfb116e0d08af483e1461e4e6ffec6574e9c064a"
-  integrity sha512-LLMNcxfXmjhxG18sQmIb4azNuwVyhMUhcVFgOQ682eVQEGaSIncPsnSQRGhgYbiqY1LGXlZEXZnYdyyDMSZR0A==
+"@lingui/core@2.7.3":
+  version "2.7.3"
+  resolved "https://registry.yarnpkg.com/@lingui/core/-/core-2.7.3.tgz#9b2a12a56dd6129faf692fc6f47c49763b470a3f"
+  integrity sha512-3rmL/78NpbuulR4SAnYCipRdpCIntE9R4vCzWM6l8wuPgkv425ui9eoF8p/lMSxj7/hSy0ARyE8/6+aS+L4xpA==
   dependencies:
     babel-runtime "^6.26.0"
     make-plural "^4.1.1"
@@ -292,12 +292,12 @@
     "@lingui/babel-plugin-transform-react" "2.7.2"
     babel-plugin-macros "^2.2.0"
 
-"@lingui/react@2.7.2":
-  version "2.7.2"
-  resolved "https://registry.yarnpkg.com/@lingui/react/-/react-2.7.2.tgz#6aa336d600d5de2b1a953097d66da80b0467126f"
-  integrity sha512-dYfhojpYLKyXp3V1i3twjipIXGK80rBBLNMZOXBBCqm5Lypef3d7Ip1jLXuhk4Ni++ijWJfHC40F3gWNBNFSjw==
+"@lingui/react@2.7.3":
+  version "2.7.3"
+  resolved "https://registry.yarnpkg.com/@lingui/react/-/react-2.7.3.tgz#3b377189b04e406b225d3c1d8a196d004d7229fe"
+  integrity sha512-apKhH+QSHX9hF94gpcuPqSypkKzheWHMdiwNCy47HMEdiyBH9b16R3dMOGcAdBpiFRc9R4Gr2lRUBpL59Ey0Fw==
   dependencies:
-    "@lingui/core" "2.7.2"
+    "@lingui/core" "2.7.3"
     babel-runtime "^6.26.0"
     hash-sum "^1.0.2"
     hoist-non-react-statics "3.0.1"
