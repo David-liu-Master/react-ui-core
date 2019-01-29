@@ -156,11 +156,6 @@
   resolved "https://registry.yarnpkg.com/@lingui/babel-plugin-transform-js/-/babel-plugin-transform-js-2.7.3.tgz#7e435cf93e69cf4ecd7acd6d3ad20fb5cc1e4f98"
   integrity sha512-ZymQCbatcXEroA6QVZ6YsolEhMt75imF1IhRC6299NAXwaL9WyH4XaM70RI0/k/9IMg/uvVSXqWO3voBDyNgbA==
 
-"@lingui/babel-plugin-transform-react@2.7.2":
-  version "2.7.2"
-  resolved "https://registry.yarnpkg.com/@lingui/babel-plugin-transform-react/-/babel-plugin-transform-react-2.7.2.tgz#b73ab59673e498ddc1dc74922ae82b01485eb5be"
-  integrity sha512-50+GM9LL7V4mB6ekY7hUGmyMLewDQ9bzVXTyRtbTl/78xJoQKSv8Wuz+jlvPcP0fKAFcmcHo3QJPPOkSAbgnOw==
-
 "@lingui/babel-plugin-transform-react@2.7.3":
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/@lingui/babel-plugin-transform-react/-/babel-plugin-transform-react-2.7.3.tgz#f80921ef2a7d7557214f17dab30128ae3f3471ef"
@@ -228,12 +223,12 @@
     babel-runtime "^6.26.0"
     ramda "^0.25.0"
 
-"@lingui/macro@2.7.2":
-  version "2.7.2"
-  resolved "https://registry.yarnpkg.com/@lingui/macro/-/macro-2.7.2.tgz#020076cd074414d2cacc04649e10ab1e00d98ef4"
-  integrity sha512-kU5fl/2MvHQLfVRju2QR28uKOHsUqlLZOJwMXNAm/eq42D6ORa5vZR2ovlBRF9IdcYGqkCCPjeTLN5NC7b5gyQ==
+"@lingui/macro@2.7.3":
+  version "2.7.3"
+  resolved "https://registry.yarnpkg.com/@lingui/macro/-/macro-2.7.3.tgz#861655667a95d41d10aa23063e5e9ed2d2678727"
+  integrity sha512-d4vxKGIn+DOksTBPeHbGiiocpxVAilRJ/oGYIZktZjuKgl38B+79T+nUJ9vHGNB/aWfocBoi/93on1aL7w/k1Q==
   dependencies:
-    "@lingui/babel-plugin-transform-react" "2.7.2"
+    "@lingui/babel-plugin-transform-react" "2.7.3"
     babel-plugin-macros "^2.2.0"
 
 "@lingui/react@2.7.3":
