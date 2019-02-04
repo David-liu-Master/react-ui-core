@@ -5,14 +5,11 @@ export default [
     component: ResponseField,
     name: 'Multiple-Choice',
     props: {
-      label: 'Multiple-Choice',
-      type: 'multiple-choice',
+      name: 'Multiple-Choice',
+      type: 'choice',
+      multiple: true,
       onChange: console.log,
-      choices: {
-        0: 'Choice 1',
-        1: 'Choice 2',
-        2: 'Choice 3'
-      },
+      choices: ['Choice 1', 'Choice 2', 'Choice 3'],
       value: {
         0: true
       }
@@ -22,14 +19,13 @@ export default [
     component: ResponseField,
     name: 'Single-Choice',
     props: {
-      label: 'Single-Choice',
-      type: 'single-choice',
+      name: 'Single-Choice',
+      publicDescription: '**test** hallo',
+      type: 'choice',
+      required: true,
+      hint: 'Give me a hint',
       onChange: console.log,
-      choices: {
-        0: 'Choice 1',
-        1: 'Choice 2',
-        2: 'Choice 3'
-      },
+      choices: ['Choice 1', 'Choice 2', 'Choice 3'],
       value: {
         0: true
       }
@@ -39,7 +35,7 @@ export default [
     component: ResponseField,
     name: 'Text',
     props: {
-      label: 'Text',
+      name: 'Text',
       type: 'text',
       onChange: console.log,
       input: {
@@ -54,7 +50,7 @@ export default [
     component: ResponseField,
     name: 'Select',
     props: {
-      label: 'Select',
+      name: 'Select',
       type: 'select',
       options: ['Option1', 'Option2', 'Option3'],
       value: 'Option2',
@@ -65,7 +61,7 @@ export default [
     component: ResponseField,
     name: 'Matrix',
     props: {
-      label: 'matrix',
+      name: 'matrix',
       type: 'matrix',
       columns: ['Column1', 'Column2', 'Column3'],
       rows: ['Row1', 'Row2', 'Row3'],
@@ -79,7 +75,7 @@ export default [
     component: ResponseField,
     name: 'Matrix - Multiple Choice',
     props: {
-      label: 'matrix',
+      name: 'matrix',
       type: 'matrix',
       columns: ['Column1', 'Column2', 'Column3'],
       rows: ['Row1', 'Row2', 'Row3'],
@@ -93,7 +89,7 @@ export default [
     component: ResponseField,
     name: 'Matrix - Text',
     props: {
-      label: 'matrix',
+      name: 'matrix',
       type: 'matrix',
       columns: ['Column1', 'Column2', 'Column3'],
       rows: ['Row1', 'Row2', 'Row3'],
@@ -114,7 +110,7 @@ export default [
     component: ResponseField,
     name: 'Matrix - Single-Choice',
     props: {
-      label: 'matrix',
+      name: 'matrix',
       type: 'matrix',
       columns: ['Column1', 'Column2', 'Column3'],
       rows: ['Row1', 'Row2', 'Row3'],
@@ -128,7 +124,7 @@ export default [
     component: ResponseField,
     name: 'Matrix - Additional',
     props: {
-      label: 'matrix',
+      name: 'matrix',
       type: 'matrix',
       columns: ['Column1', 'Column2', 'Column3'],
       rows: ['Row1', 'Row2', 'Row3'],

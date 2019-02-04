@@ -94,6 +94,7 @@ class Matrix extends React.Component {
         return (
           <Checkbox
             checked={value === true}
+            color="primary"
             onChange={(e, checked) =>
               this.onChange(checked, rowId, columnId, additional)
             }
@@ -112,6 +113,7 @@ class Matrix extends React.Component {
         return (
           <Radio
             checked={value === true}
+            color="primary"
             onChange={(e, checked) =>
               this.onChange(checked, rowId, columnId, additional)
             }

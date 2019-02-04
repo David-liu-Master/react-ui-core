@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import _map from 'lodash/map';
 import Markdown from '../MarkdownRenderer';
 import Radio from '@material-ui/core/Radio/Radio';
 import Checkbox from '@material-ui/core/Checkbox/Checkbox';
@@ -24,7 +25,7 @@ class Choice extends React.Component {
     return (
       <FormControl component="fieldset">
         <FormGroup>
-          {Object.values(choices).map((choice, i) => (
+          {_map(choices, (choice, i) => (
             <FormControlLabel
               key={i}
               control={
@@ -32,11 +33,13 @@ class Choice extends React.Component {
                   <Checkbox
                     checked={value[i] === true}
                     onChange={(e, checked) => this.onChange(checked, i)}
+                    color="primary"
                   />
                 ) : (
                   <Radio
                     checked={value[i] === true}
                     onChange={(e, checked) => this.onChange(checked, i)}
+                    color="primary"
                   />
                 )
               }
@@ -51,14 +54,14 @@ class Choice extends React.Component {
 Choice.propTypes = {
   onChange: PropTypes.func,
   multiple: PropTypes.bool,
-  choices: PropTypes.object,
+  choices: PropTypes.array,
   value: PropTypes.object
 };
 
 Choice.defaultProps = {
   onChange: () => {},
   multiple: false,
-  choices: {},
+  choices: [],
   value: {}
 };
 
