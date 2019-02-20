@@ -69,7 +69,7 @@
   "devDependencies": {
     "@lingui/cli": "2.7.4",
     "@lingui/loader": "2.7.4",
-    "@lingui/macro": "2.7.3",
+    "@lingui/macro": "2.7.4",
     "@lingui/react": "2.7.4",
     "@material-ui/core": "3.9.2",
     "@reach/router": "1.2.1",
