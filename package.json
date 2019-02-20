@@ -67,7 +67,7 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "@lingui/cli": "2.7.3",
+    "@lingui/cli": "2.7.4",
     "@lingui/loader": "2.7.3",
     "@lingui/macro": "2.7.3",
     "@lingui/react": "2.7.3",
