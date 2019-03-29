@@ -95,7 +95,7 @@
     "prettier": "1.16.4",
     "prop-types": "15.7.2",
     "react": "16.8.6",
-    "react-cosmos": "4.8.0",
+    "react-cosmos": "4.8.1",
     "react-cosmos-redux-proxy": "4.6.1",
     "react-cosmos-test": "4.7.0",
     "react-dom": "16.8.6",
