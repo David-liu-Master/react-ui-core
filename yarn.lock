@@ -9863,14 +9863,15 @@ react-cosmos-playground@^4.8.0-alpha.0:
   resolved "https://registry.yarnpkg.com/react-cosmos-playground/-/react-cosmos-playground-4.8.0-alpha.0.tgz#f6aa7941aa90b8e580b8c3a90746226032d26e73"
   integrity sha512-ZemwHD+AI75+SFZeyr4kqIRPIeFW5YgkqIVB2yIOLxhivK28mdnEIOmWTrFN0dL+nUHKIcmzvrh4NQIZdPxSdA==
 
-react-cosmos-redux-proxy@4.6.1:
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/react-cosmos-redux-proxy/-/react-cosmos-redux-proxy-4.6.1.tgz#dd2b66a4084f24ee542b0bcdfad2e1bc5cd9774c"
-  integrity sha1-3StmpAhPJO5UKwvN+tLhvFzZd0w=
+react-cosmos-redux-proxy@4.8.2:
+  version "4.8.2"
+  resolved "https://registry.yarnpkg.com/react-cosmos-redux-proxy/-/react-cosmos-redux-proxy-4.8.2.tgz#3544ac7caa39f263ca7b1325330c3cc436d983dd"
+  integrity sha512-9JTqskcGRDdnuIAuWJTJxsS14OVcpdfI/nLyqzbxzj4eJEcyAg3Ic8f12SkPmbuqHo4wws4w/UgsCyr3FC6DrA==
   dependencies:
+    "@babel/runtime-corejs2" "^7.3.1"
     lodash.omit "^4.5.0"
-    react-cosmos-shared "^4.6.1"
-    redux "^4.0.0"
+    react-cosmos-shared "^4.8.2"
+    redux "^4.0.1"
 
 react-cosmos-shared2@^4.8.1:
   version "4.8.1"
@@ -9883,16 +9884,6 @@ react-cosmos-shared2@^4.8.1:
     react-element-to-jsx-string "^14.0.2"
     react-is "^16.8.1"
     util.promisify "^1.0.0"
-
-react-cosmos-shared@^4.6.1:
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/react-cosmos-shared/-/react-cosmos-shared-4.6.1.tgz#deacaaaa69b79b408a6c0931597badb17e36ec95"
-  integrity sha1-3qyqqmm3m0CKbAkxWXutsX427JU=
-  dependencies:
-    lodash.isplainobject "^4.0.6"
-    prop-types "^15.6.2"
-    resolve-from "^4.0.0"
-    slash "^2.0.0"
 
 react-cosmos-shared@^4.7.0-24:
   version "4.7.0-24"
@@ -9909,6 +9900,17 @@ react-cosmos-shared@^4.8.0-alpha.0:
   version "4.8.0-alpha.0"
   resolved "https://registry.yarnpkg.com/react-cosmos-shared/-/react-cosmos-shared-4.8.0-alpha.0.tgz#d8025451d25481ca6403992aa6230161e6ebc3dc"
   integrity sha512-1zKKi5R/vEZv/mp7juZar1JYll34sHgtc1+ZocMfc6r1EQKaoqDcQeHfSPH/Vp1c+kFQ152bf0ZXx0wCPzZgMw==
+  dependencies:
+    "@babel/runtime-corejs2" "^7.3.1"
+    lodash.isplainobject "^4.0.6"
+    prop-types "^15.6.2"
+    resolve-from "^4.0.0"
+    slash "^2.0.0"
+
+react-cosmos-shared@^4.8.2:
+  version "4.8.2"
+  resolved "https://registry.yarnpkg.com/react-cosmos-shared/-/react-cosmos-shared-4.8.2.tgz#5fdd8749303dd7ec7582bae6710c8500354f468a"
+  integrity sha512-9Yh+vFIDWmbuv891LaYRzN9jBISmVl8A0sQuSgQTbpeL21c77iwZIubpXgz2KOD+Qvhvn4gEzrOjMf7lent1Zw==
   dependencies:
     "@babel/runtime-corejs2" "^7.3.1"
     lodash.isplainobject "^4.0.6"
@@ -10396,7 +10398,7 @@ redux-thunk@2.3.0:
   resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.3.0.tgz#51c2c19a185ed5187aaa9a2d08b666d0d6467622"
   integrity sha512-km6dclyFnmcvxhAcrQV2AkZmPQjzPDjgVlQtR0EQjxZPyJ0BnMf3in1ryuR8A2qU0HldVRfxYXbFSKlI3N7Slw==
 
-redux@4.0.1, redux@^4.0.0:
+redux@4.0.1, redux@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/redux/-/redux-4.0.1.tgz#436cae6cc40fbe4727689d7c8fae44808f1bfef5"
   integrity sha512-R7bAtSkk7nY6O/OYMVR9RiBI+XghjF9rlbl5806HJbQph0LJVHZrU5oaO4q70eUKiqMRqm4y07KLTlMZ2BlVmg==
