@@ -102,7 +102,7 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.3.4.tgz#a43357e4bbf4b92a437fb9e465c192848287f27c"
   integrity sha512-tXZCqWtlOOP4wgCp6RjRvLmfuhnqTLy9VHwRochJBCP2nDm27JnnuFEnXFASVyQNHk36jD1tAammsCEEqgscIQ==
 
-"@babel/runtime-corejs2@^7.0.0", "@babel/runtime-corejs2@^7.2.0":
+"@babel/runtime-corejs2@^7.0.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime-corejs2/-/runtime-corejs2-7.2.0.tgz#5ccd722b72d2c18c6a7224b5751f4b9816b60ada"
   integrity sha512-kPfmKoRI8Hpo5ZJGACWyrc9Eq1j3ZIUpUAQT2yH045OuYpccFJ9kYA/eErwzOM2jeBG1sC8XX1nl1EArtuM8tg==
@@ -9788,15 +9788,6 @@ react-ace@^6.2.0:
     lodash.isequal "^4.5.0"
     prop-types "^15.6.2"
 
-react-cosmos-config@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/react-cosmos-config/-/react-cosmos-config-4.7.0.tgz#75c51954a03ce8fbdcab4e59510437ef732db258"
-  integrity sha512-lTe0mynRV66dmndbULv1m5QuE4uLT7bA6pMLL2yiCXdl7+YOEo5eADWBr6GCaadnpIvaEXt81WZB25uBGXN2Vg==
-  dependencies:
-    "@babel/runtime-corejs2" "^7.2.0"
-    react-cosmos-shared "^4.7.0-24"
-    yargs "^12.0.5"
-
 react-cosmos-config@^4.8.0-alpha.0:
   version "4.8.0-alpha.0"
   resolved "https://registry.yarnpkg.com/react-cosmos-config/-/react-cosmos-config-4.8.0-alpha.0.tgz#1ef87b200260c83b7030f5441c8d1fb67feea776"
@@ -9804,6 +9795,15 @@ react-cosmos-config@^4.8.0-alpha.0:
   dependencies:
     "@babel/runtime-corejs2" "^7.3.1"
     react-cosmos-shared "^4.8.0-alpha.0"
+    yargs "^12.0.5"
+
+react-cosmos-config@^4.8.2:
+  version "4.8.2"
+  resolved "https://registry.yarnpkg.com/react-cosmos-config/-/react-cosmos-config-4.8.2.tgz#8305b55905b6fb0c1e57b73da9c8775c70171fc0"
+  integrity sha512-5S90WBuuWCeipJ6E9XLhE5NV+I7w6MHRx+o41EoyvezMvnLucq+O3n1HMlnkLNU06hN1+unh/fc8tQ/qI7G4+g==
+  dependencies:
+    "@babel/runtime-corejs2" "^7.3.1"
+    react-cosmos-shared "^4.8.2"
     yargs "^12.0.5"
 
 react-cosmos-fixture@^4.8.1:
@@ -9816,24 +9816,6 @@ react-cosmos-fixture@^4.8.1:
     react-cosmos-shared2 "^4.8.1"
     react-is "^16.8.1"
     socket.io-client "^2.2.0"
-
-react-cosmos-loader@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/react-cosmos-loader/-/react-cosmos-loader-4.7.0.tgz#4af98e157b0b8cd13b5a923c88fd71ba05d85f07"
-  integrity sha512-a+r+2Oobnm+YBs1V5d6FIdLiI2H6lY6FZ1VV98uVkopDRxYzpWBx+w2ZGukH7BOX4CDh30Fr1gLftsJ/Zou0bA==
-  dependencies:
-    "@babel/runtime-corejs2" "^7.2.0"
-    "@skidding/linked-list" "^1.0.2"
-    async-until "^1.2.2"
-    deep-equal "^1.0.1"
-    lodash.merge "^4.6.1"
-    prop-types "^15.6.2"
-    react-cosmos-shared "^4.7.0-24"
-    react-cosmos-state-proxy "^4.7.0-24"
-    react-cosmos-voyager2 "^4.7.0-24"
-    react-is "^16.7.0"
-    socket.io-client "^2.2.0"
-    url-parse "^1.4.4"
 
 react-cosmos-loader@^4.8.0-alpha.0:
   version "4.8.0-alpha.0"
@@ -9849,6 +9831,24 @@ react-cosmos-loader@^4.8.0-alpha.0:
     react-cosmos-shared "^4.8.0-alpha.0"
     react-cosmos-state-proxy "^4.8.0-alpha.0"
     react-cosmos-voyager2 "^4.8.0-alpha.0"
+    react-is "^16.8.1"
+    socket.io-client "^2.2.0"
+    url-parse "^1.4.4"
+
+react-cosmos-loader@^4.8.2:
+  version "4.8.2"
+  resolved "https://registry.yarnpkg.com/react-cosmos-loader/-/react-cosmos-loader-4.8.2.tgz#9c8dbb58b10481552ed54dc45fa3e5dbe8f2e21e"
+  integrity sha512-GfT3aVZBmC03f7leKXuL4ZN3Jv724hqu4h48qBnXc0zg5R9/8hnY1dbOUyHdN22Gzo9Jtm3iBrWDe1ayPyl8HA==
+  dependencies:
+    "@babel/runtime-corejs2" "^7.3.1"
+    "@skidding/linked-list" "^1.0.2"
+    async-until "^1.2.2"
+    deep-equal "^1.0.1"
+    lodash.merge "^4.6.1"
+    prop-types "^15.6.2"
+    react-cosmos-shared "^4.8.2"
+    react-cosmos-state-proxy "^4.8.2"
+    react-cosmos-voyager2 "^4.8.2"
     react-is "^16.8.1"
     socket.io-client "^2.2.0"
     url-parse "^1.4.4"
@@ -9885,17 +9885,6 @@ react-cosmos-shared2@^4.8.1:
     react-is "^16.8.1"
     util.promisify "^1.0.0"
 
-react-cosmos-shared@^4.7.0-24:
-  version "4.7.0-24"
-  resolved "https://registry.yarnpkg.com/react-cosmos-shared/-/react-cosmos-shared-4.7.0-24.tgz#14f406f862dd68f39670a239ac0d718d5c2dbfa1"
-  integrity sha512-iGb8AQz4P61rXzRIvKcR8pdZQJYKIINUeD3Dd5j8PrGbEI2eqajGFGfc+e2qCEotLr8xFxQ2BT1EEhOb5Z/XPg==
-  dependencies:
-    "@babel/runtime-corejs2" "^7.2.0"
-    lodash.isplainobject "^4.0.6"
-    prop-types "^15.6.2"
-    resolve-from "^4.0.0"
-    slash "^2.0.0"
-
 react-cosmos-shared@^4.8.0-alpha.0:
   version "4.8.0-alpha.0"
   resolved "https://registry.yarnpkg.com/react-cosmos-shared/-/react-cosmos-shared-4.8.0-alpha.0.tgz#d8025451d25481ca6403992aa6230161e6ebc3dc"
@@ -9918,17 +9907,6 @@ react-cosmos-shared@^4.8.2:
     resolve-from "^4.0.0"
     slash "^2.0.0"
 
-react-cosmos-state-proxy@^4.7.0-24:
-  version "4.7.0-24"
-  resolved "https://registry.yarnpkg.com/react-cosmos-state-proxy/-/react-cosmos-state-proxy-4.7.0-24.tgz#e27dec804e722d419bf0403b19644893c41f9cb6"
-  integrity sha512-VRzyIfiVrqdUsr3CAZLBonEL7TzSur9CauSWNkMaoOACjNBMezVpXO7eLiZOLrm14VaUE6oOPXDWQpirJ1bO8A==
-  dependencies:
-    "@babel/runtime-corejs2" "^7.2.0"
-    lodash.isempty "^4.4.0"
-    lodash.isequal "^4.4.0"
-    lodash.omit "^4.5.0"
-    react-cosmos-shared "^4.7.0-24"
-
 react-cosmos-state-proxy@^4.8.0-alpha.0:
   version "4.8.0-alpha.0"
   resolved "https://registry.yarnpkg.com/react-cosmos-state-proxy/-/react-cosmos-state-proxy-4.8.0-alpha.0.tgz#e24c73aca7820fd7604b4d21498896b9a083f218"
@@ -9940,30 +9918,27 @@ react-cosmos-state-proxy@^4.8.0-alpha.0:
     lodash.omit "^4.5.0"
     react-cosmos-shared "^4.8.0-alpha.0"
 
-react-cosmos-test@4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/react-cosmos-test/-/react-cosmos-test-4.7.0.tgz#2e6983d609a3ff358981930cdf566b00301645f4"
-  integrity sha512-lBc0xSiTyMWtSppPWrku+b+Ozlt1b3R3fnB2XnfExa+7bJVihlPmKmvHBi9AsBy0RCrPrDfwqaB/EFaAk0UuDQ==
+react-cosmos-state-proxy@^4.8.2:
+  version "4.8.2"
+  resolved "https://registry.yarnpkg.com/react-cosmos-state-proxy/-/react-cosmos-state-proxy-4.8.2.tgz#ddc85afd55f910ef006c2cc3dd784f96d8310035"
+  integrity sha512-15Mgk9K3jeF4QIUylEonvMJbw19nAMU9k3vEGJXbiuaMUusmiEKm7dslbN99g6fJaG1gdNjv2Xxu7UNNJHvthg==
   dependencies:
-    "@babel/runtime-corejs2" "^7.2.0"
-    react-cosmos-config "^4.7.0"
-    react-cosmos-loader "^4.7.0"
-    react-cosmos-shared "^4.7.0-24"
-    traverse "^0.6.6"
+    "@babel/runtime-corejs2" "^7.3.1"
+    lodash.isempty "^4.4.0"
+    lodash.isequal "^4.4.0"
+    lodash.omit "^4.5.0"
+    react-cosmos-shared "^4.8.2"
 
-react-cosmos-voyager2@^4.7.0-24:
-  version "4.7.0-24"
-  resolved "https://registry.yarnpkg.com/react-cosmos-voyager2/-/react-cosmos-voyager2-4.7.0-24.tgz#8ef979daecd2239abf1dd4820ab8d69b3e16cdc9"
-  integrity sha512-mQ2k5Q8b8LM8agAph6imTyp1JdTgpVhL1NvfAXY4nEqgJ9o3damxTeeeDQooaCk9+AhnggEL9hd0WJCXjwiyfg==
+react-cosmos-test@4.8.2:
+  version "4.8.2"
+  resolved "https://registry.yarnpkg.com/react-cosmos-test/-/react-cosmos-test-4.8.2.tgz#ecc750b270bb7fe45a9139f794778be8ed0a1e94"
+  integrity sha512-Krm2zj9L0oaQO6UD03bOM0uTdN6Yc4E6s42E34Wjb/yfJeR2X0PCnF5Ad4dus0/Vo24kxJUpM3WY5OkjSNVLhQ==
   dependencies:
-    "@babel/runtime-corejs2" "^7.2.0"
-    babel-types "^6.26.0"
-    babylon "^6.18.0"
-    glob "^7.1.3"
-    lodash.sortby "^4.7.0"
-    micromatch "^3.1.10"
-    react-cosmos-shared "^4.7.0-24"
-    util.promisify "^1.0.0"
+    "@babel/runtime-corejs2" "^7.3.1"
+    react-cosmos-config "^4.8.2"
+    react-cosmos-loader "^4.8.2"
+    react-cosmos-shared "^4.8.2"
+    traverse "^0.6.6"
 
 react-cosmos-voyager2@^4.8.0-alpha.0:
   version "4.8.0-alpha.0"
@@ -9977,6 +9952,20 @@ react-cosmos-voyager2@^4.8.0-alpha.0:
     lodash.sortby "^4.7.0"
     micromatch "^3.1.10"
     react-cosmos-shared "^4.8.0-alpha.0"
+    util.promisify "^1.0.0"
+
+react-cosmos-voyager2@^4.8.2:
+  version "4.8.2"
+  resolved "https://registry.yarnpkg.com/react-cosmos-voyager2/-/react-cosmos-voyager2-4.8.2.tgz#36e25cdec8b03dfd4987d5f9be172d30b934b869"
+  integrity sha512-L1iVBSWJLaAFOeyvjGMvwwuS00atQD5aSelr/agpBuPj5CBDJWE4kFVEqymRQvNvuj+K18ZSPgpDBgzM7sSyWQ==
+  dependencies:
+    "@babel/runtime-corejs2" "^7.3.1"
+    babel-types "^6.26.0"
+    babylon "^6.18.0"
+    glob "^7.1.3"
+    lodash.sortby "^4.7.0"
+    micromatch "^3.1.10"
+    react-cosmos-shared "^4.8.2"
     util.promisify "^1.0.0"
 
 react-cosmos-voyager@^4.8.0-alpha.0:
@@ -10093,11 +10082,6 @@ react-is@^16.3.2, react-is@^16.6.0, react-is@^16.6.3:
   version "16.6.3"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.6.3.tgz#d2d7462fcfcbe6ec0da56ad69047e47e56e7eac0"
   integrity sha512-u7FDWtthB4rWibG/+mFbVd5FvdI20yde86qKGx4lVUTWmPlSWQ4QxbBIrrs+HnXGbxOUlUzTAP/VDmvCwaP2yA==
-
-react-is@^16.7.0:
-  version "16.7.0"
-  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.7.0.tgz#c1bd21c64f1f1364c6f70695ec02d69392f41bfa"
-  integrity sha512-Z0VRQdF4NPDoI0tsXVMLkJLiwEBa+RP66g0xDHxgxysxSoCUccSten4RTF/UFvZF1dZvZ9Zu1sx+MDXwcOR34g==
 
 react-is@^16.8.1:
   version "16.8.1"
