@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field, withReduxForm } from '../src/form';
+import { Field, FieldArray, withReduxForm } from '../src/form';
 import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
 import Form from '../src/form/Form';
@@ -9,6 +9,8 @@ import FormSectionContent from '../src/form/FormSectionContent';
 import FormSectionHeader from '../src/form/FormSectionHeader';
 import FormActions from '../src/form/FormActions';
 import TextField from '../src/form/TextField';
+import CodeField from '../src/form/CodeField';
+import CodeFieldArray from '../src/form/CodeFieldArray';
 
 const validate = values => {
   const errors = {};
@@ -70,6 +72,8 @@ let ContactForm = props => {
             rows={5}
             component={TextField}
           />
+          <Field name="source" label="Code Field" component={CodeField} />
+          <FieldArray name="sources" component={CodeFieldArray} />
         </FormSectionContent>
       </FormSection>
       <FormActions>

@@ -7,7 +7,16 @@ import 'brace/mode/markdown';
 
 class CodeEditor extends React.Component {
   render() {
-    return <AceEditor theme="github" mode="markdown" {...this.props} />;
+    return (
+      <AceEditor
+        theme="github"
+        mode="markdown"
+        width="100%"
+        showPrintMargin={false}
+        editorProps={{ $blockScrolling: Infinity }}
+        {...this.props}
+      />
+    );
   }
 }
 
