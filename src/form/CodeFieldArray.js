@@ -1,17 +1,55 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
+import { withStyles } from '@material-ui/core/styles';
+import { Trans } from '@lingui/macro';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Button from '@material-ui/core/Button';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
 
 import { Field } from './';
 import CodeField from './CodeField';
 import TextField from './TextField';
 
+const styles = theme => {
+  const borderColor =
+    theme.palette.type === 'light'
+      ? 'rgba(0, 0, 0, 0.23)'
+      : 'rgba(255, 255, 255, 0.23)';
+
+  return {
+    root: {
+      flexGrow: 1,
+      backgroundColor: theme.palette.background.paper,
+      borderColor,
+      borderTopLeftRadius: theme.shape.borderRadius,
+      borderTopRightRadius: theme.shape.borderRadius,
+      borderStyle: 'solid',
+      borderWidth: 1
+    },
+    placeholder: {
+      backgroundColor: theme.palette.background.paper,
+      display: 'flex',
+      height: 100,
+      padding: theme.spacing.unit,
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+  };
+};
+
 class CodeFieldArray extends React.Component {
   static propTypes = {
-    fields: PropTypes.array.isRequired
+    classes: PropTypes.object.isRequired,
+    fields: PropTypes.array.isRequired,
+    margin: PropTypes.oneOf(['none', 'dense', 'normal']),
+    label: PropTypes.string.isRequired,
+    fullWidth: PropTypes.bool
+  };
+
+  static defaultProps = {
+    margin: 'normal'
   };
 
   state = {
@@ -50,10 +88,11 @@ class CodeFieldArray extends React.Component {
   };
 
   render() {
-    const { fields } = this.props;
+    const { classes, fields, label, fullWidth, ...props } = this.props;
     return (
-      <div style={{ width: '100%' }}>
-        <AppBar position="static" color="default">
+      <FormControl fullWidth={fullWidth} {...props}>
+        <FormLabel {...props}>{label}</FormLabel>
+        <div className={classes.root}>
           <Tabs
             value={this.state.tab}
             onChange={this.handleTabChange}
@@ -75,18 +114,28 @@ class CodeFieldArray extends React.Component {
               />
             ))}
           </Tabs>
-        </AppBar>
-        <Field
-          name={`${fields.get(this.state.tab).name}.source`}
-          component={CodeField}
-        />
-        <Button onClick={this.add}>Add</Button>
-        <Button onClick={this.delete}>Remove</Button>
-        <Button onClick={this.moveLeft}>Move Left</Button>
-        <Button onClick={this.moveRight}>Move Right</Button>
-      </div>
+        </div>
+        {fields.get(this.state.tab) ? (
+          <Field
+            fullWidth
+            margin="none"
+            name={`${fields.name}[${this.state.tab}].source`}
+            component={CodeField}
+          />
+        ) : (
+          <div className={classes.placeholder}>
+            <Trans>You need to add a file first.</Trans>
+          </div>
+        )}
+        <div>
+          <Button onClick={this.add}>Add</Button>
+          <Button onClick={this.delete}>Remove</Button>
+          <Button onClick={this.moveLeft}>Move Left</Button>
+          <Button onClick={this.moveRight}>Move Right</Button>
+        </div>
+      </FormControl>
     );
   }
 }
 
-export default CodeFieldArray;
+export default withStyles(styles)(CodeFieldArray);

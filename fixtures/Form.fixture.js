@@ -72,8 +72,18 @@ let ContactForm = props => {
             rows={5}
             component={TextField}
           />
-          <Field name="source" label="Code Field" component={CodeField} />
-          <FieldArray name="sources" component={CodeFieldArray} />
+          <Field
+            fullWidth
+            name="source"
+            label="Code Field"
+            component={CodeField}
+          />
+          <FieldArray
+            fullWidth
+            name="sources"
+            label="Code Field Array"
+            component={CodeFieldArray}
+          />
         </FormSectionContent>
       </FormSection>
       <FormActions>
