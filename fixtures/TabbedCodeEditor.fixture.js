@@ -4,6 +4,7 @@ export default [
   {
     component: TabbedCodeEditor,
     props: {
+      onChange: (label, value) => console.log(label, value),
       editors: [
         {
           label: 'Auto.java',
@@ -11,7 +12,7 @@ export default [
         },
         {
           label: 'Haus.java',
-          defaultValue: 'Haus'
+          value: 'Haus'
         }
       ]
     }
