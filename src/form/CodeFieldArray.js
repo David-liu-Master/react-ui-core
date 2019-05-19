@@ -42,7 +42,7 @@ const styles = theme => {
 class CodeFieldArray extends React.Component {
   static propTypes = {
     classes: PropTypes.object.isRequired,
-    fields: PropTypes.array.isRequired,
+    fields: PropTypes.object.isRequired,
     margin: PropTypes.oneOf(['none', 'dense', 'normal']),
     label: PropTypes.string.isRequired,
     fullWidth: PropTypes.bool

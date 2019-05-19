@@ -19,7 +19,8 @@ class CodeField extends React.Component {
       touched: PropTypes.bool,
       error: PropTypes.string
     }),
-    margin: PropTypes.oneOf(['none', 'dense', 'normal'])
+    margin: PropTypes.oneOf(['none', 'dense', 'normal']),
+    fullWidth: PropTypes.bool
   };
 
   static defaultProps = {
@@ -41,15 +42,13 @@ class CodeField extends React.Component {
       input,
       label,
       meta: { error },
+      margin,
+      fullWidth,
       ...custom
     } = this.props;
     return (
-      <FormControl {...custom} error={error}>
-        {label && (
-          <FormLabel {...custom} error={error}>
-            {label}
-          </FormLabel>
-        )}
+      <FormControl margin={margin} fullWidth={fullWidth} error={error}>
+        {label && <FormLabel error={error}>{label}</FormLabel>}
         <CodeEditor
           height="100%"
           maxLines={40}

@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
   container: {
     display: 'flex',
+    width: '100%',
     borderBottom: `1px solid ${theme.palette.grey[300]}`,
     padding: theme.spacing.units[2],
     [theme.breakpoints.down('sm')]: {
