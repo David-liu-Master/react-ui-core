@@ -15,14 +15,14 @@ const aceOnBlur = onBlur => (event, editor) => {
 class CodeField extends React.Component {
   static propTypes = {
     input: PropTypes.object,
-    label: PropTypes.string,
+    label: PropTypes.node,
     meta: PropTypes.shape({
       touched: PropTypes.bool,
       error: PropTypes.string
     }),
     margin: PropTypes.oneOf(['none', 'dense', 'normal']),
     fullWidth: PropTypes.bool,
-    helperText: PropTypes.string
+    helperText: PropTypes.node
   };
 
   static defaultProps = {

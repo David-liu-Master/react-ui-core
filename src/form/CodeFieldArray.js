@@ -7,6 +7,7 @@ import Tab from '@material-ui/core/Tab';
 import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
+import FormHelperText from '@@material-ui/core/FormHelperText';
 
 import { Field } from './';
 import CodeField from './CodeField';
@@ -44,7 +45,8 @@ class CodeFieldArray extends React.Component {
     classes: PropTypes.object.isRequired,
     fields: PropTypes.object.isRequired,
     margin: PropTypes.oneOf(['none', 'dense', 'normal']),
-    label: PropTypes.string.isRequired,
+    label: PropTypes.node,
+    helperText: PropTypes.node,
     fullWidth: PropTypes.bool
   };
 
@@ -88,10 +90,17 @@ class CodeFieldArray extends React.Component {
   };
 
   render() {
-    const { classes, fields, label, fullWidth, ...props } = this.props;
+    const {
+      classes,
+      fields,
+      label,
+      helperText,
+      fullWidth,
+      ...props
+    } = this.props;
     return (
       <FormControl fullWidth={fullWidth} {...props}>
-        <FormLabel {...props}>{label}</FormLabel>
+        {label && <FormLabel>{label}</FormLabel>}
         <div className={classes.root}>
           <Tabs
             value={this.state.tab}
@@ -133,6 +142,7 @@ class CodeFieldArray extends React.Component {
           <Button onClick={this.moveLeft}>Move Left</Button>
           <Button onClick={this.moveRight}>Move Right</Button>
         </div>
+        {helperText && <FormHelperText>{helperText}</FormHelperText>}
       </FormControl>
     );
   }
