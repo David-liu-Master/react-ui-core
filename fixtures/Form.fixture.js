@@ -9,10 +9,16 @@ import FormSectionContent from '../src/form/FormSectionContent';
 import FormSectionHeader from '../src/form/FormSectionHeader';
 import FormActions from '../src/form/FormActions';
 import TextField from '../src/form/TextField';
+import TextFieldArray from '../src/form/TextFieldArray';
 import CodeField from '../src/form/CodeField';
 import CodeFieldArray from '../src/form/CodeFieldArray';
 import NumberField from '../src/form/NumberField';
 import RegexField from '../src/form/RegexField';
+import ChoiceField from '../src/form/ChoiceField';
+import SliderField from '../src/form/SliderField';
+import SelectField from '../src/form/SelectField';
+import TimeField from '../src/form/TimeField';
+import DateField from '../src/form/DateField';
 
 const validate = values => {
   const errors = {};
@@ -38,6 +44,50 @@ let ContactForm = props => {
             name="username"
             label="Username"
             component={TextField}
+          />
+          <FieldArray
+            name="texts"
+            label="Texts"
+            helperText="Help me!"
+            component={TextFieldArray}
+          />
+          <Field
+            name="slider"
+            label="Slider"
+            min={5}
+            step={5}
+            max={50}
+            fullWidth
+            helperText="Min 5, Max 50, Step 5"
+            component={SliderField}
+          />
+          <Field
+            name="select"
+            label="Select"
+            fullWidth
+            options={['hallo', 'this', 'are', 'options']}
+            component={SelectField}
+          />
+          <Field
+            name="select"
+            label="Native Select"
+            native
+            fullWidth
+            options={['hallo', 'this', 'are', 'options']}
+            component={SelectField}
+          />
+        </FormSectionContent>
+      </FormSection>
+      <FormSection>
+        <FormSectionHeader>Section Time</FormSectionHeader>
+        <FormSectionContent>
+          <Field required name="time" label="Time" component={TimeField} />
+          <Field
+            required
+            name="date"
+            label="Date"
+            fullWidth
+            component={DateField}
           />
         </FormSectionContent>
       </FormSection>
@@ -88,6 +138,14 @@ let ContactForm = props => {
             label="Bio"
             rows={5}
             component={TextField}
+          />
+          <Field
+            fullWidth
+            name="choice"
+            label="Choice"
+            options={['test', 'test2']}
+            helperText="Test"
+            component={ChoiceField}
           />
           <Field
             fullWidth

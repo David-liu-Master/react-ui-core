@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
+import FormHelperText from '@material-ui/core/FormHelperText';
 
 import CodeEditor from '../CodeEditor';
 import { modes } from '../CodeEditor';
@@ -20,7 +21,8 @@ class CodeField extends React.Component {
       error: PropTypes.string
     }),
     margin: PropTypes.oneOf(['none', 'dense', 'normal']),
-    fullWidth: PropTypes.bool
+    fullWidth: PropTypes.bool,
+    helperText: PropTypes.string
   };
 
   static defaultProps = {
@@ -41,14 +43,19 @@ class CodeField extends React.Component {
     const {
       input,
       label,
-      meta: { error },
+      meta: { touched, error },
       margin,
       fullWidth,
+      helperText,
       ...custom
     } = this.props;
     return (
-      <FormControl margin={margin} fullWidth={fullWidth} error={error}>
-        {label && <FormLabel error={error}>{label}</FormLabel>}
+      <FormControl
+        margin={margin}
+        fullWidth={fullWidth}
+        error={touched && error}
+      >
+        {label && <FormLabel>{label}</FormLabel>}
         <CodeEditor
           height="100%"
           maxLines={40}
@@ -65,6 +72,7 @@ class CodeField extends React.Component {
             </option>
           ))}
         </select>
+        {helperText && <FormHelperText>{helperText}</FormHelperText>}
       </FormControl>
     );
   }

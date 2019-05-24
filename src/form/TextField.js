@@ -4,7 +4,7 @@ import MuiTextField from '@material-ui/core/TextField';
 const TextField = ({ input, label, meta: { touched, error }, ...custom }) => (
   <MuiTextField
     label={label}
-    error={touched && error}
+    error={touched && Boolean(error)}
     variant="outlined"
     margin="dense"
     {...input}
