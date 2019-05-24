@@ -18,7 +18,13 @@ class RemoteDrawerLayout extends React.Component {
   }
 
   render() {
-    const { remoteSections, drawer, useRouter, ...props } = this.props;
+    const {
+      remoteSections,
+      drawer,
+      fetchRemoteSection,
+      useRouter,
+      ...props
+    } = this.props;
 
     let combinedSections = [...Object.values(remoteSections)];
 

@@ -10,7 +10,7 @@ const styles = theme => ({
     flex: 1,
     justifyContent: 'flex-start',
     [theme.breakpoints.down('sm')]: {
-      marginBottom: theme.spacing.unit
+      marginBottom: theme.spacing(1)
     }
   }
 });

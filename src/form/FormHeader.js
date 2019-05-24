@@ -8,7 +8,7 @@ const styles = theme => ({
     display: 'flex',
     justifyContent: 'flex-start',
     borderBottom: `1px solid ${theme.palette.grey[300]}`,
-    padding: theme.spacing.units[2]
+    padding: theme.spacing(3)
   }
 });
 

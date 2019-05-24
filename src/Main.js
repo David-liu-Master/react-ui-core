@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 const styles = theme => ({
   toolbar: theme.mixins.toolbar,
   main: {
-    padding: theme.spacing.units[2]
+    padding: theme.spacing(3)
   }
 });
 

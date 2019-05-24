@@ -32,7 +32,7 @@ const styles = theme => {
       backgroundColor: theme.palette.background.paper,
       display: 'flex',
       height: 100,
-      padding: theme.spacing.unit,
+      padding: theme.spacing(1),
       alignItems: 'center',
       justifyContent: 'center'
     }

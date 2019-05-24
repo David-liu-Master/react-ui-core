@@ -14,22 +14,22 @@ import Markdown from '../MarkdownRenderer';
 
 const styles = theme => ({
   header: {
-    padding: theme.spacing.units[2],
+    padding: theme.spacing(3),
     backgroundColor: theme.palette.primary.light,
     color: theme.palette.primary.contrastText,
     display: 'flex',
     alignItems: 'center'
   },
   required: {
-    margin: theme.spacing.units[0]
+    margin: theme.spacing(1)
   },
   body: {
-    padding: theme.spacing.units[2]
+    padding: theme.spacing(3)
   },
   hint: {
-    padding: theme.spacing.units[2],
-    paddingTop: theme.spacing.units[0],
-    paddingBottom: theme.spacing.units[0],
+    padding: theme.spacing(3),
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
     color: theme.palette.grey[600],
     backgroundColor: theme.palette.grey[200]
   }

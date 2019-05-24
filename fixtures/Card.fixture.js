@@ -19,7 +19,10 @@ export default [
     component: Card
   },
   {
-    component: FullCard
+    component: FullCard,
+    props: {
+      onClick: () => console.log('Click')
+    }
   },
   {
     component: CardContent,

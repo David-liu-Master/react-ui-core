@@ -39,7 +39,7 @@ class DrawerSection extends React.Component {
 
 DrawerSection.propTypes = {
   label: PropTypes.string,
-  component: PropTypes.func,
+  component: PropTypes.node,
   links: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,

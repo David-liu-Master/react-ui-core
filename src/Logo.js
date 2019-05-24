@@ -12,7 +12,7 @@ const styles = theme => ({
     height: 46
   },
   text: {
-    marginLeft: theme.spacing.unit,
+    marginLeft: theme.spacing(1),
     fontWeight: 1000,
     fontSize: 16
   }
@@ -96,4 +96,4 @@ Logo.defaultProps = {
   inverted: false
 };
 
-export default withStyles(styles)(withTheme()(Logo));
+export default withStyles(styles)(withTheme(Logo));

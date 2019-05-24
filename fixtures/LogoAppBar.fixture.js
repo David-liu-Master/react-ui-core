@@ -10,10 +10,6 @@ export default [
   },
   {
     component: LogoAppBar,
-    reduxState: { core: {} }
-  },
-  {
-    component: LogoAppBar,
     props: {
       middle: <div>Search</div>,
       right: (

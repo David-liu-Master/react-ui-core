@@ -11,6 +11,8 @@ import FormActions from '../src/form/FormActions';
 import TextField from '../src/form/TextField';
 import CodeField from '../src/form/CodeField';
 import CodeFieldArray from '../src/form/CodeFieldArray';
+import NumberField from '../src/form/NumberField';
+import RegexField from '../src/form/RegexField';
 
 const validate = values => {
   const errors = {};
@@ -66,11 +68,35 @@ let ContactForm = props => {
           </Field>
           <Field
             fullWidth
+            name="regex"
+            label="Regex"
+            helperText="Write a regex"
+            component={RegexField}
+          />
+          <Field
+            fullWidth
+            name="regex"
+            label="Regex with Tester"
+            helperText="Write a regex"
+            showTester
+            component={RegexField}
+          />
+          <Field
+            fullWidth
             multiline
             name="bio"
             label="Bio"
             rows={5}
             component={TextField}
+          />
+          <Field
+            fullWidth
+            name="number"
+            label="Number"
+            max={10}
+            min={-10}
+            helperText="Between -10 and 10"
+            component={NumberField}
           />
           <Field
             fullWidth

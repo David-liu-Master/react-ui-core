@@ -174,7 +174,6 @@ class Table extends React.Component {
                     <TableCell
                       key={column.id}
                       padding={column.disablePadding ? 'none' : 'default'}
-                      numeric={column.numeric}
                     >
                       <CellType
                         id={row.id}

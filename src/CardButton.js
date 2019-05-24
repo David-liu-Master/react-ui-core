@@ -8,13 +8,13 @@ const styles = theme => ({
     borderRadius: `0 0 ${theme.shape.borderRadius}px ${
       theme.shape.borderRadius
     }px`,
-    padding: theme.spacing.unit * 2
+    padding: theme.spacing(2)
   }
 });
 
 class CardButton extends React.Component {
   static propTypes = {
-    children: PropTypes.element.isRequired,
+    children: PropTypes.node,
     classes: PropTypes.object.isRequired,
     onClick: PropTypes.func.isRequired
   };

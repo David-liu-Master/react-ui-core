@@ -11,7 +11,7 @@ const styles = theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     background: theme.palette.grey[200],
-    padding: theme.spacing.units[2]
+    padding: theme.spacing(3)
   },
   title: {
     fontSize: theme.fontSize.units[3]
