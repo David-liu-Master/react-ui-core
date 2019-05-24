@@ -5,10 +5,10 @@ import MuiTextField from '@material-ui/core/TextField';
 
 class RegexField extends React.Component {
   static propTypes = {
-    input: {
+    input: PropTypes.shape({
       onChange: PropTypes.func.isRequired,
       value: PropTypes.string
-    },
+    }),
     showTester: PropTypes.bool
   };
 
