@@ -62,7 +62,7 @@
     "@material-ui/lab": "^4.0.0-alpha.13",
     "@reach/router": "1.x",
     "react": "16.x",
-    "react-redux": "5.x",
+    "react-redux": "7.x",
     "redux": "4.x",
     "redux-thunk": "2.x"
   },
