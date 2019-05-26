@@ -16,7 +16,6 @@ pages:
   stage: deploy
   script:
     - yarn install
-    - yarn build
     - yarn build-storybook
     - mv storybook-static public
   artifacts:
