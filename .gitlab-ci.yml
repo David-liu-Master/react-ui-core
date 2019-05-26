@@ -17,10 +17,8 @@ pages:
   script:
     - yarn install
     - yarn build
-    - yarn cosmos:export
-    - mv cosmos-export public
-    - mv public/ui-core/* public/
-    - rm -rf public/ui-core
+    - yarn build-storybook
+    - mv storybook-static public
   artifacts:
     paths:
       - public

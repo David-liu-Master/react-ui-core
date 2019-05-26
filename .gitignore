@@ -1,4 +1,5 @@
 cosmos-export
+storybook-static
 src/locale/_build
 /coverage
 /demo/dist
