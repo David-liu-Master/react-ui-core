@@ -11,9 +11,9 @@ const rootReducer = combineReducers({
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const withReduxProvider = initialState => story => {
+const withReduxProvider = (initialState, reducer = rootReducer) => story => {
   const store = createStore(
-    rootReducer,
+    reducer,
     initialState,
     composeEnhancers(applyMiddleware(thunk))
   );
