@@ -29,8 +29,7 @@
     ]
   },
   "scripts": {
-    "build": "lingui extract --clean && lingui compile && cross-env NODE_ENV=production nwb build-react-component",
-    "clean": "nwb clean-module && nwb clean-demo",
+    "build": "lingui extract --clean && lingui compile && cross-env NODE_ENV=production ./node_modules/.bin/babel src --out-dir lib --copy-files",
     "prepublishOnly": "npm run build",
     "start": "cosmos",
     "test": "jest",
@@ -68,6 +67,11 @@
     "redux-thunk": "2.x"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
     "@lingui/cli": "^2.8.1",
     "@lingui/loader": "^2.8.1",
     "@lingui/macro": "^2.8.1",
@@ -76,24 +80,22 @@
     "@material-ui/lab": "^4.0.0-alpha.13",
     "@reach/router": "^1.2.1",
     "axios": "^0.18.0",
-    "babel-eslint": "10.0.1",
-    "babel-jest": "23.6.0",
-    "babel-plugin-macros": "2.5.1",
-    "babel-preset-env": "1.7.0",
-    "babel-preset-react": "6.24.1",
-    "babel-preset-react-app": "3.1.2",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-macros": "^2.5.1",
     "cross-env": "5.2.0",
+    "css-loader": "^2.1.1",
     "enzyme": "3.9.0",
-    "enzyme-adapter-react-16": "1.13.0",
+    "enzyme-adapter-react-16": "1.13.1",
     "eslint": "5.16.0",
     "eslint-config-prettier": "4.3.0",
-    "eslint-plugin-jest": "22.5.1",
+    "eslint-plugin-jest": "22.6.4",
     "eslint-plugin-react": "7.13.0",
+    "html-webpack-plugin": "^3.2.0",
     "husky": "2.3.0",
-    "jest": "23.6.0",
+    "jest": "^24.8.0",
     "jest-enzyme": "7.0.2",
     "lint-staged": "8.1.7",
-    "nwb": "0.23.0",
     "prettier": "1.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -104,7 +106,9 @@
     "react-redux": "^5.1.1",
     "react-test-renderer": "16.8.6",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.32.2"
   },
   "husky": {
     "hooks": {
@@ -123,7 +127,9 @@
     ]
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/enzyme.config.js",
+    "setupFilesAfterEnv": [
+      "<rootDir>/enzyme.config.js"
+    ],
     "coveragePathIgnorePatterns": [
       "<rootDir>/src/locale/",
       "<rootDir>/fixtures",
@@ -132,16 +138,6 @@
     "coverageReporters": [
       "html",
       "text"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "env",
-      "react",
-      "react-app"
-    ],
-    "plugins": [
-      "macros"
     ]
   }
 }
