@@ -1,6 +1,6 @@
 {
   "name": "@openpatch/ui-core",
-  "version": "2.1.0",
+  "version": "2.1.2",
   "description": "ui core for openpatch",
   "author": "Mike Barkmin",
   "homepage": "https://openpatch.gitlab.io/ui-core",
@@ -118,7 +118,9 @@
         "git add"
       ]
     },
-    "ignore": ["src/locale/**/*"]
+    "ignore": [
+      "src/locale/**/*"
+    ]
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/enzyme.config.js",
