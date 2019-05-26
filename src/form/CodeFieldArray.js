@@ -7,7 +7,7 @@ import Tab from '@material-ui/core/Tab';
 import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
-import FormHelperText from '@@material-ui/core/FormHelperText';
+import FormHelperText from '@material-ui/core/FormHelperText';
 
 import { Field } from './';
 import CodeField from './CodeField';
