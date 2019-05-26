@@ -112,10 +112,13 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "npm run prettier --single-quote --write",
-      "git add"
-    ]
+    "linters": {
+      "src/**/*.{js,jsx,json,css}": [
+        "npm run prettier --single-quote --write",
+        "git add"
+      ]
+    },
+    "ignore": ["src/locale/**/*"]
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/enzyme.config.js",
