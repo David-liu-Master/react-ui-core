@@ -16,4 +16,11 @@ storiesOf('Card', module)
   ))
   .add('CardButton', () => (
     <CardButton onClick={action('clicked')}>Button</CardButton>
+  ))
+  .add('Full', () => (
+    <Card>
+      <CardBanner title="Banner" />
+      <CardContent>Content</CardContent>
+      <CardButton onClick={action('clicked')}>Button</CardButton>
+    </Card>
   ));

@@ -67,6 +67,7 @@ class RegexField extends React.Component {
       label,
       meta: { touched, error },
       showTester,
+      fullWidth,
       ...custom
     } = this.props;
     const { test, match, testError } = this.state;
@@ -77,14 +78,13 @@ class RegexField extends React.Component {
           error={touched && error}
           variant="outlined"
           margin="dense"
+          fullWidth={fullWidth}
           {...input}
           {...custom}
         />
         {showTester && (
           <MuiTextField
-            label={
-              <Trans>Regular Expression Tester {match ? '(MATCH)' : ''}</Trans>
-            }
+            label={<Trans>Regular Expression Tester</Trans>}
             helperText={testError}
             value={test}
             onChange={this.handleTestChange}
@@ -94,7 +94,7 @@ class RegexField extends React.Component {
                 : 'rgba(240, 128, 128, 0.3)'
             }}
             variant="filled"
-            fullWidth
+            fullWidth={fullWidth}
             multiline
           />
         )}
