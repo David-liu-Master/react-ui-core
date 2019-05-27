@@ -4,8 +4,8 @@ import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import FormHelperText from '@material-ui/core/FormHelperText';
 
-import CodeEditor from '../CodeEditor';
-import { modes } from '../CodeEditor';
+import CodeEditor from './CodeEditor';
+import { modes } from './CodeEditor';
 
 const aceOnBlur = onBlur => (event, editor) => {
   const value = editor.getValue();
