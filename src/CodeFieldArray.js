@@ -9,7 +9,7 @@ import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import FormHelperText from '@material-ui/core/FormHelperText';
 
-import { Field } from './';
+import { Field } from './form';
 import CodeField from './CodeField';
 import TextField from './TextField';
 

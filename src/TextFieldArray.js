@@ -9,7 +9,7 @@ import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
 
-import { Field } from './';
+import { Field } from './form';
 import TextField from './TextField';
 
 class TextFieldArray extends React.Component {
