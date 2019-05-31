@@ -1,14 +1,12 @@
 import React from 'react';
-import { storiesOf, addDecorator } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
-import withI18nProvider from '../src/storybookProvider/withI18nProvider';
 import ConfirmDialog from '../src/ConfirmDialog';
 
 storiesOf('ConfirmDialog', module)
   .addDecorator(withKnobs)
-  .addDecorator(withI18nProvider())
   .add('open', () => (
     <ConfirmDialog
       open={boolean('open', true)}

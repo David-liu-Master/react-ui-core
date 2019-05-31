@@ -5,8 +5,6 @@ import { action } from '@storybook/addon-actions';
 
 import DateField from '../src/DateField';
 
-const options = ['Option 1', 'Option 2', 'Option 3'];
-
 storiesOf('DateField', module)
   .addDecorator(withKnobs)
   .add('normal', () => (
