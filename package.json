@@ -23,7 +23,8 @@
   "lingui": {
     "sourceLocale": "en",
     "localeDir": "<rootDir>/src/locale",
-    "format": "minimal",
+    "compileNamespace": "es",
+    "format": "po",
     "srcPathDirs": [
       "<rootDir>/src"
     ]
