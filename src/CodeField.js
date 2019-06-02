@@ -14,7 +14,10 @@ const aceOnBlur = onBlur => (event, editor) => {
 
 class CodeField extends React.Component {
   static propTypes = {
-    input: PropTypes.object,
+    input: PropTypes.shape({
+      value: PropTypes.string,
+      onChange: PropTypes.func
+    }),
     label: PropTypes.node,
     meta: PropTypes.shape({
       touched: PropTypes.bool,
@@ -22,11 +25,17 @@ class CodeField extends React.Component {
     }),
     margin: PropTypes.oneOf(['none', 'dense', 'normal']),
     fullWidth: PropTypes.bool,
-    helperText: PropTypes.node
+    helperText: PropTypes.node,
+    required: PropTypes.bool
   };
 
   static defaultProps = {
-    margin: 'normal'
+    margin: 'normal',
+    meta: {},
+    input: {
+      value: '',
+      onChange: () => {}
+    }
   };
 
   state = {
@@ -47,6 +56,7 @@ class CodeField extends React.Component {
       margin,
       fullWidth,
       helperText,
+      required,
       ...custom
     } = this.props;
     return (
@@ -54,6 +64,7 @@ class CodeField extends React.Component {
         margin={margin}
         fullWidth={fullWidth}
         error={touched && error}
+        required={required}
       >
         {label && <FormLabel>{label}</FormLabel>}
         <CodeEditor
