@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Terminal } from 'xterm';
 import 'xterm/lib/xterm.css';
+import _debounce from 'lodash/debounce';
 
 class XTerm extends Component {
   static propTypes = {
@@ -32,6 +33,8 @@ class XTerm extends Component {
     super(props);
     this.xtermDiv = React.createRef();
     ['fit', 'webLinks'].forEach(addon => this.applyAddon(addon));
+
+    this.debounceResize = _debounce(this.handleResize, 50);
   }
 
   applyAddon(addonName) {
@@ -39,12 +42,12 @@ class XTerm extends Component {
     Terminal.applyAddon(addon);
   }
 
-  handleResize() {
+  handleResize = () => {
     const { onResize } = this.props;
 
     this.xterm.fit();
     onResize({ cols: this.xterm.cols, rows: this.xterm.rows });
-  }
+  };
 
   componentDidMount() {
     const {
@@ -58,11 +61,12 @@ class XTerm extends Component {
     } = this.props;
 
     this.xterm = new Terminal(options);
+    window.xterm = this.xterm;
     this.xterm.open(this.xtermDiv.current);
     this.xterm.fit();
     this.xterm.write(value);
 
-    window.addEventListener('resize', this.handleResize);
+    window.addEventListener('resize', this.debounceResize);
 
     this.xterm.on('key', onKey);
     this.xterm.on('data', onData);
@@ -75,13 +79,11 @@ class XTerm extends Component {
     this.xterm.destroy();
     this.xterm = null;
 
-    window.removeEventListener('resize', this.handleResize);
+    window.removeEventListener('resize', this.debounceResize);
   }
 
-  componentDidUpdate() {
-    const { value } = this.props;
-
-    this.xterm.write(value);
+  write(value) {
+    return this.xterm.write(value);
   }
 
   render() {

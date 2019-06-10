@@ -5,20 +5,48 @@ import XTerm from '../src/XTerm';
 import WebSocket from '../src/WebSocket';
 
 const XTermWS = () => {
-  const [value, setValue] = React.useState('');
   const websocket = React.useRef(null);
+  const xterm = React.useRef(null);
+
+  const setValue = value => {
+    xterm.current.write(value);
+  };
 
   const sendData = data => {
-    websocket.current.sendMessage(data);
+    websocket.current.sendMessage(
+      JSON.stringify({
+        event: 'key',
+        data
+      })
+    );
   };
+
+  const sendResize = data => {
+    websocket.current.sendMessage(
+      JSON.stringify({
+        event: 'resize',
+        data
+      })
+    );
+  };
+
   return (
     <div>
       <WebSocket
         ref={websocket}
-        url="wss://echo.websocket.org"
-        onMessage={m => setValue(m.data)}
+        url="ws://192.168.255.10:8000/ws"
+        onMessage={m => setValue(JSON.parse(m.data).stdx)}
       />
-      <XTerm value={value} onData={sendData} />
+      <XTerm
+        ref={xterm}
+        onData={sendData}
+        onResize={sendResize}
+        options={{
+          cursorBlink: true,
+          macOptionIsMeta: true,
+          scrollback: true
+        }}
+      />
     </div>
   );
 };

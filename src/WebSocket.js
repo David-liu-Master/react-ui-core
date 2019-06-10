@@ -20,7 +20,7 @@ class WebSocket extends Component {
     onMessage: () => {},
     onOpen: () => {},
     reconnect: true,
-    reconnectInterval: 10
+    reconnectInterval: 5000
   };
 
   constructor(props) {
