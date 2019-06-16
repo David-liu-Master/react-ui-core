@@ -39,16 +39,12 @@ class NotFound extends React.Component {
         <Card className={classes.container}>
           <CardContent>
             <Typography className={classes.title} variant="h1">
-              <Trans id="openpatch.ui-core.not-found">
-                The page you are looking for was not found!
-              </Trans>
+              <Trans>The page you are looking for was not found!</Trans>
             </Typography>
             <Warning />
           </CardContent>
           <CardButton onClick={this.handleBack}>
-            <Trans id="openpatch.ui-core.return-to-last-page">
-              Return to last viewed page
-            </Trans>
+            <Trans>Return to last viewed page</Trans>
           </CardButton>
         </Card>
       </BlankCenteredLayout>

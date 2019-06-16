@@ -30,7 +30,7 @@ export class ItemRenderer extends React.Component {
     const { FormatRenderer, item, state, hidden, dispatch } = this.props;
 
     if (!FormatRenderer) {
-      return <Trans id="openpatch.ui-core.unsupported">Unsupported</Trans>;
+      return <Trans>Unsupported</Trans>;
     }
 
     const assignment = _get(item, ['assignment']);
@@ -43,7 +43,7 @@ export class ItemRenderer extends React.Component {
           <Paper>
             <div>
               <Typography>
-                <Trans id="openpatch.ui-core.assignment">Assignment</Trans>
+                <Trans>Assignment</Trans>
               </Typography>
             </div>
             <div>

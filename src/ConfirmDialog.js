@@ -31,10 +31,10 @@ class ConfirmDialog extends React.Component {
         <DialogContent>{content}</DialogContent>
         <DialogActions>
           <Button onClick={onCancel} color="primary">
-            <Trans id="openpatch.ui-core.cancel">Cancel</Trans>
+            <Trans>Cancel</Trans>
           </Button>
           <Button onClick={onConfirm} color="primary">
-            <Trans id="openpatch.ui-core.confirm">Confirm</Trans>
+            <Trans>Confirm</Trans>
           </Button>
         </DialogActions>
       </Dialog>

@@ -18,8 +18,8 @@ import Table from './Table';
 class ReduxRemoteTable extends React.Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
-    disableSort: PropTypes.boolean,
-    disableSelect: PropTypes.boolean,
+    disableSort: PropTypes.bool,
+    disableSelect: PropTypes.bool,
     axios: PropTypes.func.isRequired,
     isFetching: PropTypes.bool,
     hasFailed: PropTypes.bool,

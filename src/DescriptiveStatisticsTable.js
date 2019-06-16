@@ -19,25 +19,25 @@ class DescriptiveStatisticsTable extends React.Component {
           <TableRow>
             <TableCell />
             <TableCell>
-              <Trans id="openpatch.ui-core.min">Min</Trans>
+              <Trans>Min</Trans>
             </TableCell>
             <TableCell>
-              <Trans id="openpatch.ui-core.max">Max</Trans>
+              <Trans>Max</Trans>
             </TableCell>
             <TableCell>
-              <Trans id="openpatch.ui-core.mean">Mean</Trans>
+              <Trans>Mean</Trans>
             </TableCell>
             <TableCell>
-              <Trans id="openpatch.ui-core.median">Median</Trans>
+              <Trans>Median</Trans>
             </TableCell>
             <TableCell>
-              <Trans id="openpatch.ui-core.standardDeviation">SD</Trans>
+              <Trans>SD</Trans>
             </TableCell>
             <TableCell>
-              <Trans id="openpatch.ui-core.variance">Var</Trans>
+              <Trans>Var</Trans>
             </TableCell>
             <TableCell>
-              <Trans id="openpatch.ui-core.n">N</Trans>
+              <Trans>N</Trans>
             </TableCell>
           </TableRow>
         </TableHead>
