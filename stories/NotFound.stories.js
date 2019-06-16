@@ -1,0 +1,6 @@
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+
+import NotFound from '../src/NotFound';
+
+storiesOf('NotFound', module).add('normal', () => <NotFound />);
