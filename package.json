@@ -29,7 +29,8 @@
     ]
   },
   "scripts": {
-    "build": "lingui extract --clean && lingui compile && cross-env NODE_ENV=production ./node_modules/.bin/babel src --out-dir lib --copy-files",
+    "build": "npm run clean && npm run locale:clean && npm run locale:compile && cross-env NODE_ENV=production ./node_modules/.bin/babel src --out-dir lib --copy-files",
+    "clean": "rm -rf lib",
     "prepublishOnly": "npm run build",
     "start": "npm run storybook",
     "storybook": "start-storybook -p 6006",
