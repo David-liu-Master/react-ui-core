@@ -3,7 +3,7 @@ import i18n from './i18n/reducer';
 import layout from './layout/reducer';
 import notifications from './notifications/reducer';
 import theme from './theme/reducer';
-import { reducer as form } from '../form';
+import { reducer as form } from '../redux-form';
 import table from './table/reducer';
 import dialog from './dialog/reducer';
 

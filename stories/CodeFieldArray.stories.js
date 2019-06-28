@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import withReduxFormProvider from '../src/storybookProvider/withReduxFormProvider';
-import { FieldArray } from '../src/form';
+import { FieldArray } from '../src/redux-form';
 
 import CodeFieldArray from '../src/CodeFieldArray';
 
