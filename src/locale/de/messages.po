@@ -17,8 +17,40 @@ msgstr ""
 msgid "Add Element"
 msgstr ""
 
+#: src/ItemRenderer.js:46
+msgid "Assignment"
+msgstr ""
+
+#: src/ConfirmDialog.js:34
+msgid "Cancel"
+msgstr ""
+
+#: src/ConfirmDialog.js:37
+msgid "Confirm"
+msgstr ""
+
 #: src/TextFieldArray.js:33
 msgid "Delete"
+msgstr ""
+
+#: src/DescriptiveStatisticsTable.js:25
+msgid "Max"
+msgstr ""
+
+#: src/DescriptiveStatisticsTable.js:28
+msgid "Mean"
+msgstr ""
+
+#: src/DescriptiveStatisticsTable.js:31
+msgid "Median"
+msgstr ""
+
+#: src/DescriptiveStatisticsTable.js:22
+msgid "Min"
+msgstr ""
+
+#: src/DescriptiveStatisticsTable.js:40
+msgid "N"
 msgstr ""
 
 #: src/Table.js:205
@@ -33,68 +65,36 @@ msgstr ""
 msgid "Regular Expression Tester"
 msgstr ""
 
+#: src/NotFound.js:47
+msgid "Return to last viewed page"
+msgstr ""
+
 #: src/Table.js:200
 msgid "Rows per page:"
+msgstr ""
+
+#: src/DescriptiveStatisticsTable.js:34
+msgid "SD"
+msgstr ""
+
+#: src/NotFound.js:42
+msgid "The page you are looking for was not found!"
 msgstr ""
 
 #: src/ResponseField/ResponseField.js:65
 msgid "This Field is required!"
 msgstr ""
 
-#: src/CodeFieldArray.js:136
-msgid "You need to add a file first."
-msgstr ""
-
-#: src/ItemRenderer.js:46
-msgid "openpatch.ui-core.assignment"
-msgstr ""
-
-#: src/ConfirmDialog.js:34
-msgid "openpatch.ui-core.cancel"
-msgstr ""
-
-#: src/ConfirmDialog.js:37
-msgid "openpatch.ui-core.confirm"
-msgstr ""
-
-#: src/DescriptiveStatisticsTable.js:25
-msgid "openpatch.ui-core.max"
-msgstr ""
-
-#: src/DescriptiveStatisticsTable.js:28
-msgid "openpatch.ui-core.mean"
-msgstr ""
-
-#: src/DescriptiveStatisticsTable.js:31
-msgid "openpatch.ui-core.median"
-msgstr ""
-
-#: src/DescriptiveStatisticsTable.js:22
-msgid "openpatch.ui-core.min"
-msgstr ""
-
-#: src/DescriptiveStatisticsTable.js:40
-msgid "openpatch.ui-core.n"
-msgstr ""
-
-#: src/NotFound.js:42
-msgid "openpatch.ui-core.not-found"
-msgstr ""
-
-#: src/NotFound.js:49
-msgid "openpatch.ui-core.return-to-last-page"
-msgstr ""
-
-#: src/DescriptiveStatisticsTable.js:34
-msgid "openpatch.ui-core.standardDeviation"
-msgstr ""
-
 #: src/ItemRenderer.js:33
-msgid "openpatch.ui-core.unsupported"
+msgid "Unsupported"
 msgstr ""
 
 #: src/DescriptiveStatisticsTable.js:37
-msgid "openpatch.ui-core.variance"
+msgid "Var"
+msgstr ""
+
+#: src/CodeFieldArray.js:136
+msgid "You need to add a file first."
 msgstr ""
 
 #: src/Table.js:198
