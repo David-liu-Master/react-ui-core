@@ -11,12 +11,17 @@ const rootReducer = combineReducers({
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const withReduxProvider = (initialState, reducer = rootReducer) => story => {
+const withReduxProvider = (
+  initialState,
+  reducer = rootReducer,
+  storeCallback = () => {}
+) => story => {
   const store = createStore(
     reducer,
     initialState,
     composeEnhancers(applyMiddleware(thunk))
   );
+  storeCallback(store);
   return <Provider store={store}>{story()}</Provider>;
 };
 
