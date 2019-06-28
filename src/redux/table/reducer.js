@@ -38,6 +38,7 @@ export default (state = initialState, action) =>
         if (!(action.payload.tableId in draft)) {
           draft[action.payload.tableId] = initialTableState;
         }
+        draft[action.payload.tableId].needsRefresh = true;
         break;
       case REFRESH:
         table = draft[action.payload.tableId];
