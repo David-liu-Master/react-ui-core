@@ -4,10 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
-  toolbar: theme.mixins.toolbar,
-  main: {
-    padding: theme.spacing(3)
-  }
+  toolbar: theme.mixins.toolbar
 });
 
 class Main extends React.Component {
@@ -24,7 +21,7 @@ class Main extends React.Component {
   render() {
     const { noDrawerSpacing, classes, children, ...props } = this.props;
     return (
-      <Typography className={classes.main} component="main" {...props}>
+      <Typography component="main" {...props}>
         {!noDrawerSpacing && <div className={classes.toolbar} />}
         {children}
       </Typography>
