@@ -4,14 +4,18 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
-  toolbar: theme.mixins.toolbar
+  toolbar: theme.mixins.toolbar,
+  main: {
+    padding: theme.spacing(3)
+  }
 });
 
 class Main extends React.Component {
   static propTypes = {
     classes: PropTypes.object.isRequired,
     noDrawerSpacing: PropTypes.bool,
-    children: PropTypes.node
+    children: PropTypes.node,
+    padded: PropTypes.bool
   };
 
   static defaultProps = {
@@ -19,9 +23,13 @@ class Main extends React.Component {
   };
 
   render() {
-    const { noDrawerSpacing, classes, children, ...props } = this.props;
+    const { noDrawerSpacing, padded, classes, children, ...props } = this.props;
     return (
-      <Typography component="main" {...props}>
+      <Typography
+        className={padded ? classes.main : null}
+        component="main"
+        {...props}
+      >
         {!noDrawerSpacing && <div className={classes.toolbar} />}
         {children}
       </Typography>
