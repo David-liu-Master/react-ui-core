@@ -1,5 +1,5 @@
-const de = require('./de/messages.js');
-const en = require('./en/messages.js');
+import de from './de/messages'
+import en from './en/messages'
 
 export const locale = {
   de,
