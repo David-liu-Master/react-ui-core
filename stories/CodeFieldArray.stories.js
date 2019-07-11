@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import withReduxFormProvider from '../src/storybookProvider/withReduxFormProvider';
 import { FieldArray } from '../src/redux-form';
+import { FormSection } from '../src/redux-form';
 
 import CodeFieldArray from '../src/CodeFieldArray';
 
@@ -23,6 +24,9 @@ storiesOf('CodeFieldArray', module)
       ]
     })
   )
-  .add('normal', () => (
-    <FieldArray name="sources" component={CodeFieldArray} />
+  .add('normal', () => <FieldArray name="sources" component={CodeFieldArray} />)
+  .add('section', () => (
+    <FormSection name="task">
+      <FieldArray name="sources" component={CodeFieldArray} />
+    </FormSection>
   ));

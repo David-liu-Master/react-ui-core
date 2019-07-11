@@ -124,17 +124,16 @@ class CodeFieldArray extends React.Component {
             ))}
           </Tabs>
         </div>
-        {fields.get(this.state.tab) ? (
-          <Field
-            fullWidth
-            margin="none"
-            name={`${fields.name}[${this.state.tab}].source`}
-            component={CodeField}
-          />
-        ) : (
-          <div className={classes.placeholder}>
-            <Trans>You need to add a file first.</Trans>
-          </div>
+        {fields.map((field, i) =>
+          this.state.tab === i ? (
+            <Field
+              key={i}
+              fullWidth
+              margin="none"
+              name={`${field}.source`}
+              component={CodeField}
+            />
+          ) : null
         )}
         <div>
           <Button onClick={this.add}>Add</Button>
