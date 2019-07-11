@@ -15,88 +15,84 @@ msgstr ""
 
 #: src/TextFieldArray.js:41
 msgid "Add Element"
-msgstr ""
+msgstr "Element hinzufügen"
 
 #: src/ItemRenderer.js:46
 msgid "Assignment"
-msgstr ""
+msgstr "Aufgabe"
 
 #: src/ConfirmDialog.js:34
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 #: src/ConfirmDialog.js:37
 msgid "Confirm"
-msgstr ""
+msgstr "Bestätigen"
 
 #: src/TextFieldArray.js:33
 msgid "Delete"
-msgstr ""
+msgstr "Löschen"
 
 #: src/DescriptiveStatisticsTable.js:25
 msgid "Max"
-msgstr ""
+msgstr "Max"
 
 #: src/DescriptiveStatisticsTable.js:28
 msgid "Mean"
-msgstr ""
+msgstr "Durchschnitt"
 
 #: src/DescriptiveStatisticsTable.js:31
 msgid "Median"
-msgstr ""
+msgstr "Median"
 
 #: src/DescriptiveStatisticsTable.js:22
 msgid "Min"
-msgstr ""
+msgstr "Min"
 
 #: src/DescriptiveStatisticsTable.js:40
 msgid "N"
-msgstr ""
+msgstr "N"
 
 #: src/Table.js:205
 msgid "Next Page"
-msgstr ""
+msgstr "Nächste Seite"
 
 #: src/Table.js:202
 msgid "Previous Page"
-msgstr ""
+msgstr "Vorherige Seite"
 
 #: src/RegexField.js:87
 msgid "Regular Expression Tester"
-msgstr ""
+msgstr "Regulärer Ausdruck Tester"
 
 #: src/NotFound.js:47
 msgid "Return to last viewed page"
-msgstr ""
+msgstr "Zur letzten Seite zurückkehren"
 
 #: src/Table.js:200
 msgid "Rows per page:"
-msgstr ""
+msgstr "Zeilen pro Seite:"
 
 #: src/DescriptiveStatisticsTable.js:34
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 #: src/NotFound.js:42
 msgid "The page you are looking for was not found!"
-msgstr ""
+msgstr "Die Seite konnte leider nicht gefunden werden!"
 
 #: src/ResponseField/ResponseField.js:65
 msgid "This Field is required!"
-msgstr ""
+msgstr "Dieses Feld wird benötigt!"
 
 #: src/ItemRenderer.js:33
 msgid "Unsupported"
-msgstr ""
+msgstr "Nicht unterstützt"
 
 #: src/DescriptiveStatisticsTable.js:37
 msgid "Var"
-msgstr ""
-
-#: src/CodeFieldArray.js:136
-msgid "You need to add a file first."
-msgstr ""
+msgstr "Var"
 
 #: src/Table.js:198
 msgid "{from}-{to} of {count}"
-msgstr ""
+msgstr "{from}-{to} von {count}"

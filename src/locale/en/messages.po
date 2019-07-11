@@ -93,10 +93,6 @@ msgstr "Unsupported"
 msgid "Var"
 msgstr "Var"
 
-#: src/CodeFieldArray.js:136
-msgid "You need to add a file first."
-msgstr "You need to add a file first."
-
 #: src/Table.js:198
 msgid "{from}-{to} of {count}"
 msgstr "{from}-{to} of {count}"
