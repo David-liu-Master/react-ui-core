@@ -20,9 +20,14 @@ export const i18n = setupI18n();
 export class I18nProvider extends React.Component {
   render() {
     const { children, language, locales } = this.props;
-    i18n.load(mergeLocales(locales));
+    const catalogs = mergeLocales(locales);
+    i18n.load(catalogs);
     i18n.activate(language);
-    return <I18P i18n={i18n}>{children}</I18P>;
+    return (
+      <I18P language={language} catalogs={catalogs}>
+        {children}
+      </I18P>
+    );
   }
 }
 
