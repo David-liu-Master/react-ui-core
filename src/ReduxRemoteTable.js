@@ -28,7 +28,7 @@ export const constructElasticPagingURL = baseURL => (
       [orderBy]: order
     }
   };
-  return `${baseURL}?query="${JSON.stringify(query)}"`;
+  return `${baseURL}?query=${encodeURIComponent(JSON.stringify(query))}`;
 };
 
 class ReduxRemoteTable extends React.Component {
