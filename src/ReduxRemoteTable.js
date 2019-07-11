@@ -15,6 +15,22 @@ import {
 import { getTableById } from './redux/table/selectors';
 import Table from './Table';
 
+export const constructElasticPagingURL = baseURL => (
+  page,
+  pageSize,
+  order,
+  orderBy
+) => {
+  const query = {
+    offset: page * pageSize,
+    limit: pageSize,
+    sort: {
+      [orderBy]: order
+    }
+  };
+  return `${baseURL}?query=${JSON.stringify(query)}`;
+};
+
 class ReduxRemoteTable extends React.Component {
   static propTypes = {
     id: PropTypes.string.isRequired,

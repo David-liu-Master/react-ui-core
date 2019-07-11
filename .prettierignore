@@ -1,1 +1,1 @@
-src/locale
+src/locale/**/*.js
