@@ -56,7 +56,7 @@
     "react-markdown": "4.1.0",
     "redux-form": "8.2.4",
     "reselect": "4.0.0",
-    "xterm": "3.14.4"
+    "xterm": "3.14.5"
   },
   "peerDependencies": {
     "@lingui/macro": "2.x",
