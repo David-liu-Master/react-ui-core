@@ -15,19 +15,19 @@ import {
 import { getTableById } from './redux/table/selectors';
 import Table from './Table';
 
-export const constructElasticPagingURL = baseURL => (
-  page,
-  pageSize,
-  order,
-  orderBy
-) => {
+export const constructElasticPagingURL = (
+  baseURL,
+  additionalQueryParams = []
+) => (page, pageSize, order, orderBy) => {
   const query = {
     offset: page * pageSize,
     limit: pageSize,
     sort: {
       [orderBy]: order
-    }
+    },
+    ...additionalQueryParams
   };
+
   return `${baseURL}?query=${encodeURIComponent(JSON.stringify(query))}`;
 };
 
