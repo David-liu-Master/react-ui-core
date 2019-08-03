@@ -8,6 +8,8 @@ import {
   SET_PAGE,
   SET_PAGE_SIZE,
   SET_ROWS_COUNT,
+  SET_FILTER,
+  CLEAR_FILTER,
   SORT,
   ROWS_REQUEST,
   ROWS_COMMIT,
@@ -27,6 +29,7 @@ const initialTableState = {
   pageSize: 5,
   order: 'asc',
   orderBy: null,
+  filter: {},
   needsRefresh: false
 };
 
@@ -47,6 +50,14 @@ export default (state = initialState, action) =>
       case SET_ROWS_COUNT:
         table = draft[action.payload.tableId];
         table.rowsCount = action.payload.rowsCount;
+        break;
+      case SET_FILTER:
+        table = draft[action.payload.tableId];
+        table.filter = action.payload.filter;
+        break;
+      case CLEAR_FILTER:
+        table = draft[action.payload.tableId];
+        table.filter = {};
         break;
       case SELECT_ROWS:
         table = draft[action.payload.tableId];

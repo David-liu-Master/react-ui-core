@@ -5,6 +5,8 @@ import {
   SET_PAGE,
   SET_PAGE_SIZE,
   SET_ROWS_COUNT,
+  SET_FILTER,
+  CLEAR_FILTER,
   SORT,
   ROWS_REQUEST,
   ROWS_COMMIT,
@@ -126,6 +128,25 @@ function getRowsRollback(tableId) {
 export function refresh(tableId) {
   return {
     type: REFRESH,
+    payload: {
+      tableId
+    }
+  };
+}
+
+export function setFilter(tableId, filter) {
+  return {
+    type: SET_FILTER,
+    payload: {
+      tableId,
+      filter
+    }
+  };
+}
+
+export function clearFilter(tableId) {
+  return {
+    type: CLEAR_FILTER,
     payload: {
       tableId
     }

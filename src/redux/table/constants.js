@@ -9,3 +9,5 @@ export const ROWS_REQUEST = 'openpatch.ui-core.table.ROWS_REQUEST';
 export const ROWS_COMMIT = 'openpatch.ui-core.table.ROWS_COMMIT';
 export const ROWS_ROLLBACK = 'openpatch.ui-core.table.ROWS_ROLLBACK';
 export const REFRESH = 'openpatch.ui-core.table.REFRESH';
+export const SET_FILTER = 'openpatch.ui-core.table.FILTER';
+export const CLEAR_FILTER = 'openpatch.ui-core.table.CLEAR_FILTER';

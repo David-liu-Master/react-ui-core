@@ -15,17 +15,20 @@ import {
 import { getTableById } from './redux/table/selectors';
 import Table from './Table';
 
-export const constructElasticPagingURL = (
-  baseURL,
-  additionalQueryParams = []
-) => (page, pageSize, order, orderBy) => {
+export const constructElasticPagingURL = baseURL => (
+  page,
+  pageSize,
+  order,
+  orderBy,
+  filter
+) => {
   const query = {
     offset: page * pageSize,
     limit: pageSize,
     sort: {
       [orderBy]: order
     },
-    ...additionalQueryParams
+    filter
   };
 
   return `${baseURL}?query=${encodeURIComponent(JSON.stringify(query))}`;
@@ -46,6 +49,7 @@ class ReduxRemoteTable extends React.Component {
     pageSize: PropTypes.number,
     order: PropTypes.oneOf(['asc', 'desc']),
     orderBy: PropTypes.string,
+    filter: PropTypes.object,
     constructPagingURL: PropTypes.func.isRequired,
     rowsSelector: PropTypes.func,
     countSelector: PropTypes.func,
@@ -76,6 +80,7 @@ class ReduxRemoteTable extends React.Component {
       pageSize,
       order,
       orderBy,
+      filter,
       needsRefresh
     } = this.props;
     if (
@@ -83,20 +88,30 @@ class ReduxRemoteTable extends React.Component {
       pageSize != prevProps.pageSize ||
       order != prevProps.order ||
       orderBy != prevProps.orderBy ||
+      !_isEqual(filter, prevProps.filter) ||
       needsRefresh
     ) {
-      fetchRows(constructPagingURL(page, pageSize, order, orderBy));
+      fetchRows(constructPagingURL(page, pageSize, order, orderBy, filter));
     }
   }
 
   shouldComponentUpdate(nextProps) {
-    const { page, pageSize, order, orderBy, rows, selected } = this.props;
+    const {
+      page,
+      pageSize,
+      order,
+      orderBy,
+      rows,
+      filter,
+      selected
+    } = this.props;
     const update =
       page != nextProps.page ||
       pageSize != nextProps.pageSize ||
       order != nextProps.order ||
       orderBy != nextProps.orderBy ||
       nextProps.needsRefresh ||
+      !_isEqual(filter, nextProps.filter) ||
       !_isEqual(rows, nextProps.rows) ||
       !_isEqual(selected, nextProps.selected);
     return update;
