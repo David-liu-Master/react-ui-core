@@ -29,10 +29,10 @@
     ]
   },
   "scripts": {
-    "build": "npm run clean && npm run locale:clean && npm run locale:compile && cross-env NODE_ENV=production ./node_modules/.bin/babel src --out-dir lib --copy-files",
+    "build": "yarn clean && yarn locale:clean && yarn locale:compile && cross-env NODE_ENV=production ./node_modules/.bin/babel src --out-dir lib --copy-files",
     "clean": "rm -rf lib",
-    "prepublishOnly": "npm run build",
-    "start": "npm run storybook",
+    "prepublishOnly": "yarn build",
+    "start": "yarn storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",

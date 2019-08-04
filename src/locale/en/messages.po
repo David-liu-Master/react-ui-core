@@ -33,11 +33,11 @@ msgstr "Confirm"
 msgid "Delete"
 msgstr "Delete"
 
-#: src/LanguageSelect.js:21
+#: src/LanguageSelect.js:20
 msgid "English"
 msgstr "English"
 
-#: src/LanguageSelect.js:17
+#: src/LanguageSelect.js:16
 msgid "German"
 msgstr "German"
 
