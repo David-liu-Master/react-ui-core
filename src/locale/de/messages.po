@@ -33,6 +33,14 @@ msgstr "Bestätigen"
 msgid "Delete"
 msgstr "Löschen"
 
+#: src/LanguageSelect.js:21
+msgid "English"
+msgstr "Englisch"
+
+#: src/LanguageSelect.js:17
+msgid "German"
+msgstr "Deutsch"
+
 #: src/DescriptiveStatisticsTable.js:25
 msgid "Max"
 msgstr "Max"
