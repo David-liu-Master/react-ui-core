@@ -22,7 +22,7 @@ const languages = {
   }
 };
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   flagButton: {
     display: 'flex'
   },
@@ -31,11 +31,17 @@ const useStyles = makeStyles({
     width: 20,
     height: 20
   },
+  selectFlag: {
+    borderRadius: '50%',
+    width: 20,
+    height: 20,
+    marginRight: theme.spacing.unit
+  },
   select: {
     display: 'flex',
     alignItems: 'center'
   }
-});
+}));
 
 function LanguageSelect() {
   const dispatch = useDispatch();
@@ -76,7 +82,7 @@ function LanguageSelect() {
             onClick={() => handleLanguageSelect(code)}
           >
             <div className={classes.select}>
-              <img className={classes.flag} src={languages[code].icon} />
+              <img className={classes.selectFlag} src={languages[code].icon} />
               {languages[code].label}
             </div>
           </MenuItem>
