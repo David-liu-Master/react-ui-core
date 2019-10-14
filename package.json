@@ -56,8 +56,8 @@
     "react-markdown": "4.2.2",
     "redux-form": "8.2.6",
     "reselect": "4.0.0",
-    "uuid": "^3.3.3",
-    "vis-network": "^5.2.4",
+    "uuid": "3.3.3",
+    "vis-network": "5.4.1",
     "xterm": "3.14.5"
   },
   "peerDependencies": {
