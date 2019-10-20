@@ -2,11 +2,11 @@ import React from 'react';
 
 import AceEditor from 'react-ace';
 
-import 'brace/theme/github';
+import 'ace-builds/src-noconflict/theme-github';
 
 export const modes = ['java', 'python', 'markdown'];
 
-modes.forEach(mode => require(`brace/mode/${mode}`));
+modes.forEach(mode => require(`ace-builds/src-noconflict/mode-${mode}`));
 
 class CodeEditor extends React.Component {
   render() {

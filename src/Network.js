@@ -6,6 +6,33 @@ import vis from 'vis-network';
 import uuid from 'uuid';
 import PropTypes from 'prop-types';
 
+export const defaultOptions = {
+  physics: {
+    stabilization: false
+  },
+  autoResize: true,
+  height: 500,
+  nodes: {
+    font: {
+      face: 'Sans'
+    }
+  },
+  edges: {
+    smooth: true,
+    color: '#000000',
+    width: 1,
+    font: {
+      face: 'Sans'
+    },
+    arrows: {
+      to: {
+        enabled: true,
+        scaleFactor: 1
+      }
+    }
+  }
+};
+
 class Network extends Component {
   constructor(props) {
     super(props);
@@ -104,23 +131,6 @@ class Network extends Component {
 
   updateGraph() {
     let container = document.getElementById(this.state.identifier);
-    let defaultOptions = {
-      physics: {
-        stabilization: false
-      },
-      autoResize: false,
-      edges: {
-        smooth: false,
-        color: '#000000',
-        width: 0.5,
-        arrows: {
-          to: {
-            enabled: true,
-            scaleFactor: 0.5
-          }
-        }
-      }
-    };
 
     // merge user provied options with our default ones
     let options = defaultsDeep(defaultOptions, this.props.options);
