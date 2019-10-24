@@ -38,9 +38,20 @@ const styles = () => ({
 
 class Table extends React.Component {
   static propTypes = {
+    classes: PropTypes.object.isRequired,
     additionalCellTypes: PropTypes.objectOf(PropTypes.func),
     label: PropTypes.string.isRequired,
-    columns: PropTypes.arrayOf(PropTypes.object),
+    columns: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+          .isRequired,
+        label: PropTypes.string.isRequired,
+        numeric: PropTypes.bool,
+        disablePadding: PropTypes.bool,
+        type: PropTypes.string,
+        cellProps: PropTypes.object
+      })
+    ),
     toolbar: PropTypes.shape(TableToolbar.propTypes),
     order: PropTypes.oneOf(['asc', 'desc']),
     orderBy: PropTypes.string,
@@ -188,25 +199,27 @@ class Table extends React.Component {
             ))}
           </TableBody>
         </MuiTable>
-        <TablePagination
-          rowsPerPageOptions={pageSizeOptions}
-          component="div"
-          count={rowsCount}
-          rowsPerPage={pageSize}
-          page={page}
-          labelDisplayedRows={({ from, to, count }) =>
-            i18n._(t`${from}-${to} of ${count}`)
-          }
-          labelRowsPerPage={i18n._(t`Rows per page:`)}
-          backIconButtonProps={{
-            'aria-label': i18n._(t`Previous Page`)
-          }}
-          nextIconButtonProps={{
-            'aria-label': i18n._(t`Next Page`)
-          }}
-          onChangePage={this.handlePageChange}
-          onChangeRowsPerPage={this.handlePageSizeChange}
-        />
+        {rowsCount !== 0 && (
+          <TablePagination
+            rowsPerPageOptions={pageSizeOptions}
+            component="div"
+            count={rowsCount}
+            rowsPerPage={pageSize}
+            page={page}
+            labelDisplayedRows={({ from, to, count }) =>
+              i18n._(t`${from}-${to} of ${count}`)
+            }
+            labelRowsPerPage={i18n._(t`Rows per page:`)}
+            backIconButtonProps={{
+              'aria-label': i18n._(t`Previous Page`)
+            }}
+            nextIconButtonProps={{
+              'aria-label': i18n._(t`Next Page`)
+            }}
+            onChangePage={this.handlePageChange}
+            onChangeRowsPerPage={this.handlePageSizeChange}
+          />
+        )}
       </Paper>
     );
   }

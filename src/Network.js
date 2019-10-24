@@ -5,24 +5,28 @@ import differenceWith from 'lodash/differenceWith';
 import vis from 'vis-network';
 import uuid from 'uuid';
 import PropTypes from 'prop-types';
+import theme from './style/theme';
 
 export const defaultOptions = {
   physics: {
     stabilization: false
   },
   autoResize: true,
-  height: 500,
+  height: '500px',
   nodes: {
+    color: theme.palette.primary.main,
     font: {
-      face: 'Sans'
+      face: 'Roboto',
+      color: theme.palette.common.white
     }
   },
   edges: {
     smooth: true,
-    color: '#000000',
+    color: theme.palette.secondary.main,
     width: 1,
     font: {
-      face: 'Sans'
+      face: 'Roboto',
+      color: theme.palette.primary.main
     },
     arrows: {
       to: {

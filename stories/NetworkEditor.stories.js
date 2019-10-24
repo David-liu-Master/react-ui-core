@@ -12,26 +12,44 @@ const graph = {
     { id: 5, label: 'Node 5' }
   ],
   edges: [
-    { from: 1, to: 2, label: '>= 5' },
-    { from: 1, to: 3 },
-    { from: 2, to: 4 },
-    { from: 2, to: 5 }
+    { from: 1, to: 2, label: '5', value: 5 },
+    { from: 1, to: 3, label: '10', value: 10 },
+    { from: 2, to: 4, label: '2', value: 2 },
+    { from: 2, to: 5, label: ' ', value: 0 }
   ]
 };
 
 const options = {
   edges: {
-    color: '#000000'
+    scaling: {
+      max: 1.5,
+      min: 1,
+      label: false,
+      customScalingFunction: (min, max, _, value) => {
+        value = max / value;
+        if (value < min) {
+          return min;
+        }
+        if (value > max) {
+          return max;
+        }
+        return value;
+      }
+    },
+    value: 0
   },
   height: '500px'
 };
 
-const events = {
-  select: function(event) {
-    var { nodes, edges } = event;
-  }
-};
+function onChange(e) {
+  console.log(e);
+}
 
 storiesOf('NetworkEditor', module).add('normal', () => (
-  <NetworkEditor graph={graph} options={options} events={events} />
+  <NetworkEditor
+    allowEditEdges={true}
+    graph={graph}
+    options={options}
+    onChange={onChange}
+  />
 ));
