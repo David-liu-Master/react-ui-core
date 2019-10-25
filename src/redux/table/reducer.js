@@ -1,6 +1,7 @@
 import produce from 'immer';
 import _uniq from 'lodash/uniq';
 import _difference from 'lodash/difference';
+import _cloneDeep from 'lodash/cloneDeep';
 import {
   INIT,
   SELECT_ROWS,
@@ -39,7 +40,7 @@ export default (state = initialState, action) =>
     switch (action.type) {
       case INIT:
         if (!(action.payload.tableId in draft)) {
-          draft[action.payload.tableId] = initialTableState;
+          draft[action.payload.tableId] = _cloneDeep(initialTableState);
         }
         draft[action.payload.tableId].needsRefresh = true;
         break;

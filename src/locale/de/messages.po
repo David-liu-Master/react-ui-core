@@ -61,11 +61,11 @@ msgstr "Min"
 msgid "N"
 msgstr "N"
 
-#: src/Table.js:205
+#: src/Table.js:217
 msgid "Next Page"
 msgstr "Nächste Seite"
 
-#: src/Table.js:202
+#: src/Table.js:214
 msgid "Previous Page"
 msgstr "Vorherige Seite"
 
@@ -77,7 +77,7 @@ msgstr "Regulärer Ausdruck Tester"
 msgid "Return to last viewed page"
 msgstr "Zur letzten Seite zurückkehren"
 
-#: src/Table.js:200
+#: src/Table.js:212
 msgid "Rows per page:"
 msgstr "Zeilen pro Seite:"
 
@@ -101,6 +101,6 @@ msgstr "Nicht unterstützt"
 msgid "Var"
 msgstr "Var"
 
-#: src/Table.js:198
+#: src/Table.js:210
 msgid "{from}-{to} of {count}"
 msgstr "{from}-{to} von {count}"
