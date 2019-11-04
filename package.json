@@ -105,7 +105,7 @@
     "eslint-plugin-react": "7.16.0",
     "husky": "2.7.0",
     "jest": "24.9.0",
-    "jest-enzyme": "7.1.1",
+    "jest-enzyme": "7.1.2",
     "lint-staged": "8.2.1",
     "prettier": "1.18.2",
     "prop-types": "15.7.2",
