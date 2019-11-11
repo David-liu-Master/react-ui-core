@@ -57,7 +57,7 @@
     "redux-form": "8.2.6",
     "reselect": "4.0.0",
     "uuid": "3.3.3",
-    "vis-network": "6.3.1",
+    "vis-network": "6.4.0",
     "xterm": "3.14.5"
   },
   "peerDependencies": {
