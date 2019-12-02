@@ -12396,10 +12396,10 @@ vfile@^2.0.0:
     unist-util-stringify-position "^1.0.0"
     vfile-message "^1.0.0"
 
-vis-network@6.4.4:
-  version "6.4.4"
-  resolved "https://registry.yarnpkg.com/vis-network/-/vis-network-6.4.4.tgz#dc62e12333b4172d437db3a6bbe6c67a98e6ec9c"
-  integrity sha512-YTMTOmQ2uVsKX3zHvDdXFX/a5VLuVEkOsyBnWrPx1omf3SiB8jm0LhDIqiWEZQE6YGPeEW8jaODw2Y1UQaLRdQ==
+vis-network@6.4.6:
+  version "6.4.6"
+  resolved "https://registry.yarnpkg.com/vis-network/-/vis-network-6.4.6.tgz#1f870a25dcc5e188b5bbc80f0c563abfeed42cfb"
+  integrity sha512-/I0qd13FU14wvxyfH1rlaZYn0pCchXt94SEJaemrd6jk+zabbeBGvexyvTOznRKVMgS0D6MLb1VSY33rvAmFdg==
 
 vm-browserify@^1.0.1:
   version "1.1.0"
