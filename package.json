@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "classnames": "2.2.6",
-    "highlight.js": "9.16.2",
+    "highlight.js": "9.17.1",
     "immer": "4.0.2",
     "lodash": "4.17.15",
     "react-ace": "8.0.0",
