@@ -21,14 +21,14 @@ const SelectField = ({
     {...input}
     {...custom}
   >
-    {options.map((optionText, i) =>
+    {options.map(({ node, value }) =>
       native ? (
-        <option key={i} value={i}>
-          {optionText}
+        <option key={value} value={value}>
+          {node}
         </option>
       ) : (
-        <MenuItem key={i} value={i}>
-          {optionText}
+        <MenuItem key={value} value={value}>
+          {node}
         </MenuItem>
       )
     )}
